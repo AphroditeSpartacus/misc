@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Bean Validation issues</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>BvConstraintMappingsInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="AppserversManager">
+    <LibraryTable />
+  </component>
+  <component name="CodeStyleSchemes">
+    <option name="CURRENT_SCHEME_NAME" value="Aphrodite" />
+  </component>
+  <component name="CppTools.Settings" gccPath="gcc" mingwToolsDir="" msvcdir="" defines="" additionalIncludes="" launchGdbOnFailureCommand="/usr/X11/bin/xterm -e $gdb$ --directory=&quot;~/CF-C&quot;" gdbPath="gdb" />
+  <component name="DebuggerSettings">
+    <option name="TRACING_FILTERS_ENABLED" value="true" />
+    <option name="VALUE_LOOKUP_DELAY" value="700" />
+    <option name="DEBUGGER_TRANSPORT" value="0" />
+    <option name="FORCE_CLASSIC_VM" value="true" />
+    <option name="DISABLE_JIT" value="false" />
+    <option name="HIDE_DEBUGGER_ON_PROCESS_TERMINATION" value="false" />
+    <option name="HOTSWAP_IN_BACKGROUND" value="true" />
+    <option name="SKIP_SYNTHETIC_METHODS" value="true" />
+    <option name="SKIP_CONSTRUCTORS" value="false" />
+    <option name="SKIP_GETTERS" value="false" />
+    <option name="SKIP_CLASSLOADERS" value="true" />
+    <option name="EVALUATION_DIALOG_TYPE" />
+    <option name="RUN_HOTSWAP_AFTER_COMPILE" value="RunHotswapAsk" />
+    <option name="COMPILE_BEFORE_HOTSWAP" value="true" />
+    <option name="HOTSWAP_HANG_WARNING_ENABLED" value="true" />
+    <option name="WATCH_RETURN_VALUES" value="false" />
+    <option name="AUTO_VARIABLES_MODE" value="false" />
+    <option name="SHOW_LIBRARY_STACKFRAMES" value="true" />
+    <filter>
+      <option name="PATTERN" value="com.sun.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="java.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="javax.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="org.omg.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="sun.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="junit.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="com.intellij.rt.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="com.yourkit.runtime.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+  </component>
+  <component name="FindSettings">
+    <option name="SEARCH_OVERLOADED_METHODS" value="false" />
+    <option name="SEARCH_IN_LIBRARIES" value="false" />
+    <option name="SKIP_RESULTS_WHEN_ONE_USAGE" value="false" />
+    <option name="FIND_DIRECTION" value="forward" />
+    <option name="FIND_ORIGIN" value="from_cursor" />
+    <option name="FIND_SCOPE" value="global" />
+    <option name="FIND_CUSTOM_SCOPE" />
+    <option name="CASE_SENSITIVE_SEARCH" value="false" />
+    <option name="LOCAL_CASE_SENSITIVE_SEARCH" value="false" />
+    <option name="PRESERVE_CASE_REPLACE" value="false" />
+    <option name="WHOLE_WORDS_ONLY" value="false" />
+    <option name="COMMENTS_ONLY" value="false" />
+    <option name="STRING_LITERALS_ONLY" value="false" />
+    <option name="LOCAL_WHOLE_WORDS_ONLY" value="false" />
+    <option name="REGULAR_EXPRESSIONS" value="false" />
+    <option name="LOCAL_REGULAR_EXPRESSIONS" value="false" />
+    <option name="WITH_SUBDIRECTORIES" value="true" />
+    <option name="SEARCH_SCOPE" value="All Project Classes" />
+    <option name="FILE_MASK" />
+    <option name="RECENT_FIND_STRINGS">
+      <value>
+        <list size="30">
+          <item index="0" class="java.lang.String" itemvalue="wrap" />
+          <item index="1" class="java.lang.String" itemvalue="IntArray" />
+          <item index="2" class="java.lang.String" itemvalue="testNumber" />
+          <item index="3" class="java.lang.String" itemvalue="minu" />
+          <item index="4" class="java.lang.String" itemvalue="allZero" />
+          <item index="5" class="java.lang.String" itemvalue="system.out" />
+          <item index="6" class="java.lang.String" itemvalue="all" />
+          <item index="7" class="java.lang.String" itemvalue="ff" />
+          <item index="8" class="java.lang.String" itemvalue="long" />
+          <item index="9" class="java.lang.String" itemvalue="Zuo" />
+          <item index="10" class="java.lang.String" itemvalue="zuoyunyan" />
+          <item index="11" class="java.lang.String" itemvalue="Zhang" />
+          <item index="12" class="java.lang.String" itemvalue="a" />
+          <item index="13" class="java.lang.String" itemvalue="public" />
+          <item index="14" class="java.lang.String" itemvalue="intell" />
+          <item index="15" class="java.lang.String" itemvalue="indexer" />
+          <item index="16" class="java.lang.String" itemvalue="Searcher" />
+          <item index="17" class="java.lang.String" itemvalue="new" />
+          <item index="18" class="java.lang.String" itemvalue="ne" />
+          <item index="19" class="java.lang.String" itemvalue="nextln" />
+          <item index="20" class="java.lang.String" itemvalue="int" />
+          <item index="21" class="java.lang.String" itemvalue="divi" />
+          <item index="22" class="java.lang.String" itemvalue="substring" />
+          <item index="23" class="java.lang.String" itemvalue="sout" />
+          <item index="24" class="java.lang.String" itemvalue="println" />
+          <item index="25" class="java.lang.String" itemvalue="len" />
+          <item index="26" class="java.lang.String" itemvalue="you" />
+          <item index="27" class="java.lang.String" itemvalue="MAX" />
+          <item index="28" class="java.lang.String" itemvalue="max" />
+          <item index="29" class="java.lang.String" itemvalue="getPrime" />
+        </list>
+      </value>
+    </option>
+    <option name="RECENT_REPLACE_STRINGS">
+      <value>
+        <list size="2">
+          <item index="0" class="java.lang.String" itemvalue="sys" />
+          <item index="1" class="java.lang.String" itemvalue="b" />
+        </list>
+      </value>
+    </option>
+    <option name="RECENT_DIR_STRINGS">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+    <option name="RECENT_FILE_MASKS">
+      <value>
+        <list size="12">
+          <item index="0" class="java.lang.String" itemvalue="*.properties" />
+          <item index="1" class="java.lang.String" itemvalue="*.html" />
+          <item index="2" class="java.lang.String" itemvalue="*.jsp" />
+          <item index="3" class="java.lang.String" itemvalue="*.xml" />
+          <item index="4" class="java.lang.String" itemvalue="*.java" />
+          <item index="5" class="java.lang.String" itemvalue="*.php" />
+          <item index="6" class="java.lang.String" itemvalue="*.js" />
+          <item index="7" class="java.lang.String" itemvalue="*.as" />
+          <item index="8" class="java.lang.String" itemvalue="*.css" />
+          <item index="9" class="java.lang.String" itemvalue="*.mxml" />
+          <item index="10" class="java.lang.String" itemvalue="*.py" />
+          <item index="11" class="java.lang.String" itemvalue="*.rb" />
+        </list>
+      </value>
+    </option>
+  </component>
+  <component name="GlobalAntConfiguration">
+    <filtersTableLayout />
+    <propertiesTableLayout />
+    <registeredAnts />
+  </component>
+  <component name="HttpConfigurable">
+    <option name="plainProxyPassword" value="" />
+    <option name="USE_HTTP_PROXY" value="false" />
+    <option name="PROXY_HOST" value="" />
+    <option name="PROXY_PORT" value="80" />
+    <option name="PROXY_AUTHENTICATION" value="false" />
+    <option name="PROXY_LOGIN" value="" />
+    <option name="PROXY_PASSWORD_CRYPT" value="" />
+    <option name="KEEP_PROXY_PASSWORD" value="false" />
+  </component>
+  <component name="PropertiesSeparatorManager">
+    <file url="file://$USER_HOME$/program/IdeaProjects/chelper_test/chelper.properties" separator="\u002e" />
+  </component>
+  <component name="RecentProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/program/arena" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/program/arena" />
+      </list>
+    </option>
+    <option name="names">
+      <map>
+        <entry key="$USER_HOME$/program/arena" value="" />
+      </map>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/program/arena" />
+  </component>
+  <component name="Registry">
+    <entry key="ide.firstStartup" value="false" />
+  </component>
+  <component name="TemplateSettings">
+    <defaultShortcut shortcut="TAB" />
+    <deleted_templates>
+      <template name="tldTag" group="jsf" />
+      <template name="tldFunction" group="jsf" />
+      <template name="act" group="struts" />
+      <template name="fb" group="struts" />
+      <template name="gf" group="struts" />
+      <template name="sb" group="spring" />
+      <template name="sbf" group="spring" />
+      <template name="sbfb" group="spring" />
+      <template name="aopautoproxycreator" group="aop" />
+      <template name="aopautoproxy" group="aop" />
+      <template name="hibernatefactory" group="spring" />
+      <template name="datasource" group="spring" />
+      <template name="hibernatetm" group="spring" />
+      <template name="transactionmanager" group="spring" />
+      <template name="jndids" group="spring" />
+      <template name="jdopmf" group="spring" />
+      <template name="jdopmfproxy" group="spring" />
+      <template name="jdotm" group="spring" />
+      <template name="jpoxpmf" group="spring" />
+      <template name="toplinklsf" group="spring" />
+      <template name="toplinktasa" group="spring" />
+      <template name="toplinktm" group="spring" />
+      <template name="ibatisfactory" group="spring" />
+      <template name="jpaemfb" group="spring" />
+      <template name="jpacemf" group="spring" />
+      <template name="jpapum" group="spring" />
+      <template name="jpapabpp" group="spring" />
+      <template name="jpapetpp" group="spring" />
+      <template name="jpatm" group="spring" />
+      <template name="intscheduler" group="spring" />
+      <template name="crontrigger" group="spring" />
+      <template name="scedulerfactorybean" group="spring" />
+      <template name="simpletrigger" group="spring" />
+      <template name="jdkscheduledtimertask" group="spring" />
+      <template name="jdktimerfactorybean" group="spring" />
+      <template name="ejblssb" group="spring" />
+      <template name="ejbrssb" group="spring" />
+      <template name="freemarker" group="spring" />
+      <template name="placeholder" group="spring" />
+      <template name="propertyoverrideconfigurer" group="spring" />
+      <template name="resourcefb" group="spring" />
+      <template name="commonslogfb" group="spring" />
+      <template name="fieldretrfactory" group="spring" />
+      <template name="listfactory" group="spring" />
+      <template name="mapfactory" group="spring" />
+      <template name="proprsfactory" group="spring" />
+      <template name="setfactory" group="spring" />
+      <template name="webflowregistry" group="spring webflow" />
+      <template name="webflowexecutor" group="spring webflow" />
+      <template name="webflowbuildersevices" group="spring webflow" />
+      <template name="conversationservice" group="spring webflow" />
+      <template name="expressionparser" group="spring webflow" />
+      <template name="factorycreator" group="spring webflow" />
+      <template name="formatterregistry" group="spring webflow" />
+      <template name="webflowexelistener" group="spring webflow" />
+      <template name="osgisimpleservice" group="Spring Dynamic Modules" />
+      <template name="osgimultiservice" group="Spring Dynamic Modules" />
+      <template name="osgisimpleref" group="Spring Dynamic Modules" />
+      <template name="osgimultiref" group="Spring Dynamic Modules" />
+      <template name="osgibeannameref" group="Spring Dynamic Modules" />
+      <template name="osgirefwithlistener" group="Spring Dynamic Modules" />
+      <template name="osgisimplelist" group="Spring Dynamic Modules" />
+      <template name="osgisimpleset" group="Spring Dynamic Modules" />
+      <template name="osgilistwithcomp" group="Spring Dynamic Modules" />
+      <template name="osgisetwithcomparator" group="Spring Dynamic Modules" />
+    </deleted_templates>
+  </component>
+  <component name="TodoConfiguration">
+    <pattern icon="default" useCustomColors="false" case-sensitive="false" pattern="\btodo\b.*">
+      <option name="FOREGROUND" value="ff" />
+      <option name="BACKGROUND" />
+      <option name="FONT_TYPE" value="3" />
+      <option name="EFFECT_COLOR" />
+      <option name="EFFECT_TYPE" value="0" />
+      <option name="ERROR_STRIPE_COLOR" value="ff" />
+    </pattern>
+  </component>
+  <component name="UpdatesConfigurable">
+    <option name="myPluginHosts">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+    <option name="myKnownUpdateChannels">
+      <value>
+        <list size="6">
+          <item index="0" class="java.lang.String" itemvalue="idea90" />
+          <item index="1" class="java.lang.String" itemvalue="IDEA10EAP" />
+          <item index="2" class="java.lang.String" itemvalue="IDEA10" />
+          <item index="3" class="java.lang.String" itemvalue="IDEA11" />
+          <item index="4" class="java.lang.String" itemvalue="IDEA11EAP" />
+          <item index="5" class="java.lang.String" itemvalue="IDEA11dot1EAP" />
+        </list>
+      </value>
+    </option>
+    <option name="myIgnoredBuildNumbers">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+    <option name="CHECK_NEEDED" value="false" />
+    <option name="LAST_TIME_CHECKED" value="1329022598367" />
+    <option name="UPDATE_CHANNEL_TYPE" value="release" />
+  </component>
+  <component name="WebServicesPluginSettings" WebServicesUrlPathPrefix="/services" PathToXmlBeans="$USER_HOME$/Library/Caches/IntelliJIdea11/webservices/xmlbeans-2.3.0" RestClientHost="http://localhost:9998" ASK_TO_INSTALL_SOAPUI="true">
+    <Libs>
+      <Lib path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/xmlbeans-2.3.0/xmlpublic.jar.pack.gz" size="89723" />
+      <Lib path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/xmlbeans-2.3.0/jsr173_1.0_api.jar.pack.gz" size="5348" />
+      <Lib path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/xmlbeans-2.3.0/xmlbeans-qname.jar.pack.gz" size="1173" />
+      <Lib path="$APPLICATION_HOME_DIR$/plugins/WebServices/docs/axis1_4/documentation.jar.pack.gz" size="615245" />
+      <Lib path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/xmlbeans-2.3.0/xbean.jar.pack.gz" size="639476" />
+      <Lib path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/xmlbeans-2.3.0/resolver.jar.pack.gz" size="21195" />
+      <Lib path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/xmlbeans-2.3.0/xbean_xpath.jar.pack.gz" size="2430" />
+    </Libs>
+  </component>
+  <component name="XDebuggerSettings">
+    <data-views />
+    <debuggers>
+      <debugger id="groovy_debugger">
+        <configuration />
+      </debugger>
+      <debugger id="javascript">
+        <configuration>
+          <custom-object-presentation />
+        </configuration>
+      </debugger>
+    </debuggers>
+  </component>
+  <component name="XPathView.XPathViewPlugin">
+    <option name="SHOW_IN_TOOLBAR" value="true" />
+    <option name="SHOW_IN_MAIN_MENU" value="true" />
+    <option name="OPEN_NEW_TAB" value="false" />
+    <option name="HIGHLIGHT_RESULTS" value="true" />
+    <option name="SHOW_USAGE_VIEW" value="false" />
+    <option name="SEARCH_SCOPE">
+      <value type="PROJECT" />
+    </option>
+    <option name="MATCH_RECURSIVELY" value="false" />
+    <option name="attributes">
+      <value>
+        <option name="FOREGROUND" />
+        <option name="BACKGROUND" value="ffd578" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="-1" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="contextAttributes">
+      <value>
+        <option name="FOREGROUND" />
+        <option name="BACKGROUND" value="c2ffd4" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="-1" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="scrollToFirst" value="true" />
+    <option name="bUseContextAtCursor" value="true" />
+    <option name="bHighlightStartTagOnly" value="true" />
+    <option name="bAddErrorStripe" value="true" />
+  </component>
+  <component name="XSLT-Support.Configuration">
+    <option name="SHOW_LINKED_FILES" value="true" />
+  </component>
+  <component name="com.intellij.ide.fileTemplates.impl.FileTemplateManagerImpl">
+    <recent_templates>
+      <option name="RECENT_TEMPLATES">
+        <value>
+          <list size="0" />
+        </value>
+      </option>
+    </recent_templates>
+    <default_templates />
+    <internal_templates />
+    <includes_templates />
+    <code_templates />
+    <j2ee_templates />
+  </component>
+  <component name="com.intellij.javaee.ExternalResourceManagerImpl">
+    <ignored-resource url="urn:idea:xslt-plugin#extensions" />
+    <ignored-resource url="http://relaxng.org/ns/compatibility/annotations/1.0" />
+    <ignored-resource url="http://www.w3.org/1998/Math/MathML" />
+    <ignored-resource url="http://www.w3.org/2000/svg" />
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
+  </component>
+  <component name="com.intellij.openapi.diff.impl.external.DiffManagerImpl">
+    <enableFiles value="false" />
+    <enableFolders value="false" />
+    <filesTool value="" newValue="" />
+    <foldersTool value="" newValue="" />
+  </component>
+</application>
+

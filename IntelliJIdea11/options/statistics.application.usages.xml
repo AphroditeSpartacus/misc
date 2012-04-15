@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="StatisticsApplicationUsages">
+    <group name="libraries">
+      <project id="freemind" values="groovy" />
+    </group>
+    <group name="language-level">
+      <project id="147" values="6.0 - @Override in interfaces" />
+      <project id="test" values="6.0 - @Override in interfaces" />
+      <project id="codeforces_template" values="6.0 - @Override in interfaces" />
+      <project id="lucene" values="6.0 - @Override in interfaces" />
+      <project id="kao" values="6.0 - @Override in interfaces" />
+      <project id="haha" values="6.0 - @Override in interfaces" />
+      <project id="cf3" values="6.0 - @Override in interfaces" />
+      <project id="xixi" values="6.0 - @Override in interfaces" />
+      <project id="chelper_test" values="6.0 - @Override in interfaces" />
+      <project id="cf2" values="6.0 - @Override in interfaces" />
+      <project id="174" values="6.0 - @Override in interfaces" />
+      <project id="arena" values="JDK_1_6" />
+      <project id="174a" values="6.0 - @Override in interfaces" />
+      <project id="codeforces" values="6.0 - @Override in interfaces" />
+      <project id="tmp" values="6.0 - @Override in interfaces" />
+      <project id="freemind" values="JDK_1_6" />
+      <project id="cf" values="6.0 - @Override in interfaces" />
+      <project id="qq" values="6.0 - @Override in interfaces" />
+    </group>
+    <group name="vcs">
+      <project id="freemind" values="Git" />
+    </group>
+    <group name="run-configuration-type">
+      <project id="147" values="Unknown" />
+      <project id="cf2" values="Task" />
+      <project id="codeforces" values="Task" />
+      <project id="cf3" values="Task" />
+      <project id="cf" values="Task" />
+      <project id="chelper_test" values="Unknown" />
+    </group>
+    <group name="module type">
+      <project id="147" values="JAVA_MODULE" />
+      <project id="test" values="JAVA_MODULE" />
+      <project id="codeforces_template" values="JAVA_MODULE" />
+      <project id="lucene" values="JAVA_MODULE" />
+      <project id="kao" values="JAVA_MODULE" />
+      <project id="haha" values="JAVA_MODULE" />
+      <project id="cf3" values="JAVA_MODULE" />
+      <project id="xixi" values="JAVA_MODULE" />
+      <project id="174" values="JAVA_MODULE" />
+      <project id="cf2" values="JAVA_MODULE" />
+      <project id="arena" values="JAVA_MODULE" />
+      <project id="174a" values="JAVA_MODULE" />
+      <project id="codeforces" values="JAVA_MODULE" />
+      <project id="tmp" values="JAVA_MODULE" />
+      <project id="freemind" values="JAVA_MODULE" />
+      <project id="cf" values="JAVA_MODULE" />
+      <project id="qq" values="JAVA_MODULE" />
+    </group>
+    <group name="run-configuration-type-temp">
+      <project id="test" values="Application" />
+      <project id="arena" values="Application" />
+      <project id="codeforces" values="Application" />
+      <project id="kao" values="Application" />
+      <project id="lucene" values="Application" />
+      <project id="qq" values="Application" />
+    </group>
+    <group name="file-type">
+      <project id="147" values="Properties,XML,JAVA,IDEA_MODULE,UNKNOWN" />
+      <project id="test" values="JAVA,XML,UNKNOWN,IDEA_MODULE" />
+      <project id="codeforces_template" values="Properties,XML,UNKNOWN,IDEA_MODULE" />
+      <project id="lucene" values="IDEA_MODULE,PLAIN_TEXT,CLASS,Native,Properties,HTML,Images,CSS,UNKNOWN,ARCHIVE,JavaScript,JAVA,XML" />
+      <project id="kao" values="JAVA,UNKNOWN,IDEA_MODULE,XML" />
+      <project id="haha" values="JAVA,IDEA_WORKSPACE,IDEA_MODULE,IDEA_PROJECT,UNKNOWN" />
+      <project id="cf3" values="IDEA_MODULE,UNKNOWN" />
+      <project id="xixi" values="IDEA_MODULE,UNKNOWN,JAVA,XML" />
+      <project id="chelper_test" values="UNKNOWN" />
+      <project id="cf2" values="XML,IDEA_MODULE,UNKNOWN,Properties,JAVA" />
+      <project id="174" values="UNKNOWN,Properties,IDEA_MODULE,XML" />
+      <project id="arena" values="IDEA_MODULE,HTML,UNKNOWN,JAVA,PLAIN_TEXT" />
+      <project id="174a" values="IDEA_MODULE,UNKNOWN,XML" />
+      <project id="codeforces" values="IDEA_MODULE,JAVA,UNKNOWN" />
+      <project id="tmp" values="XML,UNKNOWN,IDEA_MODULE,PLAIN_TEXT,C++" />
+      <project id="cf" values="IDEA_MODULE,UNKNOWN" />
+      <project id="qq" values="UNKNOWN,JAVA,Images,IDEA_MODULE,Native,PLAIN_TEXT,CLASS,PATCH" />
+    </group>
+    <group name="JavaScript versions">
+      <project id="arena" values="DEFAULT" />
+      <project id="freemind" values="DEFAULT" />
+    </group>
+  </component>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="execute.Application.Coverage" count="5" />
+      <entry feature="execute.Application.Debug" count="2" />
+      <entry feature="execute.Application.Run" count="1521" />
+      <entry feature="execute.Task.Debug" count="1" />
+      <entry feature="execute.Task.Run" count="93" />
+    </counts>
+  </component>
+</application>
+

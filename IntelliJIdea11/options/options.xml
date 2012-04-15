@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="DimensionService">
+    <location key="DetectedRootsChooserDialog.0.22.1440.874" x="324" y="177" />
+    <location key="#Browse_Repositories.0.22.1440.874" x="210" y="22" />
+    <location key="#Project_Structure.0.22.1440.874" x="269" y="22" />
+    <location key="vcs.readOnlyHandler.ReadOnlyStatusDialog.0.22.1440.874" x="678" y="407" />
+    <location key="OptionsEditor" x="108" y="37" />
+    <location key="#DengklekMakingChains.0.22.1440.874" x="457" y="151" />
+    <location key="#com.intellij.execution.impl.EditConfigurationsDialog.0.22.1440.874" x="370" y="183" />
+    <location key="IdeErrosDialog.0.22.1440.874" x="411" y="329" />
+    <location key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog.0.22.1440.874" x="370" y="209" />
+    <location key="#V.0.22.1440.874" x="457" y="151" />
+    <location key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog.0.22.1440.874" x="591" y="385" />
+    <location key="#Custom_Plugin_Repositories.0.22.1440.874" x="564" y="341" />
+    <location key="NewModule_or_Project.wizard.0.22.1440.874" x="349" y="130" />
+    <location key="NewModule_or_Project.wizard.0.0.1440.900" x="260" y="63" />
+    <location key="replaceTextDialog.0.22.1440.874" x="511" y="225" />
+    <location key="#Auto_Import.0.0.1440.900" x="517" y="187" />
+    <location key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes.0.22.1440.874" x="469" y="303" />
+    <location key="NewModule_or_Project.wizard" x="260" y="59" />
+    <location key="OptionsEditor.0.0.1440.900" x="216" y="0" />
+    <location key="#Inspections.0.22.1440.874" x="403" y="107" />
+    <location key="#Plugins" x="308" y="121" />
+    <location key="#com.intellij.codeInsight.template.impl.EditVariableDialog.0.22.1440.874" x="520" y="304" />
+    <location key="com.intellij.testIntegration.createTest.CreateTestDialog.0.22.1440.874" x="716" y="322" />
+    <location key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog.0.22.1440.874" x="439" y="85" />
+    <location key="#Browse_Repositories.0.0.1440.900" x="416" y="84" />
+    <location key="#Project_Structure.0.0.1440.900" x="196" y="17" />
+    <location key="OptionsEditor.0.22.1440.874" x="35" y="22" />
+    <location key="EditParametersPopupWindow.0.22.1440.874" x="0" y="659" />
+    <location key="#com.intellij.openapi.editor.actions.MultiplePasteAction.Chooser.0.0.1440.900" x="558" y="71" />
+    <location key="com.intellij.history.integration.ui.views.FileHistoryDialog.0.22.1440.874" x="100" y="122" />
+    <location key="#Searcher.0.22.1440.874" x="457" y="135" />
+    <location key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog.0.22.1440.874" x="453" y="191" />
+    <location key="ProcessPopupWindow" x="715" y="500" />
+    <location key="#Auto_Import.0.22.1440.874" x="789" y="333" />
+    <location key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog.0.22.1440.874" x="636" y="309" />
+    <location key="#com.intellij.openapi.editor.actions.MultiplePasteAction.Chooser.0.22.1440.874" x="207" y="160" />
+    <location key="#Cpp.0.22.1440.874" x="457" y="266" />
+    <location key="FileChooserDialogImpl.0.22.1440.874" x="521" y="206" />
+    <location key="#Indexer.0.22.1440.874" x="457" y="135" />
+    <location key="#com.intellij.fileTypes.FileTypeChooser.0.22.1440.874" x="679" y="379" />
+    <location key="#Live_Templates.0.22.1440.874" x="26" y="162" />
+    <location key="#Menus_and_Toolbars.0.22.1440.874" x="552" y="174" />
+    <size key="ProcessPopupWindow" width="432" height="288" />
+    <size key="GridCell.Tab.0.left.0.22.1440.874" width="622" height="835" />
+    <size key="javadoc.popup.0.22.1440.874" width="500" height="165" />
+    <size key="GridCell.Tab.0.bottom.0.22.1440.874" width="622" height="835" />
+    <size key="com.intellij.history.integration.ui.views.FileHistoryDialog.0.22.1440.874" width="1240" height="674" />
+    <size key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog.0.22.1440.874" width="700" height="500" />
+    <size key="GridCell.Tab.0.right.0.22.1440.874" width="622" height="835" />
+    <size key="GridCell.Tab.0.center.0.22.1440.874" width="622" height="835" />
+    <extendedState key="com.intellij.history.integration.ui.views.FileHistoryDialog" state="0" />
+    <extendedState key="com.intellij.history.integration.ui.views.FileHistoryDialog.0" state="300" />
+    <extendedState key="com.intellij.history.integration.ui.views.FileHistoryDialog.1" state="500" />
+  </component>
+  <component name="LafManager">
+    <laf class-name="com.apple.laf.AquaLookAndFeel" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="AppServerDKsEditor.splitterProportion" value="0.3" />
+    <property name="FileTemplates.CurrentTab" value="Code" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="ShowDocumentationInToolWindow" value="true" />
+    <property name="SingleInspectionProfilePanel.HORIZONTAL_DIVIDER_PROPORTION" value="0.5" />
+    <property name="file.colors.enable.non.project" value="Yellow" />
+    <property name="project.jdk.splitter" value="0.2" />
+    <property name="RunConfigurable.dividerProportion" value="0.3" />
+    <property name="SingleInspectionProfilePanel.VERTICAL_DIVIDER_PROPORTION" value="0.5" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="KEYMAP" value="Undo&#10;indent&#10;join&#10;selection&#10;search" />
+    <property name="default.storage.format" value=".idea (directory based)" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MoveFile.RECENT_KEYS" value="$USER_HOME$/program/IdeaProjects/codeforces/174a/src&#10;/Users/Aphrodite/program/IdeaProjects/codeforces/174a/" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="INTENTION_FILTER_HISTORY" value="symbol" />
+    <property name="FileTemplates.SelectedTemplate" value="Catch Statement Body" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="Non-Project Files" value="Yellow" />
+    <property name="installation.uid" value="719710e3-4d8e-42b1-860a-769142054daf" />
+    <property name="com.intellij.diagnostic.IdeErrorsDialogactiveTab" value="-1" />
+    <property name="AssociationsEditor.dividerProportion" value="0.3" />
+    <property name="file.colors.enable.tests" value="Green" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Sources" />
+    <property name="Tests" value="Green" />
+    <property name="ColorChooser.RecentColors" value="204-204-204-255,,,204-45-41-255,,,255-255-255-255,,,194-194-194-255,,,194-172-115-255,,,194-165-107-255,,,161-137-89-255,,,59-52-35-255,,,92-81-54-255,,,171-171-171-255,,,33-33-33-255,,,51-51-51-255,,,153-204-255-255,,,255-102-0-255,,,255-204-0-255,,,207-106-76-255,,,0-128-0-255" />
+  </component>
+</application>
+

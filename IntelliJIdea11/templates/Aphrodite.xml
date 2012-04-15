@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Aphrodite">
+  <template name="for" value="for(int $INDEX$ = $START$; $INDEX$ &lt; $STOP$; $INDEX$++) {&#10;  $END$&#10;}" description="Iterate elements of array" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="START" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="STOP" expression="" defaultValue="&quot;MAX&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="fore" value="for(int $INDEX$ = $START$; $INDEX$ &lt;= $STOP$; $INDEX$++) {&#10;  $END$&#10;}" description="Iterate elements of array" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="START" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="STOP" expression="" defaultValue="&quot;MAX&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="fors" value="for(int $INDEX$ = 0; $INDEX$ &lt; $STRING$.length(); $INDEX$++) {&#10;  $END$&#10;}" description="Iterate elements of array" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="STRING" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="OTHER" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="JSP" value="false" />
+      <option name="XML" value="false" />
+      <option name="GSP" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="CSS" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="HTML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="XSL_TEXT" value="false" />
+    </context>
+  </template>
+  <template name="rfors" value="for(int $INDEX$ = $STRiNG$.length() - 1; $INDEX$ &gt;= 0; $INDEX$--) {&#10;  $END$&#10;}" description="Iterate elements of array" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="STRiNG" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="OTHER" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="JSP" value="false" />
+      <option name="XML" value="false" />
+      <option name="GSP" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="CSS" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="HTML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="XSL_TEXT" value="false" />
+    </context>
+  </template>
+  <template name="rfor" value="for(int $INDEX$ = $START$; $INDEX$ &gt; $STOP$; $INDEX$--) {&#10;  $END$&#10;}" description="Iterate elements of array" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="START" expression="" defaultValue="&quot;MAX&quot;" alwaysStopAt="true" />
+    <variable name="STOP" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="rfore" value="for(int $INDEX$ = $START$; $INDEX$ &gt;= $STOP$; $INDEX$--) {&#10;  $END$&#10;}" description="Iterate elements of array" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="START" expression="" defaultValue="&quot;MAX&quot;" alwaysStopAt="true" />
+    <variable name="STOP" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="fora" value="for(int $INDEX$ = 0; $INDEX$ &lt; $ARRAY$.length; $INDEX$++) {&#10;  $END$&#10;}" description="Iterate elements of array" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARRAY" expression="arrayVariable()" defaultValue="&quot;array&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GSP" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="CSS" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="HAML" value="false" />
+    </context>
+  </template>
+  <template name="rfora" value="for(int $INDEX$ = $ARRAY$.length - 1; $INDEX$ &gt;= 0; $INDEX$--) {&#10;  $END$&#10;}" description="Iterate elements of array in reverse order" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARRAY" expression="arrayVariable()" defaultValue="&quot;array&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="forc" value="for ($ELEMENT_TYPE$ $VAR$ : $ITERABLE_TYPE$) {&#10;  $END$&#10;}" description="Iterate Iterable | Array in J2SDK 5.0 syntax" toReformat="true" toShortenFQNames="true">
+    <variable name="ITERABLE_TYPE" expression="iterableVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ELEMENT_TYPE" expression="iterableComponentType(ITERABLE_TYPE)" defaultValue="&quot;java.lang.Object&quot;" alwaysStopAt="false" />
+    <variable name="VAR" expression="suggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="forl" value="for (int $INDEX$ = 0; $INDEX$ &lt; $LIST$.size(); $INDEX$++) {&#10;  $END$&#10;}" description="Iterate elements of java.util.List" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="LIST" expression="variableOfType(&quot;java.util.List&quot;)" defaultValue="&quot;list&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="XML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="SQL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="HTML_TEXT" value="false" />
+    </context>
+  </template>
+  <template name="rforl" value="for (int $INDEX$ = $LIST$.size() - 1; $INDEX$ &gt;= 0; $INDEX$--) {&#10;  $END$&#10;}" description="Iterate elements of java.util.List" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="LIST" expression="variableOfType(&quot;java.util.List&quot;)" defaultValue="&quot;list&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="HAML" value="false" />
+      <option name="XML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="ColdFusion" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="SQL" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="HTML_TEXT" value="false" />
+    </context>
+  </template>
+</templateSet>
+
