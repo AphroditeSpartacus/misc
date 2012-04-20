@@ -43,7 +43,7 @@
     <keyboard-shortcut first-keystroke="control G" />
   </action>
   <action id="CodeCompletion">
-    <keyboard-shortcut first-keystroke="control OPEN_BRACKET" />
+    <keyboard-shortcut first-keystroke="control SEMICOLON" />
   </action>
   <action id="CommanderSwapPanels" />
   <action id="CommentByLineComment">
@@ -255,10 +255,6 @@
   <action id="JumpToLastChange">
     <keyboard-shortcut first-keystroke="shift control BACK_SPACE" />
     <keyboard-shortcut first-keystroke="control X" second-keystroke="control X" />
-  </action>
-  <action id="JumpToLastWindow">
-    <keyboard-shortcut first-keystroke="F12" />
-    <keyboard-shortcut first-keystroke="control SEMICOLON" />
   </action>
   <action id="MethodHierarchy.ImplementMethodAction" />
   <action id="NewElement">
