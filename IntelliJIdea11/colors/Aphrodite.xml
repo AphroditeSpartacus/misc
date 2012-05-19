@@ -10,7 +10,7 @@
     <option name="CARET_ROW_COLOR" value="" />
     <option name="CONSOLE_BACKGROUND_KEY" value="404040" />
     <option name="FILESTATUS_MODIFIED" value="215ee6" />
-    <option name="GUTTER_BACKGROUND" value="424242" />
+    <option name="GUTTER_BACKGROUND" value="323232" />
     <option name="INDENT_GUIDE" value="505050" />
     <option name="LEFT_GUTTER_BACKGROUND" value="8a8a8a" />
     <option name="LINE_NUMBERS_COLOR" value="6da0a1" />
@@ -20,7 +20,8 @@
     <option name="RIGHT_MARGIN_COLOR" value="6b6b6b" />
     <option name="SELECTED_FOLDING_TREE_COLOR" value="32be33" />
     <option name="SELECTED_INDENT_GUIDE" value="6b5656" />
-    <option name="SELECTION_BACKGROUND" value="348d34" />
+    <option name="SELECTION_BACKGROUND" value="212121" />
+    <option name="SELECTION_FOREGROUND" value="" />
     <option name="TEARLINE_COLOR" value="c2c2c2" />
     <option name="WHITESPACES" value="656565" />
   </colors>
@@ -847,7 +848,7 @@
     </option>
     <option name="JAVA_NUMBER">
       <value>
-        <option name="FOREGROUND" value="9bc28e" />
+        <option name="FOREGROUND" value="ff6600" />
         <option name="BACKGROUND" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_COLOR" />
@@ -1467,7 +1468,7 @@
     </option>
     <option name="PY.NUMBER">
       <value>
-        <option name="FOREGROUND" value="9bc28e" />
+        <option name="FOREGROUND" value="ff6600" />
         <option name="BACKGROUND" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_COLOR" />
@@ -1477,7 +1478,7 @@
     </option>
     <option name="PY.OPERATION_SIGN">
       <value>
-        <option name="FOREGROUND" value="ffffff" />
+        <option name="FOREGROUND" value="c8c8c8" />
         <option name="BACKGROUND" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_COLOR" />
@@ -2078,7 +2079,7 @@
     <option name="TEXT">
       <value>
         <option name="FOREGROUND" value="9bc28e" />
-        <option name="BACKGROUND" value="404040" />
+        <option name="BACKGROUND" value="303030" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
