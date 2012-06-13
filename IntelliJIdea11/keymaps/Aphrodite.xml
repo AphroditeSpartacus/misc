@@ -2,6 +2,7 @@
 <keymap version="1" name="Aphrodite" parent="Emacs">
   <action id="$Copy">
     <keyboard-shortcut first-keystroke="meta C" />
+    <keyboard-shortcut first-keystroke="meta W" />
   </action>
   <action id="$Cut">
     <keyboard-shortcut first-keystroke="meta X" />
@@ -18,10 +19,6 @@
   <action id="$Undo">
     <keyboard-shortcut first-keystroke="control SLASH" />
   </action>
-  <action id="ActivateProjectToolWindow">
-    <keyboard-shortcut first-keystroke="alt 1" />
-    <keyboard-shortcut first-keystroke="meta M" />
-  </action>
   <action id="ActivateRunToolWindow">
     <keyboard-shortcut first-keystroke="alt 4" />
     <keyboard-shortcut first-keystroke="meta 4" />
@@ -31,6 +28,7 @@
   </action>
   <action id="ClassNameCompletion">
     <keyboard-shortcut first-keystroke="control meta OPEN_BRACKET" />
+    <keyboard-shortcut first-keystroke="control meta SEMICOLON" />
   </action>
   <action id="CloseActiveTab">
     <keyboard-shortcut first-keystroke="shift control F4" />
@@ -65,6 +63,7 @@
   </action>
   <action id="Editor Copy">
     <keyboard-shortcut first-keystroke="meta C" />
+    <keyboard-shortcut first-keystroke="meta W" />
   </action>
   <action id="Editor Cut">
     <keyboard-shortcut first-keystroke="meta X" />
@@ -104,6 +103,7 @@
   </action>
   <action id="EditorCopy">
     <keyboard-shortcut first-keystroke="meta C" />
+    <keyboard-shortcut first-keystroke="meta W" />
   </action>
   <action id="EditorCutLineBackward" />
   <action id="EditorDeleteLine">
@@ -210,6 +210,10 @@
   <action id="EmacsStyleIndent">
     <keyboard-shortcut first-keystroke="control I" />
   </action>
+  <action id="ExecuteInPyConsoleAction">
+    <keyboard-shortcut first-keystroke="shift alt E" />
+    <keyboard-shortcut first-keystroke="shift meta R" />
+  </action>
   <action id="Find">
     <keyboard-shortcut first-keystroke="control S" />
   </action>
@@ -256,9 +260,16 @@
     <keyboard-shortcut first-keystroke="shift control BACK_SPACE" />
     <keyboard-shortcut first-keystroke="control X" second-keystroke="control X" />
   </action>
+  <action id="JumpToLastWindow">
+    <keyboard-shortcut first-keystroke="F12" />
+    <keyboard-shortcut first-keystroke="control QUOTE" />
+  </action>
   <action id="MethodHierarchy.ImplementMethodAction" />
   <action id="NewElement">
     <keyboard-shortcut first-keystroke="control X" second-keystroke="control N" />
+  </action>
+  <action id="NewPythonFile">
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="P" />
   </action>
   <action id="NextParameter">
     <keyboard-shortcut first-keystroke="control I" />
@@ -291,6 +302,7 @@
   </action>
   <action id="QuickDocCopy">
     <keyboard-shortcut first-keystroke="meta C" />
+    <keyboard-shortcut first-keystroke="meta W" />
   </action>
   <action id="QuickJavaDoc">
     <mouse-shortcut keystroke="alt button2" />
@@ -340,5 +352,8 @@
   </action>
   <action id="TypeHierarchy" />
   <action id="Vcs.UpdateProject" />
+  <action id="com.jetbrains.python.console.RunPythonConsoleAction">
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="shift P" />
+  </action>
 </keymap>
 
