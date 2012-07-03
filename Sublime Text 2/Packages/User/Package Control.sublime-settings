@@ -1,0 +1,11 @@
+{
+	"auto_upgrade_last_run": 1341226221,
+	"installed_packages":
+	[
+		"Package Control",
+		"sublemacspro",
+		"SublimeCodeIntel",
+		"sublimelint",
+		"SublimeRope"
+	]
+}
