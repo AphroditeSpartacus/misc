@@ -1,5 +1,8 @@
 {
+	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"dictionary": "Packages/Language - English/en_US.dic",
 	"font_size": 15,
+	"auto_complete": false,
 	"ignored_packages":
 	[
 		"Vintage",

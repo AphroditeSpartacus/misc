@@ -1,8 +1,9 @@
 {
-	"auto_upgrade_last_run": 1341226221,
+	"auto_upgrade_last_run": 1341287010,
 	"installed_packages":
 	[
 		"Package Control",
+		"SFTP",
 		"sublemacspro",
 		"SublimeCodeIntel",
 		"sublimelint",
