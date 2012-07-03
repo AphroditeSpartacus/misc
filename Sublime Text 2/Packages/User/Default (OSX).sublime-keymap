@@ -1,4 +1,6 @@
 [
+	{ "keys": ["super+q"], "command": "noop" },
+
 	{ "keys": ["ctrl+j"], "command": "insert", "args": {"characters": "\n"} },
 	{ "keys": ["ctrl+j"], "command": "commit_completion", "context":
 		[
@@ -170,8 +172,6 @@
 		]
 	},
 
-	{ "keys": ["ctrl+super+p"], "command": "move", "args": {"by": "lines", "forward": false, "extend": true} },
-	{ "keys": ["ctrl+super+n"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true} },
 	{ "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true}, "context": 
 		[
 			{ "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
