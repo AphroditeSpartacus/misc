@@ -12,6 +12,8 @@ keycode 23 = apostrophe quotedbl
 keycode 105 = Alt_R
 keycode 108 = Tab
 add Control = Control_R
+! remove Tab in mod1
+remove mod1 = Tab
 
 ! orig: 37: Control_L 66: Caps_Lock
 remove Control = Control_L
