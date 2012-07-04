@@ -1,6 +1,9 @@
 [
 	{ "keys": ["super+q"], "command": "noop" },
 
+	{ "keys": ["super+ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
+	{ "keys": ["super+shift+ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line Before.sublime-macro"} },
+
 	{ "keys": ["ctrl+j"], "command": "insert", "args": {"characters": "\n"} },
 	{ "keys": ["ctrl+j"], "command": "commit_completion", "context":
 		[
@@ -24,17 +27,47 @@
 			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\}", "match_all": true }
 		]
 	},
-	// { "keys": ["ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
 
-	// { "keys": ["super+u"], "command": "expand_selection", "args": {"to": "line"} },
-	// { "keys": ["super+s"], "command": "expand_selection", "args": {"to": "scope"} },
+	// Find panel key bindings
+	{ "keys": ["ctrl+j"], "command": "find_next", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+ctrl+j"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["alt+ctrl+j"], "command": "find_all", "args": {"close_panel": true},
+		 "context": [{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+
+	// Replace panel key bindings
+	{ "keys": ["ctrl+j"], "command": "find_next", "context":
+		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+ctrl+j"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["alt+ctrl+j"], "command": "find_all", "args": {"close_panel": true},
+		"context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+alt+ctrl+j"], "command": "replace_all", "args": {"close_panel": true},
+		 "context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+
+	// Incremental find panel key bindings
+	{ "keys": ["ctrl+j"], "command": "hide_panel", "context":
+		[{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["shift+ctrl+j"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["alt+ctrl+j"], "command": "find_all", "args": {"close_panel": true},
+		"context": [{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
+	},
+
 	{ "keys": ["super+s"], "command": "slurp_find_string" },
 
 	{ "keys": ["ctrl+super+s"], "command": "find_under_expand" },
 	{ "keys": ["ctrl+super+shift+s"], "command": "find_under_expand_skip" },
-
-	// { "keys": ["ctrl+i"], "command": "indent" },
-	// { "keys": ["ctrl+super+i"], "command": "unindent" },
 
 	{ "keys": ["ctrl+i"], "command": "insert_best_completion", "args": {"default": "\t", "exact": true} },
 	{ "keys": ["ctrl+i"], "command": "insert_best_completion", "args": {"default": "\t", "exact": false},
@@ -96,7 +129,7 @@
 		]
 	},
 
-
+	{ "keys": ["ctrl+super+y"], "command": "paste_and_indent" },
 
 	{ "keys": ["super+v"], "command": "move", "args": {"by": "pages", "forward": false} },
 
