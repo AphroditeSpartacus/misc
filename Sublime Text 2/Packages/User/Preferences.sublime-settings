@@ -1,13 +1,13 @@
 {
+	"auto_complete": false,
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"font_size": 15,
-	"auto_complete": false,
-    "trim_trailing_white_space_on_save": true,
 	"ignored_packages":
 	[
 		"Vintage",
 		"SublimeCodeIntel",
 		"sublimelint"
-	]
+	],
+	"trim_trailing_white_space_on_save": true
 }

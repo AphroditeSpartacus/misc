@@ -129,7 +129,10 @@
 		]
 	},
 
-	{ "keys": ["ctrl+super+y"], "command": "paste_and_indent" },
+	{ "keys": ["super+i"], "command": "reindent" },
+
+	{ "keys": ["ctrl+y"], "command": "paste_and_indent" },
+	{ "keys": ["ctrl+super+y"], "command": "paste" },
 
 	{ "keys": ["super+v"], "command": "move", "args": {"by": "pages", "forward": false} },
 
@@ -206,12 +209,12 @@
 		]
 	},
 
-	{ "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true}, "context": 
+	{ "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true}, "context":
 		[
 			{ "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
 		]
 	},
-	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false, "extend": true}, "context": 
+	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false, "extend": true}, "context":
 		[
 			{ "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
 		]
@@ -263,7 +266,119 @@
 		]
 	},
 
+	{ "keys": ["ctrl+super+1"], "command": "focus_group", "args": { "group": 0 } },
+	{ "keys": ["ctrl+super+2"], "command": "focus_group", "args": { "group": 1 } },
+	{ "keys": ["ctrl+super+3"], "command": "focus_group", "args": { "group": 2 } },
+	{ "keys": ["ctrl+super+4"], "command": "focus_group", "args": { "group": 3 } },
+
+	///////////////////// REPL keymap start ///////////////////////
+	{ "keys": ["ctrl+p"], "command": "repl_view_previous",
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+n"], "command": "repl_view_next",
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+j"], "command": "repl_enter", "args": {},
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true },
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": false }
+		]
+	},
+	{ "keys": ["ctrl+g"], "command": "repl_escape", "args": {},
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+h"], "command": "repl_backspace", "args": {},
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+b"], "command": "repl_left", "args": {},
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+a"], "command": "repl_home", "args": {},
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["shift+ctrl+b"], "command": "repl_shift_left", "args": {},
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["shift+ctrl+a"], "command": "repl_shift_home", "args": {},
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+l"], "command": "repl_clear",
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true }
+		]
+	},
+
+	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 	{ "keys": ["ctrl+x", "super+r"], "command": "show_panel", "args": {"panel": "replace"} },
 
-	{ "keys": ["super+r"], "command": "build" }
+	{"keys": ["super+r"],
+	 "command": "repl_open",
+	 "caption": "Python - RUN current file",
+	 "id": "repl_python_run",
+	 "mnemonic": "d",
+	 "args": {
+	    "type": "subprocess",
+	    "encoding": "utf8",
+	    "cmd": ["python", "-u", "$file_basename"],
+	    "cwd": "$file_path",
+	    "syntax": "Packages/Python/Python.tmLanguage",
+	    "external_id": "python"
+	    }
+	},
+	{"keys": ["ctrl+super+r"],
+	 "command": "repl_open",
+	 "caption": "Python - PDB current file",
+	 "id": "repl_python_pdb",
+	 "mnemonic": "d",
+	 "args": {
+	    "type": "subprocess",
+	    "encoding": "utf8",
+	    "cmd": ["python", "-i", "-u", "-m", "pdb", "$file_basename"],
+	    "cwd": "$file_path",
+	    "syntax": "Packages/Python/Python.tmLanguage",
+	    "external_id": "python"
+	    }
+	},
+	{"keys": ["ctrl+x", "p"],
+	 "command": "repl_open",
+	 "caption": "Python",
+	 "id": "repl_python",
+	 "mnemonic": "p",
+	 "args": {
+	    "type": "subprocess",
+	    "encoding": "utf8",
+	    "cmd": ["python", "-i", "-u"],
+	    "cwd": "$file_path",
+	    "syntax": "Packages/Python/Python.tmLanguage",
+	    "external_id": "python"
+	    }
+	}
+	///////////////////// REPL keymap start ///////////////////////
 ]
