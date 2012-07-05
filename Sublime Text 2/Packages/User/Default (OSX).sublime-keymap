@@ -379,6 +379,14 @@
 	    "syntax": "Packages/Python/Python.tmLanguage",
 	    "external_id": "python"
 	    }
-	}
-	///////////////////// REPL keymap start ///////////////////////
+	},
+	///////////////////// REPL keymap end ///////////////////////
+
+	///////////////////// SFTP keymap start ///////////////////////
+	{ "keys": ["super+ctrl+n","super+ctrl+s"], "command": "sftp_create_server" },
+	{ "keys": ["super+ctrl+n","super+ctrl+b"], "command": "sftp_browse_server" },
+	{ "keys": ["super+ctrl+n","super+ctrl+n"], "command": "sftp_last_server" },
+	{ "keys": ["super+ctrl+n","super+ctrl+e"], "command": "sftp_edit_server" },
+	{ "keys": ["super+ctrl+n","super+ctrl+d"], "command": "sftp_delete_server" }
+	///////////////////// SFTP keymap end ///////////////////////
 ]
