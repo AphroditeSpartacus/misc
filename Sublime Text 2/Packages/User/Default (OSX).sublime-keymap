@@ -82,6 +82,7 @@
 			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
 		]
 	},
+
 	{ "keys": ["ctrl+i"], "command": "reindent", "context":
 		[
 			{ "key": "setting.auto_indent", "operator": "equal", "operand": true },
@@ -131,6 +132,19 @@
 
 	{ "keys": ["super+i"], "command": "reindent" },
 
+	{ "keys": ["super+/"], "command": "insert_best_completion", "args": {"exact": false},
+		"context":
+		[
+			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["super+/"], "command": "replace_completion_with_next_completion", "context":
+		[
+			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
+		]
+	},
+
 	{ "keys": ["ctrl+y"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+super+y"], "command": "paste" },
 
@@ -156,15 +170,6 @@
 
 	{ "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true, "text" : ":"}},
 	{ "keys": ["ctrl+super+g"], "command": "show_overlay", "args": {"overlay":"goto", "show_files" : false, "text": "@"}},
-
-	{ "keys": ["super+/"], "command": "auto_complete" },
-	{ "keys": ["super+/"], "command": "replace_completion_with_auto_complete", "context":
-		[
-			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
-			{ "key": "auto_complete_visible", "operator": "equal", "operand": false },
-			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
-		]
-	},
 
 	{ "keys": ["ctrl+o"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line Before.sublime-macro"} },
 
@@ -225,15 +230,6 @@
 
 	{ "keys": ["ctrl+super+k"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
 
-	{ "keys": ["ctrl+;"], "command": "auto_complete" },
-	{ "keys": ["ctrl+;"], "command": "replace_completion_with_auto_complete", "context":
-		[
-			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
-			{ "key": "auto_complete_visible", "operator": "equal", "operand": false },
-			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
-		]
-	},
-
 	{ "keys": ["ctrl+g"], "command": "single_selection", "context":
 		[
 			{ "key": "num_selections", "operator": "not_equal", "operand": 1 }
@@ -270,6 +266,21 @@
 	{ "keys": ["ctrl+super+2"], "command": "focus_group", "args": { "group": 1 } },
 	{ "keys": ["ctrl+super+3"], "command": "focus_group", "args": { "group": 2 } },
 	{ "keys": ["ctrl+super+4"], "command": "focus_group", "args": { "group": 3 } },
+
+	{ "keys": ["super+ctrl+;"], "command": "auto_complete" },
+	{ "keys": ["super+ctrl+;"], "command": "replace_completion_with_auto_complete", "context":
+		[
+			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": false },
+			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
+		]
+	},
+
+	///////////////////// SublimeCodeIntel keymap start ///////////////////////
+	{ "keys": ["ctrl+;"], "command": "code_intel_auto_complete" },
+	{ "keys": ["ctrl+x","ctrl+d"], "command": "goto_python_definition" },
+	{ "keys": ["super+alt+ctrl+left"], "command": "back_to_python_definition"},
+	///////////////////// SublimeCodeIntel keymap end ///////////////////////
 
 	///////////////////// REPL keymap start ///////////////////////
 	{ "keys": ["ctrl+p"], "command": "repl_view_previous",
@@ -387,6 +398,25 @@
 	{ "keys": ["super+ctrl+n","super+ctrl+b"], "command": "sftp_browse_server" },
 	{ "keys": ["super+ctrl+n","super+ctrl+n"], "command": "sftp_last_server" },
 	{ "keys": ["super+ctrl+n","super+ctrl+e"], "command": "sftp_edit_server" },
-	{ "keys": ["super+ctrl+n","super+ctrl+d"], "command": "sftp_delete_server" }
+	{ "keys": ["super+ctrl+n","super+ctrl+d"], "command": "sftp_delete_server" },
+
+	{ "keys": ["super+ctrl+u","super+ctrl+f"], "command": "sftp_upload_file" },
+	{ "keys": ["super+ctrl+u","super+ctrl+r"], "command": "sftp_upload_folder" },
+	{ "keys": ["super+ctrl+u","super+ctrl+y"], "command": "sftp_sync_up" },
+	{ "keys": ["super+ctrl+u","super+ctrl+n"], "command": "sftp_upload_open_files" },
+	{ "keys": ["super+ctrl+u","super+ctrl+m"], "command": "sftp_monitor_file" },
+
+	{ "keys": ["super+ctrl+u","super+ctrl+o"], "command": "sftp_download_file" },
+	{ "keys": ["super+ctrl+u","super+ctrl+e"], "command": "sftp_download_folder" },
+	{ "keys": ["super+ctrl+u","super+ctrl+d"], "command": "sftp_sync_down" },
+	{ "keys": ["super+ctrl+u","super+ctrl+i"], "command": "sftp_diff_remote_file" },
+
+	{ "keys": ["super+ctrl+u","super+ctrl+b"], "command": "sftp_sync_both" },
+	{ "keys": ["super+ctrl+u","super+ctrl+c"], "command": "sftp_vcs_changed_files" },
+
+	{ "keys": ["super+ctrl+u","super+ctrl+w"], "command": "sftp_browse" },
+
+	{ "keys": ["super+ctrl+u","super+ctrl+s"], "command": "sftp_show_panel" },
+	{ "keys": ["super+ctrl+u","super+ctrl+x"], "command": "sftp_cancel_upload" }
 	///////////////////// SFTP keymap end ///////////////////////
 ]
