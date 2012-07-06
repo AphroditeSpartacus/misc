@@ -349,7 +349,7 @@
 
 	{ "keys": ["ctrl+x", "super+r"], "command": "show_panel", "args": {"panel": "replace"} },
 
-	{"keys": ["super+r"],
+	{"keys": ["ctrl+super+r"],
 	 "command": "repl_open",
 	 "caption": "Python - RUN current file",
 	 "id": "repl_python_run",
@@ -363,35 +363,37 @@
 	    "external_id": "python"
 	    }
 	},
-	{"keys": ["ctrl+super+r"],
-	 "command": "repl_open",
-	 "caption": "Python - PDB current file",
-	 "id": "repl_python_pdb",
-	 "mnemonic": "d",
-	 "args": {
-	    "type": "subprocess",
-	    "encoding": "utf8",
-	    "cmd": ["python", "-i", "-u", "-m", "pdb", "$file_basename"],
-	    "cwd": "$file_path",
-	    "syntax": "Packages/Python/Python.tmLanguage",
-	    "external_id": "python"
-	    }
-	},
-	{"keys": ["ctrl+x", "p"],
-	 "command": "repl_open",
-	 "caption": "Python",
-	 "id": "repl_python",
-	 "mnemonic": "p",
-	 "args": {
-	    "type": "subprocess",
-	    "encoding": "utf8",
-	    "cmd": ["python", "-i", "-u"],
-	    "cwd": "$file_path",
-	    "syntax": "Packages/Python/Python.tmLanguage",
-	    "external_id": "python"
-	    }
-	},
+	// {"keys": ["ctrl+super+r"],
+	//  "command": "repl_open",
+	//  "caption": "Python - PDB current file",
+	//  "id": "repl_python_pdb",
+	//  "mnemonic": "d",
+	//  "args": {
+	//     "type": "subprocess",
+	//     "encoding": "utf8",
+	//     "cmd": ["python", "-i", "-u", "-m", "pdb", "$file_basename"],
+	//     "cwd": "$file_path",
+	//     "syntax": "Packages/Python/Python.tmLanguage",
+	//     "external_id": "python"
+	//     }
+	// },
+	// {"keys": ["ctrl+x", "p"],
+	//  "command": "repl_open",
+	//  "caption": "Python",
+	//  "id": "repl_python",
+	//  "mnemonic": "p",
+	//  "args": {
+	//     "type": "subprocess",
+	//     "encoding": "utf8",
+	//     "cmd": ["python", "-i", "-u"],
+	//     "cwd": "$file_path",
+	//     "syntax": "Packages/Python/Python.tmLanguage",
+	//     "external_id": "python"
+	//     }
+	// },
 	///////////////////// REPL keymap end ///////////////////////
+
+	{ "keys": ["super+r"], "command": "build" },
 
 	///////////////////// SFTP keymap start ///////////////////////
 	{ "keys": ["super+ctrl+n","super+ctrl+s"], "command": "sftp_create_server" },
