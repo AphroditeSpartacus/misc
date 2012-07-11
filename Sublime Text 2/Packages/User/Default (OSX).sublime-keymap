@@ -1,10 +1,11 @@
 [
 	{ "keys": ["super+q"], "command": "noop" },
 
+	{ "keys": ["ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
 	{ "keys": ["super+ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
 	{ "keys": ["super+shift+ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line Before.sublime-macro"} },
 
-	{ "keys": ["ctrl+j"], "command": "insert", "args": {"characters": "\n"} },
+	{ "keys": ["ctrl+super+j"], "command": "insert", "args": {"characters": "\n"} },
 	{ "keys": ["ctrl+j"], "command": "commit_completion", "context":
 		[
 			{ "key": "auto_complete_visible" },
@@ -308,6 +309,12 @@
 			{ "key": "setting.repl", "operator": "equal", "operand": true }
 		]
 	},
+	{ "keys": ["ctrl+u"], "command": "repl_escape", "args": {},
+	"context":
+		[
+			{ "key": "setting.repl", "operator": "equal", "operand": true }
+		]
+	},
 	{ "keys": ["ctrl+h"], "command": "repl_backspace", "args": {},
 	"context":
 		[
@@ -346,8 +353,6 @@
 	},
 
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-	{ "keys": ["ctrl+x", "super+r"], "command": "show_panel", "args": {"panel": "replace"} },
 
 	{"keys": ["ctrl+super+r"],
 	 "command": "repl_open",
@@ -393,6 +398,7 @@
 	// },
 	///////////////////// REPL keymap end ///////////////////////
 
+	{ "keys": ["ctrl+x", "super+r"], "command": "show_panel", "args": {"panel": "replace"} },
 	{ "keys": ["super+r"], "command": "build" },
 
 	///////////////////// SFTP keymap start ///////////////////////
