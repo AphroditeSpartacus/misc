@@ -10,10 +10,11 @@
 		"Vintage",
 		"Emacs-like Modelines",
 		"IPython Integration",
-		"sublimelint",
-		"SublimeRope"
+		"SublimeRope",
+		"SublimeLinter"
 	],
 	"open_files_in_new_window": false,
+	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
