@@ -69,6 +69,9 @@
 
 	{ "keys": ["ctrl+super+s"], "command": "find_under_expand" },
 	{ "keys": ["ctrl+super+shift+s"], "command": "find_under_expand_skip" },
+	{ "keys": ["ctrl+super+9"], "command": "expand_selection", "args": {"to": "scope"} },
+	{ "keys": ["ctrl+super+0"], "command": "expand_selection", "args": {"to": "brackets"} },
+	{ "keys": ["ctrl+super+b"], "command": "move_to", "args": {"to": "brackets"} },
 
 	{ "keys": ["ctrl+i"], "command": "insert_best_completion", "args": {"default": "\t", "exact": true} },
 	{ "keys": ["ctrl+i"], "command": "insert_best_completion", "args": {"default": "\t", "exact": false},
@@ -260,6 +263,11 @@
 	{ "keys": ["ctrl+g"], "command": "hide_auto_complete", "context":
 		[
 			{ "key": "auto_complete_visible", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+g"], "command": "sbp_cancel_mark", "context":
+		[
+	    	{ "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
 		]
 	},
 
