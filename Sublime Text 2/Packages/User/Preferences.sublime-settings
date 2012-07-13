@@ -15,6 +15,7 @@
 	],
 	"open_files_in_new_window": false,
 	"theme": "Soda Dark.sublime-theme",
+	"highlight_modified_tabs": true,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
