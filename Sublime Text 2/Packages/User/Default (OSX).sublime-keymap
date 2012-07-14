@@ -61,7 +61,7 @@
 	{ "keys": ["shift+ctrl+j"], "command": "find_prev", "context":
 		[{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
 	},
-	{ "keys": ["alt+ctrl+j"], "command": "find_all", "args": {"close_panel": true},
+	{ "keys": ["super+ctrl+j"], "command": "find_all", "args": {"close_panel": true},
 		"context": [{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
 	},
 
