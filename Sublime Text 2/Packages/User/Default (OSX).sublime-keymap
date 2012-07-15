@@ -1,6 +1,7 @@
 [
 	{ "keys": ["super+q"], "command": "noop" },
 
+	///////////////////// j related keymap start ///////////////////////
 	{ "keys": ["ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
 	{ "keys": ["ctrl+super+j"], "command": "insert", "args": {"characters": "\n"} },
 
@@ -18,8 +19,6 @@
 			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\}", "match_all": true }
 		]
 	},
-
-	{ "keys": ["ctrl+o"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line Before.sublime-macro"} },
 
 	// Find panel key bindings
 	{ "keys": ["ctrl+j"], "command": "find_next", "context":
@@ -39,10 +38,10 @@
 	{ "keys": ["ctrl+shift+j"], "command": "find_prev", "context":
 		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
 	},
-	{ "keys": ["alt+ctrl+j"], "command": "find_all", "args": {"close_panel": true},
+	{ "keys": ["ctrl+super+j"], "command": "find_all", "args": {"close_panel": true},
 		"context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
 	},
-	{ "keys": ["shift+alt+ctrl+j"], "command": "replace_all", "args": {"close_panel": true},
+	{ "keys": ["ctrl+shift+super+j"], "command": "replace_all", "args": {"close_panel": true},
 		 "context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
 	},
 
@@ -56,42 +55,13 @@
 	{ "keys": ["ctrl+super+j"], "command": "find_all", "args": {"close_panel": true},
 		"context": [{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
 	},
+	///////////////////// j related keymap end ///////////////////////
 
-	{ "keys": ["super+s"], "command": "slurp_find_string" },
+	{ "keys": ["ctrl+o"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line Before.sublime-macro"} },
 
-	{ "keys": ["ctrl+super+s"], "command": "find_under_expand" },
-	{ "keys": ["ctrl+shift+super+s"], "command": "find_under_expand_skip" },
-	{ "keys": ["ctrl+super+9"], "command": "expand_selection", "args": {"to": "scope"} },
-	{ "keys": ["ctrl+super+0"], "command": "expand_selection", "args": {"to": "brackets"} },
-	{ "keys": ["ctrl+super+b"], "command": "move_to", "args": {"to": "brackets"} },
+	///////////////////// i related keymap start ///////////////////////
+	{ "keys": ["ctrl+i"], "command": "insert_best_completion", "args": {"exact": true} },
 
-	{ "keys": ["ctrl+i"], "command": "insert_best_completion", "args": {"default": "\t", "exact": true} },
-	{ "keys": ["ctrl+i"], "command": "insert_best_completion", "args": {"default": "\t", "exact": false},
-		"context":
-		[
-			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
-		]
-	},
-	{ "keys": ["ctrl+i"], "command": "replace_completion_with_next_completion", "context":
-		[
-			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
-			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
-		]
-	},
-
-	{ "keys": ["ctrl+i"], "command": "reindent", "context":
-		[
-			{ "key": "setting.auto_indent", "operator": "equal", "operand": true },
-			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-			{ "key": "preceding_text", "operator": "regex_match", "operand": "^$", "match_all": true },
-			{ "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true }
-		]
-	},
-	{ "keys": ["ctrl+i"], "command": "indent", "context":
-		[
-			{ "key": "text", "operator": "regex_contains", "operand": "\n" }
-		]
-	},
 	{ "keys": ["ctrl+i"], "command": "next_field", "context":
 		[
 			{ "key": "has_next_field", "operator": "equal", "operand": true }
@@ -99,47 +69,44 @@
 	},
 	{ "keys": ["ctrl+i"], "command": "commit_completion", "context":
 		[
-			{ "key": "auto_complete_visible" },
-			{ "key": "setting.auto_complete_commit_on_ctrl+i" }
+			{ "key": "auto_complete_visible" }
 		]
 	},
 
-	{ "keys": ["ctrl+super+i"], "command": "insert", "args": {"characters": "\t"} },
-	{ "keys": ["ctrl+super+i"], "command": "unindent", "context":
-		[
-			{ "key": "setting.shift_tab_unindent", "operator": "equal", "operand": true }
-		]
-	},
-	{ "keys": ["ctrl+super+i"], "command": "unindent", "context":
-		[
-			{ "key": "preceding_text", "operator": "regex_match", "operand": "^[\t ]*" }
-		]
-	},
-	{ "keys": ["ctrl+super+i"], "command": "unindent", "context":
-		[
-			{ "key": "text", "operator": "regex_contains", "operand": "\n" }
-		]
-	},
+	{ "keys": ["super+i"], "command": "insert", "args": {"characters": "\t"} },
+
+	{ "keys": ["ctrl+super+i"], "command": "reindent" },
 	{ "keys": ["ctrl+super+i"], "command": "prev_field", "context":
 		[
 			{ "key": "has_prev_field", "operator": "equal", "operand": true }
 		]
 	},
+	///////////////////// i related keymap end ///////////////////////
 
-	{ "keys": ["super+i"], "command": "reindent" },
-
-	{ "keys": ["super+/"], "command": "insert_best_completion", "args": {"exact": false},
-		"context":
-		[
-			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
-		]
-	},
+	{ "keys": ["super+/"], "command": "insert_best_completion", "args": {"exact": false} },
 	{ "keys": ["super+/"], "command": "replace_completion_with_next_completion", "context":
 		[
-			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
-			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
+			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" }
 		]
 	},
+
+	{ "keys": ["ctrl+super+;"], "command": "auto_complete" },
+
+	///////////////////// SublimeCodeIntel keymap start ///////////////////////
+	{ "keys": ["ctrl+;"], "command": "code_intel_auto_complete" },
+	{ "keys": ["ctrl+x","ctrl+d"], "command": "goto_python_definition" },
+	{ "keys": ["ctrl+shift+super+left"], "command": "back_to_python_definition"},
+	///////////////////// SublimeCodeIntel keymap end ///////////////////////
+
+	///////////////////// expand keymap start ///////////////////////
+	{ "keys": ["super+s"], "command": "slurp_find_string" },
+
+	{ "keys": ["ctrl+super+s"], "command": "find_under_expand" },
+	{ "keys": ["ctrl+shift+super+s"], "command": "find_under_expand_skip" },
+	{ "keys": ["ctrl+super+9"], "command": "expand_selection", "args": {"to": "scope"} },
+	{ "keys": ["ctrl+super+0"], "command": "expand_selection", "args": {"to": "brackets"} },
+	{ "keys": ["ctrl+super+b"], "command": "move_to", "args": {"to": "brackets"} },
+	///////////////////// expand keymap end ///////////////////////
 
 	{ "keys": ["ctrl+y"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+super+y"], "command": "paste" },
@@ -160,7 +127,7 @@
 	{ "keys": ["ctrl+super+h"], "command": "delete_word", "args": { "forward": false, "sub_words": true } },
 
 	{ "keys": ["super+;"], "command": "toggle_comment", "args": { "block": false } },
-	{ "keys": ["super+alt+;"], "command": "toggle_comment", "args": { "block": true } },
+	{ "keys": ["shift+super+;"], "command": "toggle_comment", "args": { "block": true } },
 
 	{ "keys": ["ctrl+super+/"], "command": "redo"},
 
@@ -271,15 +238,6 @@
 	{ "keys": ["ctrl+super+3"], "command": "focus_group", "args": { "group": 2 } },
 	{ "keys": ["ctrl+super+4"], "command": "focus_group", "args": { "group": 3 } },
 
-	{ "keys": ["ctrl+super+;"], "command": "auto_complete" },
-	{ "keys": ["ctrl+super+;"], "command": "replace_completion_with_auto_complete", "context":
-		[
-			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
-			{ "key": "auto_complete_visible", "operator": "equal", "operand": false },
-			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
-		]
-	},
-
 	// bookmark
 	{ "keys": ["ctrl+x", "b"], "command": "noop" },
 	{ "keys": ["ctrl+x", "b", "n"], "command": "next_bookmark" },
@@ -312,12 +270,6 @@
 			{ "key": "following_text", "operator": "regex_contains", "operand": "^'", "match_all": true }
 		]
 	},
-
-	///////////////////// SublimeCodeIntel keymap start ///////////////////////
-	{ "keys": ["ctrl+;"], "command": "code_intel_auto_complete" },
-	{ "keys": ["ctrl+x","ctrl+d"], "command": "goto_python_definition" },
-	{ "keys": ["super+alt+ctrl+left"], "command": "back_to_python_definition"},
-	///////////////////// SublimeCodeIntel keymap end ///////////////////////
 
 	///////////////////// REPL keymap start ///////////////////////
 	{ "keys": ["ctrl+p"], "command": "repl_view_previous",
@@ -404,34 +356,6 @@
 	    "external_id": "python"
 	    }
 	},
-	// {"keys": ["ctrl+super+r"],
-	//  "command": "repl_open",
-	//  "caption": "Python - PDB current file",
-	//  "id": "repl_python_pdb",
-	//  "mnemonic": "d",
-	//  "args": {
-	//     "type": "subprocess",
-	//     "encoding": "utf8",
-	//     "cmd": ["python", "-i", "-u", "-m", "pdb", "$file_basename"],
-	//     "cwd": "$file_path",
-	//     "syntax": "Packages/Python/Python.tmLanguage",
-	//     "external_id": "python"
-	//     }
-	// },
-	// {"keys": ["ctrl+x", "p"],
-	//  "command": "repl_open",
-	//  "caption": "Python",
-	//  "id": "repl_python",
-	//  "mnemonic": "p",
-	//  "args": {
-	//     "type": "subprocess",
-	//     "encoding": "utf8",
-	//     "cmd": ["python", "-i", "-u"],
-	//     "cwd": "$file_path",
-	//     "syntax": "Packages/Python/Python.tmLanguage",
-	//     "external_id": "python"
-	//     }
-	// },
 	///////////////////// REPL keymap end ///////////////////////
 
 	{ "keys": ["ctrl+x", "super+r"], "command": "show_panel", "args": {"panel": "replace"} },
