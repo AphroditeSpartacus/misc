@@ -2,20 +2,21 @@
 	"auto_complete": false,
 	"caret_style": "solid",
 	"codeintel_live": false,
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"color_scheme": "Packages/User/Aphrodite.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"font_size": 15.0,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Vintage",
-		"Emacs-like Modelines",
 		"IPython Integration",
-		"SublimeRope",
-		"SublimeLinter"
+		"SublimeLinter",
+		"Emacs-like Modelines",
+		"SublimeCodeIntel"
 	],
 	"open_files_in_new_window": false,
+	"tabSize": 4,
 	"theme": "Soda Dark.sublime-theme",
-	"highlight_modified_tabs": true,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }

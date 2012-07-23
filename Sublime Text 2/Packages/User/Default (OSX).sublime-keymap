@@ -1,5 +1,6 @@
 [
 	{ "keys": ["super+q"], "command": "noop" },
+	{ "keys": ["super+h"], "command": "noop" },
 	{ "keys": ["super+n"], "command": "noop" },
 	{ "keys": ["ctrl+x", "ctrl+n"], "command": "new_file" },
 
@@ -97,12 +98,12 @@
 		]
 	},
 
-	{ "keys": ["ctrl+super+;"], "command": "auto_complete" },
+	{ "keys": ["ctrl+;"], "command": "auto_complete" },
 
 	///////////////////// SublimeCodeIntel keymap start ///////////////////////
-	{ "keys": ["ctrl+;"], "command": "code_intel_auto_complete" },
-	{ "keys": ["ctrl+x","ctrl+d"], "command": "goto_python_definition" },
-	{ "keys": ["ctrl+shift+super+left"], "command": "back_to_python_definition"},
+	// { "keys": ["ctrl+;"], "command": "code_intel_auto_complete" },
+	// { "keys": ["ctrl+x","ctrl+d"], "command": "goto_python_definition" },
+	// { "keys": ["ctrl+shift+super+left"], "command": "back_to_python_definition"},
 	///////////////////// SublimeCodeIntel keymap end ///////////////////////
 
 	///////////////////// expand keymap start ///////////////////////
@@ -462,6 +463,55 @@
 	{ "keys": ["ctrl+super+u","ctrl+super+w"], "command": "sftp_browse" },
 
 	{ "keys": ["ctrl+super+u","ctrl+super+s"], "command": "sftp_show_panel" },
-	{ "keys": ["ctrl+super+u","ctrl+super+x"], "command": "sftp_cancel_upload" }
+	{ "keys": ["ctrl+super+u","ctrl+super+x"], "command": "sftp_cancel_upload" },
 	///////////////////// SFTP keymap end ///////////////////////
+
+	///////////////////// SublimeRope keymap start ///////////////////////
+	{ "keys": ["ctrl+u", "ctrl+d"], "command": "goto_python_definition", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+h"], "command": "python_get_documentation", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+r"], "command": "python_refactor_rename", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+e"], "command": "python_refactor_extract_method", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+v"], "command": "python_refactor_extract_variable", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+n"], "command": "python_refactor_inline_variable", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+j"], "command": "python_jump_to_global", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+i"], "command": "python_auto_import", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+c"], "command": "python_regenerate_cache", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+f"], "command": "python_refactor_restructure" }
+	///////////////////// SublimeRope keymap end ///////////////////////
 ]
