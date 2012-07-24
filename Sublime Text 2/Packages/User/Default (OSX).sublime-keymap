@@ -6,7 +6,7 @@
 
 	///////////////////// j related keymap start ///////////////////////
 	{ "keys": ["ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
-	{ "keys": ["ctrl+super+j"], "command": "insert", "args": {"characters": "\n"} },
+	{ "keys": ["ctrl+m"], "command": "insert", "args": {"characters": "\n"} },
 
 	{ "keys": ["ctrl+j"], "command": "commit_completion", "context":
 		[
@@ -101,8 +101,8 @@
 	{ "keys": ["ctrl+;"], "command": "auto_complete" },
 
 	///////////////////// SublimeCodeIntel keymap start ///////////////////////
-	// { "keys": ["ctrl+;"], "command": "code_intel_auto_complete" },
-	// { "keys": ["ctrl+x","ctrl+d"], "command": "goto_python_definition" },
+	{ "keys": ["ctrl+super+;"], "command": "code_intel_auto_complete" },
+	{ "keys": ["ctrl+x","ctrl+d"], "command": "goto_python_definition" },
 	// { "keys": ["ctrl+shift+super+left"], "command": "back_to_python_definition"},
 	///////////////////// SublimeCodeIntel keymap end ///////////////////////
 

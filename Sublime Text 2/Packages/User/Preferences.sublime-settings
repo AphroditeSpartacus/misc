@@ -11,8 +11,7 @@
 		"Vintage",
 		"IPython Integration",
 		"SublimeLinter",
-		"Emacs-like Modelines",
-		"SublimeCodeIntel"
+		"Emacs-like Modelines"
 	],
 	"open_files_in_new_window": false,
 	"tabSize": 4,
