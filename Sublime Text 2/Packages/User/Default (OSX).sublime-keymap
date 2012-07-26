@@ -139,7 +139,7 @@
 
 	{ "keys": ["ctrl+super+/"], "command": "redo"},
 
-	{ "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true, "text" : ":"}},
+	{ "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}},
 	{ "keys": ["ctrl+super+g"], "command": "show_overlay", "args": {"overlay":"goto", "show_files" : false, "text": "@"}},
 
 	{ "keys": ["ctrl+h"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Left Right.sublime-macro"}, "context":
@@ -240,6 +240,14 @@
 	    	{ "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
 		]
 	},
+
+	{ "keys": ["ctrl+super+l"], "command": "duplicate" },
+
+	{ "keys": ["super+p"], "command": "move_caret_top" },
+	{ "keys": ["super+m"], "command": "move_caret_middle"},
+	{ "keys": ["super+n"], "command": "move_caret_bottom"},
+	// { "keys": ["alt+left"], "command": "move_caret_back", "args": { "nlines": 10}  },
+	// { "keys": ["alt+right"], "command": "move_caret_forward", "args": { "nlines": 10} },
 
 	{ "keys": ["ctrl+super+1"], "command": "focus_group", "args": { "group": 0 } },
 	{ "keys": ["ctrl+super+2"], "command": "focus_group", "args": { "group": 1 } },
