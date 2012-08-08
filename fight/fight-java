@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# TEMPLATE="/Users/Aphrodite/program/acm/lib/template/template.cpp"
+# TEMPLATE="/Users/Aphrodite/program/acm/lib/template/template.java"
+
+# mkdir $1 && cp ${TEMPLATE} $1/A.java
+
+BASENAME=`basename $1`
+CLASSNAME=${BASENAME%.java}
+DEST="Main"
+SGU="sgu"
+if [[ "$1" == *"$SGU"* ]] 
+then
+    DEST="Solution"
+    sed "s/$CLASSNAME/${DEST}/g" $1 > ~/program/arena/tmp/src/${DEST}.java
+else
+    sed "s/$CLASSNAME/${DEST}/g" $1 > ~/test/submit/${DEST}.java
+fi
