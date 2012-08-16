@@ -64,6 +64,16 @@
 	},
 	///////////////////// j related keymap end ///////////////////////
 
+	{ "keys": ["ctrl+s"], "command": "show_panel", "args": {"panel": "find"} },
+	{ "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "find"} },
+
+	{ "keys": ["ctrl+s"], "command": "find_next", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+r"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+
 	{ "keys": ["ctrl+o"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line Before.sublime-macro"} },
 
 	///////////////////// i related keymap start ///////////////////////

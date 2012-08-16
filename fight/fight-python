@@ -2,4 +2,4 @@
 
 PYTHON_TEMPLATE="/Users/Aphrodite/program/arena/libs/template/template.py"
 
-mkdir $1 && cp ${TEMPLATE} $1/1.py
+mkdir $1 && cp ${PYTHON_TEMPLATE} $1/1.py
