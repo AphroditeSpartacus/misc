@@ -121,10 +121,10 @@
 		]
 	},
 
-	{ "keys": ["ctrl+super+;"], "command": "auto_complete" },
+	{ "keys": ["ctrl+;"], "command": "auto_complete" },
 
 	///////////////////// SublimeCodeIntel keymap start ///////////////////////
-	{ "keys": ["ctrl+;"], "command": "code_intel_auto_complete" },
+	{ "keys": ["ctrl+super+;"], "command": "code_intel_auto_complete" },
 	{ "keys": ["ctrl+x","ctrl+d"], "command": "goto_python_definition" },
 	// { "keys": ["ctrl+shift+super+left"], "command": "back_to_python_definition"},
 	///////////////////// SublimeCodeIntel keymap end ///////////////////////
@@ -287,6 +287,10 @@
 	{ "keys": ["ctrl+x", "b", "t"], "command": "toggle_bookmark" },
 	{ "keys": ["ctrl+x", "b", "c"], "command": "clear_bookmarks" },
 	{ "keys": ["ctrl+x", "b", "a"], "command": "select_all_bookmarks" },
+
+	// Registers
+	{ "keys": ["ctrl+x", "r", "s"], "command": "sbp_register_store" },
+	{ "keys": ["ctrl+x", "r", "i"], "command": "sbp_register_insert" },
 
 	// Auto-pair single quotes
 	{ "keys": ["'"], "command": "insert_snippet", "args": {"contents": "'$0'"}, "context":
