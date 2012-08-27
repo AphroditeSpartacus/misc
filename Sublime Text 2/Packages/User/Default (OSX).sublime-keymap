@@ -474,8 +474,10 @@
 	},
 	///////////////////// REPL keymap end ///////////////////////
 
-	{ "keys": ["ctrl+x", "super+r"], "command": "show_panel", "args": {"panel": "replace"} },
+	{ "keys": ["ctrl+x", "ctrl+r"], "command": "show_panel", "args": {"panel": "replace"} },
 	{ "keys": ["super+r"], "command": "build" },
+	{ "keys": ["ctrl+c"], "command": "exec", "args": {"kill": true} },
+	{ "keys": ["ctrl+x", "super+r"], "command": "show_panel", "args": {"panel": "output.exec"} },
 
 	///////////////////// SFTP keymap start ///////////////////////
 	{ "keys": ["ctrl+super+n","ctrl+super+s"], "command": "sftp_create_server" },
