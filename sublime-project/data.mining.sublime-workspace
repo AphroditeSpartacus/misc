@@ -1,0 +1,1010 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"HttpR",
+				"HttpResponse	(global, class)"
+			],
+			[
+				"lo",
+				"loads	(imported, function)"
+			],
+			[
+				"def",
+				"defaultdict	(imported, class)"
+			],
+			[
+				"tr",
+				"translate	(builtin, function)"
+			],
+			[
+				"li",
+				"linux_distribution	(imported, function)"
+			],
+			[
+				"ma",
+				"mac_ver	(imported, function)"
+			],
+			[
+				"C",
+				"Container	(imported, class)"
+			],
+			[
+				"ran",
+				"randrange	(imported, instance)"
+			],
+			[
+				"iter",
+				"itertools	(imported, module)"
+			],
+			[
+				"combinations",
+				"combinations_with_replacement  (class)"
+			],
+			[
+				"ap",
+				"append  (function)"
+			],
+			[
+				"com",
+				"combinations_with_replacement  (class)"
+			],
+			[
+				"version",
+				"version_info	(builtin, instance)"
+			],
+			[
+				"max",
+				"maxint  (variable)"
+			],
+			[
+				"maxi",
+				"maxsize  (variable)"
+			],
+			[
+				"sy",
+				"sys  (module)"
+			],
+			[
+				"XML",
+				"XMLID  (function)"
+			],
+			[
+				"xml",
+				"XMLID  (function)"
+			],
+			[
+				"cle",
+				"__class__  (variable)"
+			],
+			[
+				"p",
+				"print"
+			],
+			[
+				"r",
+				"remove  (function)"
+			],
+			[
+				"de",
+				"deque  (class)"
+			],
+			[
+				"Co",
+				"Container  (class)"
+			],
+			[
+				"ur",
+				"urlparse  (function)"
+			],
+			[
+				"ex",
+				"exists  (function)"
+			],
+			[
+				"ca",
+				"capwords  (function)"
+			],
+			[
+				"low",
+				"ascii_lowercase  (variable)"
+			],
+			[
+				"find",
+				"findall  (function)"
+			],
+			[
+				"pa",
+				"path  (module)"
+			],
+			[
+				"t",
+				"truth  (function)"
+			],
+			[
+				"is",
+				"is_not  (function)"
+			],
+			[
+				"sys",
+				"system  (function)"
+			],
+			[
+				"a",
+				"abspath"
+			],
+			[
+				"pr",
+				"print	(builtin, function)"
+			],
+			[
+				"for",
+				"for	For Loop"
+			],
+			[
+				"l",
+				"list	(builtin, class)"
+			],
+			[
+				"x",
+				"xrange	(builtin, class)"
+			],
+			[
+				"fo",
+				"for	(keyword, instance)"
+			],
+			[
+				"f",
+				"for	(keyword, instance)"
+			],
+			[
+				"fu",
+				"func	(global, function)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/Aphrodite/program/data.mining/src/a.py",
+			"settings":
+			{
+				"buffer_size": 49,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Aphrodite/program/data.mining/examples/Programming.Collective.Intelligence/chapter2/pydelicious.py",
+			"settings":
+			{
+				"buffer_size": 28268,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Aphrodite/program/data.mining/examples/Programming.Collective.Intelligence/chapter2/deliciousrec.py",
+			"settings":
+			{
+				"buffer_size": 874,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 72.0,
+		"selected_items":
+		[
+			[
+				"upda",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"side",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"togg",
+				"View: Toggle Tabs"
+			],
+			[
+				"toggle",
+				"View: Toggle Tabs"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"new",
+				"Rope: New Project"
+			],
+			[
+				"rope",
+				"Rope: Show Documentation"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"rope ne",
+				"Rope: New Project"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"rop",
+				"Package Control: Enable Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"upd",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"she",
+				"SublimeREPL: Shell"
+			],
+			[
+				"Snippet: ",
+				"Snippet: printf …"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"term",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"termin",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"shell",
+				"SublimeREPL: Shell"
+			],
+			[
+				"repl",
+				"SublimeREPL: Shell"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"disap",
+				"Package Control: Disable Package"
+			],
+			[
+				"disc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sid",
+				"Preferences: SFTP Key Bindings"
+			],
+			[
+				"sftp",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"remote",
+				"SFTP: Map to Remote…"
+			],
+			[
+				"go",
+				"Rope: Go to Definition"
+			],
+			[
+				"show",
+				"Rope: Show Documentation"
+			],
+			[
+				"listP",
+				"Package Control: List Packages"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"",
+				"Preferences: Key Bindings - User"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 236.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Aphrodite/program/data.mining/examples/Mining.the.Social.Web/web_code/dojo/dojo_tree.html",
+		"/Users/Aphrodite/program/mining/src/a.py",
+		"/Volumes/wxPython2.9-osx-2.9.4.0-cocoa-py2.7/README 1st.txt",
+		"/Users/Aphrodite/program/sublime-project/examples/01/getname.py",
+		"/Users/Aphrodite/program/sublime-project/examples/01/search4.txt",
+		"/Users/Aphrodite/program/sublime-project/examples/01/search4.py",
+		"/Users/Aphrodite/program/sublime-project/examples/01/search1.py",
+		"/Users/Aphrodite/program/sublime-project/src/a.py",
+		"/Users/Aphrodite/program/network/examples/python2/01/getname.py",
+		"/Users/Aphrodite/program/network/examples/python2/01/search1.py",
+		"/Users/Aphrodite/program/network/src/a.py",
+		"/Users/Aphrodite/program/network/.ropeproject/config.py",
+		"/Users/Aphrodite/program/network/examples/python2/01/search2.py",
+		"/Users/Aphrodite/program/network/examples/python2/01/search3.py",
+		"/Users/Aphrodite/program/network/examples/python2/01/search4.py",
+		"/Users/Aphrodite/program/network/examples/python2/01/search4.txt",
+		"/Users/Aphrodite/program/network/examples/README.txt",
+		"/Users/Aphrodite/program/network/network.sublime-project",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/Aphrodite/program/network/.codeintel/config",
+		"/Users/Aphrodite/program/tmp/functional.py",
+		"/Users/Aphrodite/program/tmp/functional.txt",
+		"/Users/Aphrodite/Downloads/foundations-of-python-network-programming/README.txt",
+		"/Users/Aphrodite/Downloads/集体智慧编程Programming_Collective_Intelligence/SRF文件格式打开说明.txt",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344998500/ha1/usr/lib/ocf/resource.d/heartbeat/mysql",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/User/Aphrodite.tmTheme",
+		"/Users/Aphrodite/program/arena/libs/src/python/ipv4.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344846728/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/interface/interface.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344846566/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/core/manager.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344846624/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/core/resource.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344846541/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/interface/interface.py",
+		"/Users/Aphrodite/program/tmp/c.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344835528/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/test/interface_test.py",
+		"/Users/Aphrodite/program/arena/libs/src/python/base_translation.py",
+		"/Users/Aphrodite/program/tmp/b.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344835472/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/core/manager.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344835313/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/interface/interface.py",
+		"/Users/Aphrodite/program/arena/libs/src/python/regex.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344835377/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/core/resource.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344835261/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/interface/.interface.py.swp",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344567856/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/test/log_test.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344567861/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/log/log.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344563587/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/test/log_test.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344563534/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/log/log.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344408321/ha1/root/test/a.c",
+		"/Users/Aphrodite/test/AXInstaller.cpp",
+		"/Users/Aphrodite/test/out",
+		"/Users/Aphrodite/test/out2",
+		"/Users/Aphrodite/program/tmp/a.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344239735/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/interface/interface.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344240489/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/core/manager.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1344239786/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/test/interface_test.py",
+		"/Users/Aphrodite/program/tmp/mail.txt",
+		"/Users/Aphrodite/program/tmp/.ropeproject/config.py",
+		"/Users/Aphrodite/program/django/.ropeproject/config.py",
+		"/Users/Aphrodite/program/django/mysite/mysite/settings.py",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/README.rst",
+		"/Users/Aphrodite/program/django/.codeintel/config",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/.codeintel/config",
+		"/Users/Aphrodite/program/django/mysite/mysite/views.py",
+		"/Users/Aphrodite/program/django/tmp/test.py",
+		"/Users/Aphrodite/program/django/mysite/mysite/wsgi.py",
+		"/Users/Aphrodite/program/django/mysite/manage.py",
+		"/Users/Aphrodite/program/django/mysite/mysite/urls.py",
+		"/Users/Aphrodite/test/ha/haclient.py",
+		"/Users/Aphrodite/test/rpm_e_test/package_list",
+		"/Users/Aphrodite/test/rpm_e_test/info",
+		"/Users/Aphrodite/test/rpm_e_test/log",
+		"/Users/Aphrodite/test/ha/ha-members.txt",
+		"/Users/Aphrodite/test/ha/ha-web/ha_modules/core/resource.py",
+		"/Users/Aphrodite/test/ha/ha-web/ha_modules/log/log.py",
+		"/Users/Aphrodite/program/django/mysite/mysite/__init__.py",
+		"/Users/Aphrodite/program/django/test.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/tmp/test.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343631793/ha1/root/svn/ha7.2/trunk/src/ha-web/ha_modules/common/utils.py",
+		"/Users/Aphrodite/Downloads/corosync2.log",
+		"/Users/Aphrodite/program/arena/pythonChallenge/8.py",
+		"/Users/Aphrodite/test/ha/ha-web/ha_modules/common/utils.py",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/Theme - Aqua/README.md",
+		"/Users/Aphrodite/program/arena/pythonChallenge/5.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/6.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/7.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/libs/web.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/3.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/1.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/2.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/4.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/0.py",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/Base File.sublime-settings",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/SublimeRope/SublimeRope.sublime-settings",
+		"/Users/Aphrodite/program/arena/pythonChallenge/.ropeproject/globalnames",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/User/duplicate.py",
+		"/Users/Aphrodite/test/rflicense/partnum.c",
+		"/Users/Aphrodite/test/rflicense/mkrpm.sh",
+		"/Users/Aphrodite/test/rflicense/rfbootchk.c",
+		"/Users/Aphrodite/test/rflicense/rflicchk.c",
+		"/Users/Aphrodite/test/rflicense/rfgetser.c",
+		"/Users/Aphrodite/test/rflicense/README",
+		"/Users/Aphrodite/test/rflicense/install.sh",
+		"/Users/Aphrodite/test/rflicense/Makefile",
+		"/Users/Aphrodite/test/rflicense/partnum.h",
+		"/Users/Aphrodite/test/rflicense/allparts.h",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/User/move_caret.py",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/User/clear_selection.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/test.py",
+		"/Users/Aphrodite/program/arena/pythonChallenge/git",
+		"/Users/Aphrodite/program/arena/tmp/a.py",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343193954/ha1/root/cluster-glue/cluster-glue-1.0-fix-get-ocf-source-error.patch",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343193793/ha1/root/cluster-glue/cluster-glue_hb_report.patch",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343193513/ha1/root/cluster-glue/cluster-glue-1.0-use-chkconfig-logd.patch",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343193393/ha1/root/cluster-glue/cluster-glue-RF.spec",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343193293/ha1/root/svn/ha7.2/trunk/src/cluster-glue/cluster-glue.spec",
+		"/Users/Aphrodite/test/resource-agents do NOT migrate sections:",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343181244/ha1/root/resource-agents/resource-agents.spec",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343181266/ha1/root/resource-agents/resource-agents-add-ocf-scripts.patch",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343181485/ha1/root/svn/ha7.2/trunk/src/resource-agents/resource-agents.spec",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343185789/ha1/root/resource-agents/resource-agents-1.0-mv-db2-from-heartbeat-to-redflag.patch",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/SublimeRope/README.markdown",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/SublimeRope/rope/contrib/autoimport.py",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/SublimeCodeIntel.py",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/SublimeRope/rope/base/project.py",
+		"/Users/Aphrodite/program/arena/tmp/.ropeproject/config.py",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/SublimeRope/rope/base/prefs.py",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/Python/Python.sublime-build",
+		"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/User/SublimeRope.sublime-settings",
+		"/var/folders/85/c7jwjjd17r149crp8x8d0xv80000gn/T/sublime-sftp-browse-1343097800/ha1/root/resource-agents/resource-agents.spec"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"haha",
+			"s",
+			"goto",
+			"cr",
+			"ctrl+;",
+			"python_path",
+			"operator.add",
+			"print",
+			"t",
+			"toggle_comment",
+			"args",
+			"k",
+			"r",
+			"find",
+			"command",
+			"slurp_find_string",
+			" \"",
+			"super",
+			"find",
+			"incr",
+			"t",
+			"re",
+			"a",
+			"an",
+			"as",
+			"a",
+			"logging",
+			"basicConfig",
+			"b",
+			"a",
+			"rock",
+			"client_b",
+			"check_slave",
+			"MYSQL",
+			"err_install",
+			"err_installed",
+			"OCF_ERR_INSTALLED",
+			"INSTALL",
+			"mysql_status",
+			"mysql_monitor",
+			"not install",
+			"OCF_RESKEY_pid",
+			"mysql_status",
+			"not ins",
+			"mysql_monitor",
+			"mysql_m",
+			"’",
+			"‘",
+			"ipv4",
+			"ipvr",
+			"ipv4",
+			"ipv",
+			"ipv4",
+			"d",
+			"get_primitive_rsc_config",
+			"get_single_resource_config",
+			"get_sin",
+			"bits",
+			"imap",
+			"ctrl+super+u",
+			"super+/",
+			"DoInstall",
+			"InstallPackages",
+			"UninstallPackages",
+			"ClickUninstall",
+			"uninstall",
+			"info",
+			"get_single_resource_config",
+			"get_single_resource_major_config",
+			"get_rsc_major_info",
+			"get_special_info",
+			"rsc_root",
+			"get_node_tree_shape",
+			"nodes_config",
+			"get_node_tree_shape",
+			"child_config",
+			"change_to_web_tree",
+			"get_single_node_config",
+			"get_node_info",
+			"get_node_status",
+			"get_node_s",
+			"get_node_info",
+			"get_node_uname",
+			"get_node_status",
+			"get_node_s",
+			"status",
+			"get_single_node_config",
+			"get_nodes_config",
+			"nodes_config",
+			"DJANGO_SETTINGS_MODULE",
+			"django_set",
+			"double",
+			"sys",
+			"adm",
+			"am",
+			"Am",
+			"date",
+			"time",
+			"APPE",
+			"append_s",
+			"toggle",
+			"side",
+			"super+k",
+			"ctrl",
+			"comm",
+			"ctrls",
+			"ctrl+d",
+			"ctrl+u",
+			"show_fo",
+			"show_g",
+			"mode_level",
+			"logG",
+			"log",
+			"syslog",
+			"y",
+			"ctrl+u",
+			"tab",
+			"ctrl+u",
+			"ctrl+;",
+			"r.*l",
+			"impo",
+			"rock",
+			"overlay",
+			"palette",
+			"\"'",
+			"http",
+			"upp",
+			"prod_name_t"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"\\d",
+			"log_file",
+			"super+ctrl",
+			"ctrl+i\"",
+			"ctrl+i"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/Aphrodite/program/data.mining/src/a.py",
+					"settings":
+					{
+						"buffer_size": 49,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/Aphrodite/program/data.mining/examples/Programming.Collective.Intelligence/chapter2/pydelicious.py",
+					"settings":
+					{
+						"buffer_size": 28268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/Aphrodite/program/data.mining/examples/Programming.Collective.Intelligence/chapter2/deliciousrec.py",
+					"settings":
+					{
+						"buffer_size": 874,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								352,
+								352
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 312.0
+	},
+	"output.rope_python_documentation":
+	{
+		"height": 174.0
+	},
+	"output.sftp":
+	{
+		"height": 118.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"big",
+				"examples/02/big_sender.py"
+			],
+			[
+				"udp",
+				"examples/02/udp_remote.py"
+			],
+			[
+				"search1",
+				"examples/01/search1.py"
+			],
+			[
+				"get",
+				"examples/01/getname.py"
+			],
+			[
+				"search4",
+				"examples/01/search4.txt"
+			],
+			[
+				"a",
+				"src/a.py"
+			],
+			[
+				"search3",
+				"examples/python2/01/search3.py"
+			],
+			[
+				"se",
+				"examples/python2/01/search1.py"
+			],
+			[
+				"",
+				"examples/python2/01/search1.py"
+			],
+			[
+				"4",
+				"/Users/Aphrodite/program/arena/libs/src/python/ipv4.py"
+			],
+			[
+				"a.",
+				"a.py"
+			],
+			[
+				"mail",
+				"mail.txt"
+			],
+			[
+				"a.py",
+				"a.py"
+			],
+			[
+				"tes",
+				"django/tmp/test.py"
+			],
+			[
+				"test",
+				"django/tmp/test.py"
+			],
+			[
+				"vi",
+				"django/mysite/mysite/views.py"
+			],
+			[
+				"url",
+				"django/mysite/mysite/urls.py"
+			],
+			[
+				"sett",
+				"django/mysite/mysite/settings.py"
+			],
+			[
+				"ma",
+				"django/mysite/manage.py"
+			],
+			[
+				"__",
+				"django/mysite/mysite/__init__.py"
+			],
+			[
+				"te",
+				"tmp/test.py"
+			],
+			[
+				"re",
+				"/Users/Aphrodite/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/README.rst"
+			],
+			[
+				"t",
+				"tmp/test.py"
+			],
+			[
+				"we",
+				"libs/web.py"
+			],
+			[
+				"3",
+				"3.py"
+			],
+			[
+				"1",
+				"1.py"
+			],
+			[
+				"2.",
+				"2.py"
+			],
+			[
+				"read",
+				"/Users/Aphrodite/test/rflicense/README"
+			],
+			[
+				"web",
+				"libs/web.py"
+			],
+			[
+				"ha_modules/",
+				"ha_modules/export/export.py"
+			],
+			[
+				"/users/aphrodite/test",
+				"/Users/Aphrodite/test/a.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"tm",
+				"/Users/Aphrodite/program/sublime-project/tmp.sublime-project"
+			],
+			[
+				"tmp",
+				"/Users/Aphrodite/program/sublime-project/tmp.sublime-project"
+			],
+			[
+				"ne",
+				"/Users/Aphrodite/program/sublime-project/network.sublime-project"
+			],
+			[
+				"",
+				"/Users/Aphrodite/program/sublime-project/data.mining.sublime-project"
+			],
+			[
+				"test",
+				"/Users/Aphrodite/program/network/network.sublime-project"
+			],
+			[
+				"t",
+				"/Users/Aphrodite/program/tmp/tmp.sublime-project"
+			],
+			[
+				"dj",
+				"/Users/Aphrodite/program/django/mysite.sublime-project"
+			],
+			[
+				"n",
+				"/Users/Aphrodite/program/arena/spoj/spoj.sublime-project"
+			],
+			[
+				"abc",
+				"/Users/Aphrodite/program/django/mysite.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 169.0,
+	"status_bar_visible": false
+}

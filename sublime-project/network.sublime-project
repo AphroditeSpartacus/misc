@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/Aphrodite/program/network"
+		}
+	],
+    "build_systems":
+    [
+        {
+            "name": "network",
+            // activate the specific virtualenv for the project
+            // "cmd": ["source", "/Users/Aphrodite/Install/virtualenv/network/bin/activate"],
+            "env": {"PYTHONPATH": "/Users/Aphrodite/Install/virtualenv/network/lib/python2.7/site-packages"},
+            // now indicates a different folder to run the next cmd
+            "working_dir": "${project_path:${folder}}",
+            // runs the file
+            "cmd": ["python", "-u", "$file"]
+        }
+    ]
+}

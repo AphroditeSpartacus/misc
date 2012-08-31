@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/Aphrodite/program/pyqt"
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "pyqt",
+			"env": {"PYTHONPATH": "/usr/local/lib/python2.7/site-packages"},
+			//"working_dir": "${project_path:${folder}}",
+			"cmd": ["python", "-u", "$file"]
+		}
+	]
+}
