@@ -20,7 +20,6 @@
 
 	{ "keys": ["ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line in Braces.sublime-macro"}, "context":
 		[
-			{ "key": "setting.auto_indent", "operator": "equal", "operand": true },
 			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
 			{ "key": "preceding_text", "operator": "regex_contains", "operand": "\\{$", "match_all": true },
 			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\}", "match_all": true }
@@ -86,10 +85,10 @@
 
 	{ "keys": ["ctrl+i"], "command": "reindent", "context":
 		[
-			{ "key": "setting.auto_indent", "operator": "equal", "operand": true },
 			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-			{ "key": "preceding_text", "operator": "regex_match", "operand": "^$", "match_all": true },
-			{ "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true }
+			{ "key": "text", "operator": "regex_match", "operand": "^[ \t]*$", "match_all": true }
+			// { "key": "preceding_text", "operator": "regex_match", "operand": "^$", "match_all": true }
+			// { "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true }
 		]
 	},
 
