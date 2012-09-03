@@ -1,145 +1,560 @@
 [
-  { "keys": ["alt+q"], "command": "wrap_lines" },
-  { "keys": ["ctrl+o"], "command": "sbp_open_line" },
+	{ "keys": ["super+q"], "command": "noop" },
+	{ "keys": ["super+h"], "command": "noop" },
+	{ "keys": ["super+n"], "command": "noop" },
+	{ "keys": ["ctrl+x", "ctrl+n"], "command": "new_file" },
+	{ "keys": ["ctrl+x", "ctrl+b"], "command": "toggle_side_bar" },
 
-  // Emacs style
-  { "keys": ["ctrl+a"], "command": "move_to", "args": {"to": "bol", "extend": false} },
-  { "keys": ["ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} },
-  { "keys": ["alt+v"], "command": "move", "args": {"by": "pages", "forward": false} },
-  { "keys": ["ctrl+v"], "command": "move", "args": {"by": "pages", "forward": true} },
-  { "keys": ["ctrl+b"], "command": "move", "args": {"by": "characters", "forward": false} },
-  { "keys": ["ctrl+f"], "command": "move", "args": {"by": "characters", "forward": true} },
-  { "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false} },
-  { "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true} },
-  { "keys": ["alt+b"], "command": "move", "args": {"by": "words", "forward": false}},
-  { "keys": ["alt+f"], "command": "move", "args": {"by": "word_ends", "forward": true}},
-  { "keys": ["ctrl+h"], "command": "left_delete"},
-  { "keys": ["ctrl+shift+h"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard BOL.sublime-macro"}},
-  { "keys": ["ctrl+d"], "command": "right_delete"},
-  { "keys": ["alt+d"], "command": "delete_word", "args": { "forward": true } },
-  { "keys": ["ctrl+backspace"], "command": "delete_word", "args": { "forward": false } },
-  { "keys": ["alt+backspace"], "command": "delete_word", "args": { "forward": false } },
-  { "keys": ["super+backspace"], "command": "delete_word", "args": { "forward": false } },
-  { "keys": ["ctrl+/"], "command": "undo"},
-  { "keys": ["ctrl+shift+/"], "command": "redo"},
-  { "keys": ["ctrl+_"], "command": "undo"}, // consistency with the Mac
+	{ "keys": ["super+u"], "command": "soft_undo" },
+	{ "keys": ["ctrl+super+u"], "command": "soft_redo" },
 
-  
-  { "keys": ["alt+shift+,"], "command": "move_to", "args": {"to": "bof", "extend": false}},
-  { "keys": ["alt+shift+."], "command": "move_to", "args": {"to": "eof", "extend": false}},
-  
-  { "keys": ["ctrl+l"], "command": "sbp_recenter_in_view" },
-  { "keys": ["alt+q"], "command": "sbp_wrap_paragraph"},
+	///////////////////// j related keymap start ///////////////////////
+	{ "keys": ["ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line.sublime-macro"} },
+	{ "keys": ["ctrl+m"], "command": "insert", "args": {"characters": "\n"} },
 
-  { "keys": ["ctrl+x","h"], "command": "select_all"},
+	{ "keys": ["ctrl+j"], "command": "commit_completion", "context":
+		[
+			{ "key": "auto_complete_visible" }
+		]
+	},
 
-  // Kill Ring handling
-  { "keys": ["ctrl+k"], "command": "sbp_kill_line"},
-  { "keys": ["alt+k"], "command": "sbp_kill_to_end_of_sentence"},
-  { "keys": ["ctrl+y"], "command": "paste" },
-  { "keys": ["ctrl+shift+y"], "command": "sbp_yank_choice" },
-  { "keys": ["ctrl+space"], "command": "sbp_set_mark" },
+	// NOT in python
+	// { "keys": ["ctrl+j"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line in Braces.sublime-macro"}, "context":
+	// 	[
+	// 		{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+	// 		{ "key": "preceding_text", "operator": "regex_contains", "operand": "\\{$", "match_all": true },
+	// 		{ "key": "following_text", "operator": "regex_contains", "operand": "^\\}", "match_all": true }
+	// 	]
+	// },
 
-  { "keys": ["ctrl+w"], "command": "sbp_delete_to_mark" },
-  { "keys": ["super+c"], "command": "sbp_kill_ring_save" },
-  { "keys": ["alt+w"], "command": "sbp_kill_ring_save" },
-  { "keys": ["ctrl+g"], "command": "sbp_cancel_mark" },
+	// Find panel key bindings
+	{ "keys": ["ctrl+j"], "command": "find_next", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+shift+j"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+super+j"], "command": "find_all", "args": {"close_panel": true},
+		 "context": [{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
 
-  { "keys": ["ctrl+f"], "command": "move", "args": {"by": "characters", "forward": true, "extend": true}, "context": 
-    [
-        { "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
-    ]
-  },
-  { "keys": ["ctrl+b"], "command": "move", "args": {"by": "characters", "forward": false, "extend": true}, "context":
-    [
-      { "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
-    ]
-  },
-  { "keys": ["alt+b"], "command": "move", "args": {"by": "words", "forward": false, "extend": true}, "context": 
-    [
-        { "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
-    ] 
-  },
+	// Replace panel key bindings
+	{ "keys": ["ctrl+j"], "command": "find_next", "context":
+		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+shift+j"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+super+j"], "command": "find_all", "args": {"close_panel": true},
+		"context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+shift+super+j"], "command": "replace_all", "args": {"close_panel": true},
+		 "context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
 
-  { "keys": ["alt+f"], "command": "move", "args": {"by": "word_ends", "forward": true, "extend": true}, "context": 
-    [
-        { "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
-    ]
-  },
+	// Incremental find panel key bindings
+	{ "keys": ["ctrl+j"], "command": "hide_panel", "context":
+		[{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+shift+j"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+super+j"], "command": "find_all", "args": {"close_panel": true},
+		"context": [{"key": "panel", "operand": "incremental_find"}, {"key": "panel_has_focus"}]
+	},
+	///////////////////// j related keymap end ///////////////////////
 
-  { "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true}, "context": 
-    [
-        { "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
-    ]
-  },
-  { "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false, "extend": true}, "context":
-    [
-        { "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
-    ]
-  },
-  { "keys": ["ctrl+space"], "command": "sbp_cancel_mark", "context" :
-    [
-        { "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
-    ]
-  },
+	{ "keys": ["ctrl+s"], "command": "show_panel", "args": {"panel": "find"} },
+	{ "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "find"} },
 
-  // Search and Replace
-  { "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse":true} },
-  { "keys": ["ctrl+s"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse":false} },
-  { "keys": ["alt+r"], "command": "show_panel", "args": {"panel": "replace"} },
-  { "keys": ["super+r"], "command": "show_panel", "args": {"panel": "replace"} },
+	{ "keys": ["ctrl+s"], "command": "find_next", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
+	{ "keys": ["ctrl+r"], "command": "find_prev", "context":
+		[{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+	},
 
-  // Goto stuff
-  { "keys": ["ctrl+x", "ctrl+f"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
-  { "keys": ["alt+g", "alt+g"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true, "text" : ":"}},
-  { "keys": ["ctrl+alt+g"], "command": "show_overlay", "args": {"overlay":"goto", "show_files" : false, "text": "@"}},
-  { "keys": ["ctrl+x", "b"], "command": "next_view" },
+	{ "keys": ["ctrl+o"], "command": "run_macro_file", "args": {"file": "Packages/Default/Add Line Before.sublime-macro"} },
 
-  // Completion
-  { "keys": ["alt+/"], "command": "auto_complete" },
-  { "keys": ["alt+/"], "command": "replace_completion_with_auto_complete", "context":
-    [
-      { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
-      { "key": "auto_complete_visible", "operator": "equal", "operand": false },
-      { "key": "setting.tab_completion", "operator": "equal", "operand": true }
-    ]
-  },
+	///////////////////// i related keymap start ///////////////////////
+	{ "keys": ["ctrl+i"], "command": "insert_best_completion", "args": {"exact": false} },
+	{ "keys": ["ctrl+i"], "command": "replace_completion_with_next_completion", "context":
+		[
+			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" }
+		]
+	},
 
-  // Aborter
-  { "keys": ["ctrl+g"], "command": "hide_overlay", "context":
-    [
-      { "key": "overlay_visible", "operator": "equal", "operand": true }
-    ]
-  },
-   { "keys": ["ctrl+g"], "command": "hide_auto_complete", "context":
-    [
-      { "key": "auto_complete_visible", "operator": "equal", "operand": true }
-    ]
-  },
-  { "keys": ["ctrl+g"], "command": "hide_panel", "context":
-    [
-      { "key": "panel_visible", "operator": "equal", "operand": true }
-    ]
-  },
+	{ "keys": ["ctrl+i"], "command": "reindent", "context":
+		[
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			// { "key": "preceding_text", "operator": "regex_match", "operand": "^$", "match_all": true }
+			{ "key": "preceding_text", "operator": "regex_match", "operand": "^[ \t]*$", "match_all": true },
+			// { "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true }
+			{ "key": "following_text", "operator": "regex_match", "operand": "^[ \t]*$", "match_all": true }
+		]
+	},
 
-  { "keys": ["alt+;"], "command": "toggle_comment" },
+	{ "keys": ["ctrl+i"], "command": "next_field", "context":
+		[
+			{ "key": "has_next_field", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+i"], "command": "commit_completion", "context":
+		[
+			{ "key": "auto_complete_visible" }
+		]
+	},
 
-  // Rectangles
-  { "keys": ["ctrl+x", "r", "t"], "command": "sbp_rectangle_insert" },
-  { "keys": ["ctrl+x", "r", "d"], "command": "sbp_rectangle_delete" },
+	{ "keys": ["super+i"], "command": "insert", "args": {"characters": "\t"} },
 
-  // Registers
-  { "keys": ["ctrl+x", "r", "s"], "command": "sbp_register_store" },
-  { "keys": ["ctrl+x", "r", "i"], "command": "sbp_register_insert" },
+	{ "keys": ["ctrl+super+i"], "command": "reindent" },
+	{ "keys": ["ctrl+super+i"], "command": "prev_field", "context":
+		[
+			{ "key": "has_prev_field", "operator": "equal", "operand": true }
+		]
+	},
+	///////////////////// i related keymap end ///////////////////////
 
-  // Do it my way
-  { "keys": ["ctrl+x", "k"], "command": "close" },
-  { "keys": ["ctrl+x", "ctrl+c"], "command": "exit"},
-  { "keys": ["ctrl+x", "ctrl+s"], "command": "save"},
+	{ "keys": ["super+/"], "command": "insert_best_completion", "args": {"exact": false} },
+	{ "keys": ["super+/"], "command": "replace_completion_with_next_completion", "context":
+		[
+			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" }
+		]
+	},
 
-  // Other Emacs features
-  { "keys": ["alt+x", "f", "f", "a", "p"], "command": "sbp_find_file_at_point" },
+	{ "keys": ["ctrl+;"], "command": "auto_complete" },
 
-  // Emacs style tabs
-  { "keys": ["tab"], "command": "reindent"}
+	///////////////////// SublimeCodeIntel keymap start ///////////////////////
+	{ "keys": ["ctrl+super+;"], "command": "code_intel_auto_complete" },
+	{ "keys": ["ctrl+x","ctrl+d"], "command": "goto_python_definition" },
+	// { "keys": ["ctrl+shift+super+left"], "command": "back_to_python_definition"},
+	///////////////////// SublimeCodeIntel keymap end ///////////////////////
+
+	///////////////////// expand keymap start ///////////////////////
+	{ "keys": ["super+s"], "command": "slurp_find_string" },
+
+	{ "keys": ["ctrl+super+s"], "command": "find_under_expand" },
+	{ "keys": ["ctrl+shift+super+s"], "command": "find_under_expand_skip" },
+	{ "keys": ["ctrl+super+9"], "command": "expand_selection", "args": {"to": "scope"} },
+	{ "keys": ["ctrl+super+0"], "command": "expand_selection", "args": {"to": "brackets"} },
+	{ "keys": ["ctrl+super+b"], "command": "move_to", "args": {"to": "brackets"} },
+	///////////////////// expand keymap end ///////////////////////
+
+	{ "keys": ["ctrl+y"], "command": "paste_and_indent" },
+	{ "keys": ["ctrl+super+y"], "command": "paste" },
+
+	{ "keys": ["super+v"], "command": "move", "args": {"by": "pages", "forward": false} },
+
+	{ "keys": ["super+b"], "command": "move", "args": {"by": "words", "forward": false} },
+	{ "keys": ["super+f"], "command": "move", "args": {"by": "word_ends", "forward": true} },
+
+	{ "keys": ["shift+super+,"], "command": "move_to", "args": {"to": "bof", "extend": false}},
+	{ "keys": ["shift+super+."], "command": "move_to", "args": {"to": "eof", "extend": false}},
+
+	{ "keys": ["super+y"], "command": "sbp_yank_choice" },
+
+	{ "keys": ["super+w"], "command": "sbp_kill_ring_save" },
+
+	{ "keys": ["super+d"], "command": "delete_word", "args": { "forward": true, "sub_words": true } },
+	{ "keys": ["ctrl+super+h"], "command": "delete_word", "args": { "forward": false, "sub_words": true } },
+
+	{ "keys": ["super+;"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["shift+super+;"], "command": "toggle_comment", "args": { "block": true } },
+
+	{ "keys": ["ctrl+super+/"], "command": "redo"},
+
+	{ "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+	{ "keys": ["ctrl+super+g"], "command": "show_overlay", "args": {"overlay":"goto", "show_files" : false, "text": "@"}},
+
+	{ "keys": ["ctrl+h"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Left Right.sublime-macro"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "preceding_text", "operator": "regex_contains", "operand": "\"$", "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^\"", "match_all": true }
+		]
+	},
+	{ "keys": ["ctrl+h"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Left Right.sublime-macro"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "preceding_text", "operator": "regex_contains", "operand": "'$", "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^'", "match_all": true }
+		]
+	},
+	{ "keys": ["ctrl+h"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Left Right.sublime-macro"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "preceding_text", "operator": "regex_contains", "operand": "\\($", "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\)", "match_all": true }
+		]
+	},
+	{ "keys": ["ctrl+h"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Left Right.sublime-macro"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "preceding_text", "operator": "regex_contains", "operand": "\\[$", "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\]", "match_all": true }
+		]
+	},
+	{ "keys": ["ctrl+h"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Left Right.sublime-macro"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "preceding_text", "operator": "regex_contains", "operand": "\\{$", "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\}", "match_all": true }
+		]
+	},
+
+	{ "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true, "extend": true}, "context":
+		[
+			{ "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false, "extend": true}, "context":
+		[
+			{ "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
+		]
+	},
+
+	{ "keys": ["ctrl+'"], "command": "next_view_in_stack" },
+	{ "keys": ["ctrl+super+'"], "command": "prev_view_in_stack" },
+
+	{ "keys": ["ctrl+super+k"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
+
+	{ "keys": ["ctrl+g"], "command": "clear_fields", "context":
+		[
+			{ "key": "has_next_field", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+g"], "command": "clear_fields", "context":
+		[
+			{ "key": "has_prev_field", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+g"], "command": "hide_panel", "args": {"cancel": true},
+		"context":
+		[
+			{ "key": "panel_visible", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+g"], "command": "hide_overlay", "context":
+		[
+			{ "key": "overlay_visible", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+g"], "command": "hide_auto_complete", "context":
+		[
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+g"], "command": "single_selection", "context":
+		[
+			{ "key": "num_selections", "operator": "not_equal", "operand": 1 }
+		]
+	},
+	{ "keys": ["ctrl+g"], "command": "clear_selection", "context":
+		[
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+		]
+	},
+	{ "keys": ["ctrl+g"], "command": "sbp_cancel_mark", "context":
+		[
+	    	{ "key": "sbp_emacs_has_mark", "operator": "equal", "operand": true }
+		]
+	},
+
+	{ "keys": ["ctrl+super+l"], "command": "duplicate" },
+
+	{ "keys": ["super+p"], "command": "move_caret_top" },
+	{ "keys": ["super+m"], "command": "move_caret_middle"},
+	{ "keys": ["super+n"], "command": "move_caret_bottom"},
+	// { "keys": ["alt+left"], "command": "move_caret_back", "args": { "nlines": 10}  },
+	// { "keys": ["alt+right"], "command": "move_caret_forward", "args": { "nlines": 10} },
+
+	{ "keys": ["ctrl+x", "super+u"], "command": "upper_case" },
+	{ "keys": ["ctrl+x", "super+l"], "command": "lower_case" },
+
+	{ "keys": ["ctrl+super+1"], "command": "focus_group", "args": { "group": 0 } },
+	{ "keys": ["ctrl+super+2"], "command": "focus_group", "args": { "group": 1 } },
+	{ "keys": ["ctrl+super+3"], "command": "focus_group", "args": { "group": 2 } },
+	{ "keys": ["ctrl+super+4"], "command": "focus_group", "args": { "group": 3 } },
+
+	// bookmark
+	{ "keys": ["ctrl+x", "b"], "command": "noop" },
+	{ "keys": ["ctrl+x", "b", "n"], "command": "next_bookmark" },
+	{ "keys": ["ctrl+x", "b", "p"], "command": "prev_bookmark" },
+	{ "keys": ["ctrl+x", "b", "t"], "command": "toggle_bookmark" },
+	{ "keys": ["ctrl+x", "b", "c"], "command": "clear_bookmarks" },
+	{ "keys": ["ctrl+x", "b", "a"], "command": "select_all_bookmarks" },
+
+	// Registers
+	{ "keys": ["ctrl+x", "r", "s"], "command": "sbp_register_store" },
+	{ "keys": ["ctrl+x", "r", "i"], "command": "sbp_register_insert" },
+
+	// Auto-pair single quotes
+	{ "keys": ["'"], "command": "insert_snippet", "args": {"contents": "'$0'"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			// { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|>|$)", "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|>|:|$)", "match_all": true },
+			// { "key": "preceding_text", "operator": "not_regex_contains", "operand": "['a-zA-Z0-9_]$", "match_all": true },
+			{ "key": "preceding_text", "operator": "not_regex_contains", "operand": "['a-qs-zA-Z0-9_]$", "match_all": true },
+			{ "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.single", "match_all": true }
+		]
+	},
+	{ "keys": ["'"], "command": "insert_snippet", "args": {"contents": "'${0:$SELECTION}'"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+		]
+	},
+	{ "keys": ["'"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^'", "match_all": true }
+		]
+	},
+
+	// Auto-pair brackets
+	{ "keys": ["("], "command": "insert_snippet", "args": {"contents": "($0)"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			// { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true }
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|:|$)", "match_all": true }
+		]
+	},
+	{ "keys": ["("], "command": "insert_snippet", "args": {"contents": "(${0:$SELECTION})"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+		]
+	},
+	{ "keys": [")"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\)", "match_all": true }
+		]
+	},
+
+	// Auto-pair square brackets
+	{ "keys": ["["], "command": "insert_snippet", "args": {"contents": "[$0]"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			// { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true }
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|:|$)", "match_all": true }
+		]
+	},
+	{ "keys": ["["], "command": "insert_snippet", "args": {"contents": "[${0:$SELECTION}]"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+		]
+	},
+	{ "keys": ["]"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\]", "match_all": true }
+		]
+	},
+
+	// Auto-pair curly brackets
+	{ "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{$0}"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			// { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|$)", "match_all": true }
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|:|$)", "match_all": true }
+		]
+	},
+	{ "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{${0:$SELECTION}}"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+		]
+	},
+	{ "keys": ["}"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+			{ "key": "following_text", "operator": "regex_contains", "operand": "^\\}", "match_all": true }
+		]
+	},
+
+	///////////////////// REPL keymap start ///////////////////////
+	// { "keys": ["ctrl+p"], "command": "repl_view_previous",
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+	// 	]
+	// },
+	// { "keys": ["ctrl+n"], "command": "repl_view_next",
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+	// 	]
+	// },
+	// { "keys": ["ctrl+j"], "command": "repl_enter", "args": {},
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true },
+	// 		{ "key": "auto_complete_visible", "operator": "equal", "operand": false }
+	// 	]
+	// },
+	// { "keys": ["ctrl+g"], "command": "repl_escape", "args": {},
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+	// 	]
+	// },
+	// { "keys": ["ctrl+u"], "command": "repl_escape", "args": {},
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+	// 	]
+	// },
+	// { "keys": ["ctrl+h"], "command": "repl_backspace", "args": {},
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+	// 	]
+	// },
+	// { "keys": ["ctrl+b"], "command": "repl_left", "args": {},
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+	// 	]
+	// },
+	// { "keys": ["ctrl+a"], "command": "repl_home", "args": {},
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+	// 	]
+	// },
+	// { "keys": ["ctrl+shift+b"], "command": "repl_shift_left", "args": {},
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+	// 	]
+	// },
+	// { "keys": ["ctrl+shift+a"], "command": "repl_shift_home", "args": {},
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+	// 	]
+	// },
+	// { "keys": ["ctrl+l"], "command": "repl_clear",
+	// "context":
+	// 	[
+	// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+	// 	]
+	// },
+
+	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	{"keys": ["ctrl+super+r"],
+	 "command": "repl_open",
+	 "caption": "Python - RUN current file",
+	 "id": "repl_python_run",
+	 "mnemonic": "d",
+	 "args": {
+	    "type": "subprocess",
+	    "encoding": "utf8",
+	    "cmd": ["python", "-u", "$file_basename"],
+	    "cwd": "$file_path",
+	    "syntax": "Packages/Python/Python.tmLanguage",
+	    "external_id": "python"
+	    }
+	},
+	///////////////////// REPL keymap end ///////////////////////
+
+	{ "keys": ["ctrl+x", "ctrl+r"], "command": "show_panel", "args": {"panel": "replace"} },
+	{ "keys": ["super+r"], "command": "build" },
+	{ "keys": ["ctrl+c"], "command": "exec", "args": {"kill": true} },
+	{ "keys": ["ctrl+x", "super+r"], "command": "show_panel", "args": {"panel": "output.exec"} },
+
+	///////////////////// SFTP keymap start ///////////////////////
+	{ "keys": ["ctrl+super+n","ctrl+super+s"], "command": "sftp_create_server" },
+	{ "keys": ["ctrl+super+n","ctrl+super+b"], "command": "sftp_browse_server" },
+	{ "keys": ["ctrl+super+n","ctrl+super+n"], "command": "sftp_last_server" },
+	{ "keys": ["ctrl+super+n","ctrl+super+e"], "command": "sftp_edit_server" },
+	{ "keys": ["ctrl+super+n","ctrl+super+d"], "command": "sftp_delete_server" },
+
+	// { "keys": ["ctrl+super+u","ctrl+super+f"], "command": "sftp_upload_file" },
+	{ "keys": ["ctrl+super+n","ctrl+super+f"], "command": "sftp_upload_file" },
+	// { "keys": ["ctrl+super+u","ctrl+super+r"], "command": "sftp_upload_folder" },
+	// { "keys": ["ctrl+super+u","ctrl+super+y"], "command": "sftp_sync_up" },
+	// { "keys": ["ctrl+super+u","ctrl+super+n"], "command": "sftp_upload_open_files" },
+	// { "keys": ["ctrl+super+u","ctrl+super+m"], "command": "sftp_monitor_file" },
+
+	// { "keys": ["ctrl+super+u","ctrl+super+o"], "command": "sftp_download_file" },
+	{ "keys": ["ctrl+super+n","ctrl+super+o"], "command": "sftp_download_file" },
+	// { "keys": ["ctrl+super+u","ctrl+super+e"], "command": "sftp_download_folder" },
+	// { "keys": ["ctrl+super+u","ctrl+super+d"], "command": "sftp_sync_down" },
+	// { "keys": ["ctrl+super+u","ctrl+super+i"], "command": "sftp_diff_remote_file" },
+
+	// { "keys": ["ctrl+super+u","ctrl+super+b"], "command": "sftp_sync_both" },
+	// { "keys": ["ctrl+super+u","ctrl+super+c"], "command": "sftp_vcs_changed_files" },
+
+	// { "keys": ["ctrl+super+u","ctrl+super+w"], "command": "sftp_browse" },
+
+	// { "keys": ["ctrl+super+u","ctrl+super+s"], "command": "sftp_show_panel" },
+	// { "keys": ["ctrl+super+u","ctrl+super+x"], "command": "sftp_cancel_upload" },
+	///////////////////// SFTP keymap end ///////////////////////
+
+	///////////////////// SublimeRope keymap start ///////////////////////
+	{ "keys": ["ctrl+u", "ctrl+d"], "command": "goto_python_definition", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+h"], "command": "python_get_documentation", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+r"], "command": "python_refactor_rename", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+e"], "command": "python_refactor_extract_method", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+v"], "command": "python_refactor_extract_variable", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+n"], "command": "python_refactor_inline_variable", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+j"], "command": "python_jump_to_global", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+i"], "command": "python_auto_import", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+c"], "command": "python_regenerate_cache", "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "source.python" }
+	    ]
+	},
+	{ "keys": ["ctrl+u", "ctrl+f"], "command": "python_refactor_restructure" }
+	///////////////////// SublimeRope keymap end ///////////////////////
 ]
