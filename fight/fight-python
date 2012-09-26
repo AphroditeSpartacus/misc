@@ -1,5 +1,5 @@
 #!/bin/bash
 
-PYTHON_TEMPLATE="/Users/Aphrodite/program/arena/libs/template/template.py"
+PYTHON_TEMPLATE="/Users/Aphrodite/program/arena/libs/template/python/template.py"
 
 mkdir $1 && cp ${PYTHON_TEMPLATE} $1/1.py
