@@ -1,0 +1,8 @@
+<snippet>
+    <tabTrigger>ir</tabTrigger>
+    <scope>source.python</scope>
+    <description>raw_input()</description>
+    <content><![CDATA[
+int(raw_input())$0
+]]></content>
+</snippet>
