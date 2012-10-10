@@ -165,6 +165,7 @@
 
 	{ "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 	{ "keys": ["ctrl+super+g"], "command": "show_overlay", "args": {"overlay":"goto", "show_files" : false, "text": "@"}},
+	{ "keys": ["ctrl+shift+super+g"], "command": "show_overlay", "args": {"overlay":"goto", "show_files" : false, "text": "#"}},
 
 	{ "keys": ["ctrl+h"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Left Right.sublime-macro"}, "context":
 		[
