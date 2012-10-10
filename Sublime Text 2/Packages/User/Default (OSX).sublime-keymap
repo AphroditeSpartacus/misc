@@ -4,6 +4,7 @@
 	{ "keys": ["super+n"], "command": "noop" },
 	{ "keys": ["ctrl+x", "ctrl+n"], "command": "new_file" },
 	{ "keys": ["ctrl+x", "ctrl+b"], "command": "toggle_side_bar" },
+	{ "keys": ["ctrl+x", "ctrl+w"], "command": "prompt_save_as" },
 
 	{ "keys": ["super+u"], "command": "soft_undo" },
 	{ "keys": ["ctrl+super+u"], "command": "soft_redo" },
