@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="StatisticsApplicationUsages">
+    <group name="vcs">
+      <project id="arena" values="Git" />
+    </group>
+    <group name="module type">
+      <project id="charm" values="PYTHON_MODULE" />
+      <project id="ww" values="PYTHON_MODULE" />
+      <project id="arena" values="PYTHON_MODULE" />
+    </group>
+    <group name="run-configuration-type-temp">
+      <project id="charm" values="PythonConfigurationType,tests.Doctests" />
+      <project id="arena" values="PythonConfigurationType" />
+    </group>
+    <group name="file-type">
+      <project id="charm" values="Python,UNKNOWN,XML" />
+      <project id="ww" values="XML,UNKNOWN" />
+      <project id="arena" values="PLAIN_TEXT,UNKNOWN,C++,XML,Python" />
+    </group>
+    <group name="javaScript Scope Usages">
+      <project id="charm" values="Project,Project,Project,Project,Project,Project,Project,Project,Project,Project" />
+      <project id="ww" values="Project,Project,Project,Project,Project,Project,Project,Project,Project,Project" />
+      <project id="arena" values="Project,Project,Project,Project,Project,Project,Project,Project,Project,Project" />
+    </group>
+    <group name="JavaScript versions">
+      <project id="charm" values="DEFAULT" />
+      <project id="ww" values="DEFAULT" />
+      <project id="arena" values="DEFAULT" />
+    </group>
+  </component>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="NewDirectoryProjectAction.Empty project" count="1" />
+      <entry feature="execute.PythonConfigurationType.Coverage" count="1" />
+      <entry feature="execute.PythonConfigurationType.Run" count="89" />
+      <entry feature="execute.tests.Run" count="2" />
+    </counts>
+  </component>
+</application>
+

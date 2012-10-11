@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="DimensionService">
+    <location key="#com.intellij.codeInsight.template.impl.EditVariableDialog.0.22.1440.874" x="477" y="296" />
+    <location key="#Plugins" x="308" y="97" />
+    <location key="OptionsEditor.0.22.1440.874" x="108" y="45" />
+    <location key="OptionsEditor" x="108" y="37" />
+    <location key="#Notifications.0.22.1440.874" x="337" y="340" />
+    <location key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate.0.22.1440.874" x="470" y="357" />
+    <location key="#Inspections.0.22.1440.874" x="455" y="159" />
+    <location key="com.intellij.openapi.editor.actions.MultiplePasteAction$1.0.22.1440.874" x="-324" y="0" />
+    <location key="#Python_Interpreters" x="173" y="39" />
+    <location key="CommitChangelistDialog.0.22.1440.874" x="370" y="22" />
+    <location key="#Intentions.0.22.1440.874" x="308" y="121" />
+    <size key="GridCell.Tab.0.left.0.22.1440.874" width="550" height="730" />
+    <size key="javadoc.popup.0.22.1440.874" width="500" height="123" />
+    <size key="OptionsEditor.0.22.1440.874" width="1224" height="828" />
+    <size key="GridCell.Tab.0.bottom.0.22.1440.874" width="550" height="730" />
+    <size key="CommitChangelistDialog.0.22.1440.874" width="699" height="874" />
+    <size key="GridCell.Tab.0.right.0.22.1440.874" width="550" height="730" />
+    <size key="GridCell.Tab.0.center.0.22.1440.874" width="550" height="730" />
+  </component>
+  <component name="LafManager">
+    <laf class-name="com.apple.laf.AquaLookAndFeel" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="CommitChangeListDialog.SPLITTER_PROPORTION_" value="0.590604" />
+    <property name="Non-Project Files" value="Yellow" />
+    <property name="installation.uid" value="176d8417-4f86-427a-8ac2-2a51bbd77fcf" />
+    <property name="PyCharm.InitialConfiguration" value="true" />
+    <property name="FileTemplates.CurrentTab" value="Templates" />
+    <property name="file.colors.enable.tests" value="Green" />
+    <property name="file.colors.enable.non.project" value="Yellow" />
+    <property name="SingleInspectionProfilePanel.HORIZONTAL_DIVIDER_PROPORTION" value="0.5" />
+    <property name="SingleInspectionProfilePanel.VERTICAL_DIVIDER_PROPORTION" value="0.5" />
+    <property name="CommitChangeListDialog.DETAILS_SHOW_OPTION_" value="true" />
+    <property name="KEYMAP" value="jump&#10;comment&#10;run&#10;tab&#10;emacs" />
+    <property name="Tests" value="Green" />
+    <property name="ChangesViewManager.DETAILS_SPLITTER_PROPORTION" value="0.5" />
+    <property name="PyCharm.initialConfigurationShown" value="true" />
+    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_OPTION_" value="0.81063557" />
+    <property name="PyCharm.InitialConfiguration.V4" value="true" />
+    <property name="PyCharm.InitialConfiguration.V3" value="true" />
+    <property name="PyCharm.InitialConfiguration.V2" value="true" />
+    <property name="FileTemplates.SelectedTemplate" value="Python Script" />
+    <property name="ColorChooser.RecentColors" value="249-194-47-255,,,249-160-8-255,,,121-131-18-255,,,67-178-239-255,,,102-217-239-255,,,203-153-33-255,,,154-187-114-255,,,147-125-72-255,,,68-124-186-255,,,203-153-35-255,,,155-194-142-255,,,109-160-161-255,,,200-200-200-255,,,128-128-128-255,,,248-147-172-255,,,102-153-255-255,,,0-204-204-255,,,73-95-42-255,,,0-0-0-255,,,157-157-157-255" />
+  </component>
+</application>
+
