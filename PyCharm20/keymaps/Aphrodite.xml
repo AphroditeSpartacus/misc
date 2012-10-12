@@ -107,7 +107,6 @@
   <action id="EditorEscape">
     <keyboard-shortcut first-keystroke="ESCAPE" second-keystroke="ESCAPE" />
     <keyboard-shortcut first-keystroke="control G" />
-    <keyboard-shortcut first-keystroke="control OPEN_BRACKET" />
   </action>
   <action id="EditorHungryBackSpace">
     <keyboard-shortcut first-keystroke="shift meta H" />
@@ -225,6 +224,7 @@
   <action id="HideSideWindows">
     <keyboard-shortcut first-keystroke="meta 0" />
     <keyboard-shortcut first-keystroke="control CLOSE_BRACKET" />
+    <keyboard-shortcut first-keystroke="control OPEN_BRACKET" />
   </action>
   <action id="HippieBackwardCompletion">
     <keyboard-shortcut first-keystroke="shift alt SLASH" />
