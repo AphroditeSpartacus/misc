@@ -77,13 +77,11 @@
     <keyboard-shortcut first-keystroke="control I" />
   </action>
   <action id="EditorCodeBlockEnd">
-    <keyboard-shortcut first-keystroke="control CLOSE_BRACKET" />
     <keyboard-shortcut first-keystroke="control alt CLOSE_BRACKET" />
     <keyboard-shortcut first-keystroke="control alt B" />
     <keyboard-shortcut first-keystroke="control meta F" />
   </action>
   <action id="EditorCodeBlockStart">
-    <keyboard-shortcut first-keystroke="control OPEN_BRACKET" />
     <keyboard-shortcut first-keystroke="control alt OPEN_BRACKET" />
     <keyboard-shortcut first-keystroke="control alt F" />
     <keyboard-shortcut first-keystroke="control meta B" />
@@ -109,6 +107,7 @@
   <action id="EditorEscape">
     <keyboard-shortcut first-keystroke="ESCAPE" second-keystroke="ESCAPE" />
     <keyboard-shortcut first-keystroke="control G" />
+    <keyboard-shortcut first-keystroke="control OPEN_BRACKET" />
   </action>
   <action id="EditorHungryBackSpace">
     <keyboard-shortcut first-keystroke="shift meta H" />
@@ -172,6 +171,7 @@
   </action>
   <action id="EditorTab">
     <keyboard-shortcut first-keystroke="TAB" />
+    <keyboard-shortcut first-keystroke="meta I" />
   </action>
   <action id="EditorTextEnd">
     <keyboard-shortcut first-keystroke="control END" />
@@ -224,6 +224,7 @@
   </action>
   <action id="HideSideWindows">
     <keyboard-shortcut first-keystroke="meta 0" />
+    <keyboard-shortcut first-keystroke="control CLOSE_BRACKET" />
   </action>
   <action id="HippieBackwardCompletion">
     <keyboard-shortcut first-keystroke="shift alt SLASH" />
@@ -324,7 +325,7 @@
   </action>
   <action id="ShowIntentionActions">
     <keyboard-shortcut first-keystroke="alt ENTER" />
-    <keyboard-shortcut first-keystroke="meta I" />
+    <keyboard-shortcut first-keystroke="control meta I" />
   </action>
   <action id="SmartTypeCompletion">
     <keyboard-shortcut first-keystroke="shift control SPACE" />
