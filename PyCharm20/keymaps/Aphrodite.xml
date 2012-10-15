@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <keymap version="1" name="Aphrodite" parent="Emacs">
+  <action id="$Copy">
+    <keyboard-shortcut first-keystroke="alt C" />
+    <keyboard-shortcut first-keystroke="ESCAPE" second-keystroke="W" />
+    <keyboard-shortcut first-keystroke="meta C" />
+  </action>
   <action id="$Redo">
     <keyboard-shortcut first-keystroke="shift control Z" />
     <keyboard-shortcut first-keystroke="shift alt MINUS" />
@@ -49,6 +54,9 @@
     <keyboard-shortcut first-keystroke="meta SEMICOLON" />
   </action>
   <action id="Diff.FocusOppositePane" />
+  <action id="Editor Copy">
+    <keyboard-shortcut first-keystroke="meta C" />
+  </action>
   <action id="Editor Redo">
     <keyboard-shortcut first-keystroke="control meta SLASH" />
   </action>
@@ -163,7 +171,9 @@
     <keyboard-shortcut first-keystroke="shift RIGHT" />
     <keyboard-shortcut first-keystroke="control meta F" />
   </action>
-  <action id="EditorScrollToCenter" />
+  <action id="EditorScrollToCenter">
+    <keyboard-shortcut first-keystroke="control L" />
+  </action>
   <action id="EditorSelectLine">
     <keyboard-shortcut first-keystroke="meta L" />
   </action>
@@ -336,7 +346,9 @@
   <action id="SaveAs">
     <keyboard-shortcut first-keystroke="control X" second-keystroke="control W" />
   </action>
-  <action id="ScrollTreeToCenter" />
+  <action id="ScrollTreeToCenter">
+    <keyboard-shortcut first-keystroke="control L" />
+  </action>
   <action id="ShowBookmarks">
     <keyboard-shortcut first-keystroke="shift F11" />
     <keyboard-shortcut first-keystroke="control X" second-keystroke="control meta B" />
