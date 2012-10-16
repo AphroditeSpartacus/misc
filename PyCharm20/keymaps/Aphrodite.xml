@@ -41,6 +41,7 @@
     <keyboard-shortcut first-keystroke="alt 6" />
     <keyboard-shortcut first-keystroke="meta 6" />
   </action>
+  <action id="CheckinProject" />
   <action id="CloseAllEditorsButActive">
     <keyboard-shortcut first-keystroke="control X" second-keystroke="meta K" />
   </action>
@@ -53,6 +54,7 @@
     <keyboard-shortcut first-keystroke="control DIVIDE" />
     <keyboard-shortcut first-keystroke="meta SEMICOLON" />
   </action>
+  <action id="Console.TableResult.Reload" />
   <action id="Diff.FocusOppositePane" />
   <action id="Editor Copy">
     <keyboard-shortcut first-keystroke="meta C" />
@@ -157,7 +159,6 @@
   </action>
   <action id="EditorPageUp">
     <keyboard-shortcut first-keystroke="PAGE_UP" />
-    <keyboard-shortcut first-keystroke="control Z" />
     <keyboard-shortcut first-keystroke="alt V" />
     <keyboard-shortcut first-keystroke="meta V" />
   </action>
@@ -206,6 +207,10 @@
     <keyboard-shortcut first-keystroke="ESCAPE" second-keystroke="COMMA" />
     <keyboard-shortcut first-keystroke="shift meta COMMA" />
   </action>
+  <action id="EditorToggleCase">
+    <keyboard-shortcut first-keystroke="shift control U" />
+    <keyboard-shortcut first-keystroke="control meta U" />
+  </action>
   <action id="EditorToggleColumnMode">
     <keyboard-shortcut first-keystroke="control X" second-keystroke="T" />
   </action>
@@ -225,6 +230,8 @@
     <keyboard-shortcut first-keystroke="TAB" />
     <keyboard-shortcut first-keystroke="control I" />
   </action>
+  <action id="FileChooser.NewFolder" />
+  <action id="FileChooser.TogglePathShowing" />
   <action id="FindWordAtCaret">
     <keyboard-shortcut first-keystroke="control F3" />
     <keyboard-shortcut first-keystroke="control meta W" />
@@ -247,6 +254,7 @@
   <action id="GotoPreviousBookmark">
     <keyboard-shortcut first-keystroke="control X" second-keystroke="OPEN_BRACKET" />
   </action>
+  <action id="GotoSuperMethod" />
   <action id="GotoSymbol">
     <keyboard-shortcut first-keystroke="shift control alt N" />
     <keyboard-shortcut first-keystroke="shift meta G" />
@@ -328,7 +336,6 @@
     <keyboard-shortcut first-keystroke="control meta I" />
   </action>
   <action id="QuickJavaDoc">
-    <keyboard-shortcut first-keystroke="control Q" />
     <mouse-shortcut keystroke="alt button2" />
     <keyboard-shortcut first-keystroke="control X" second-keystroke="shift SLASH" />
   </action>
@@ -400,6 +407,7 @@
     <keyboard-shortcut first-keystroke="alt BACK_QUOTE" />
     <keyboard-shortcut first-keystroke="control meta T" />
   </action>
+  <action id="Vcs.UpdateProject" />
   <action id="ViewToolButtons">
     <keyboard-shortcut first-keystroke="control X" second-keystroke="control B" />
   </action>
