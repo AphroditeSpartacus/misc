@@ -240,6 +240,13 @@
     <keyboard-shortcut first-keystroke="shift alt G" />
     <keyboard-shortcut first-keystroke="shift control meta G" />
   </action>
+  <action id="GotoDeclaration">
+    <keyboard-shortcut first-keystroke="control alt G" />
+    <keyboard-shortcut first-keystroke="ESCAPE" second-keystroke="PERIOD" />
+    <keyboard-shortcut first-keystroke="alt PERIOD" />
+    <mouse-shortcut keystroke="control button1" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="control D" />
+  </action>
   <action id="GotoFile">
     <keyboard-shortcut first-keystroke="shift control N" />
     <keyboard-shortcut first-keystroke="control meta G" />
@@ -258,6 +265,12 @@
   <action id="GotoSymbol">
     <keyboard-shortcut first-keystroke="shift control alt N" />
     <keyboard-shortcut first-keystroke="shift meta G" />
+  </action>
+  <action id="GotoTypeDeclaration">
+    <keyboard-shortcut first-keystroke="shift control B" />
+    <mouse-shortcut keystroke="shift control button1" />
+    <mouse-shortcut keystroke="shift button2" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="control T" />
   </action>
   <action id="HideSideWindows">
     <keyboard-shortcut first-keystroke="meta 0" />
