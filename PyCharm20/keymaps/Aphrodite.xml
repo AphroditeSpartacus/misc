@@ -72,7 +72,7 @@
   </action>
   <action id="EditorChooseLookupItem">
     <keyboard-shortcut first-keystroke="ENTER" />
-    <keyboard-shortcut first-keystroke="control J" />
+    <keyboard-shortcut first-keystroke="control meta I" />
   </action>
   <action id="EditorChooseLookupItemAlways">
     <keyboard-shortcut first-keystroke="control ENTER" />
@@ -143,6 +143,14 @@
     <keyboard-shortcut first-keystroke="shift LEFT" />
     <keyboard-shortcut first-keystroke="control meta B" />
   </action>
+  <action id="EditorLineEndWithSelection">
+    <keyboard-shortcut first-keystroke="shift END" />
+    <keyboard-shortcut first-keystroke="control meta E" />
+  </action>
+  <action id="EditorLineStartWithSelection">
+    <keyboard-shortcut first-keystroke="shift HOME" />
+    <keyboard-shortcut first-keystroke="control meta A" />
+  </action>
   <action id="EditorMoveToPageBottom">
     <keyboard-shortcut first-keystroke="control PAGE_DOWN" />
     <keyboard-shortcut first-keystroke="meta N" />
@@ -201,11 +209,19 @@
     <keyboard-shortcut first-keystroke="shift alt PERIOD" />
     <keyboard-shortcut first-keystroke="shift meta PERIOD" />
   </action>
+  <action id="EditorTextEndWithSelection">
+    <keyboard-shortcut first-keystroke="shift control END" />
+    <keyboard-shortcut first-keystroke="shift control meta PERIOD" />
+  </action>
   <action id="EditorTextStart">
     <keyboard-shortcut first-keystroke="control HOME" />
     <keyboard-shortcut first-keystroke="shift alt COMMA" />
     <keyboard-shortcut first-keystroke="ESCAPE" second-keystroke="COMMA" />
     <keyboard-shortcut first-keystroke="shift meta COMMA" />
+  </action>
+  <action id="EditorTextStartWithSelection">
+    <keyboard-shortcut first-keystroke="shift control HOME" />
+    <keyboard-shortcut first-keystroke="shift control meta COMMA" />
   </action>
   <action id="EditorToggleCase">
     <keyboard-shortcut first-keystroke="shift control U" />
@@ -296,7 +312,7 @@
   </action>
   <action id="JumpToLastWindow">
     <keyboard-shortcut first-keystroke="F12" />
-    <keyboard-shortcut first-keystroke="control X" second-keystroke="meta R" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="control QUOTE" />
   </action>
   <action id="NewElement">
     <keyboard-shortcut first-keystroke="control X" second-keystroke="control N" />
@@ -351,6 +367,10 @@
   <action id="QuickJavaDoc">
     <mouse-shortcut keystroke="alt button2" />
     <keyboard-shortcut first-keystroke="control X" second-keystroke="shift SLASH" />
+  </action>
+  <action id="RenameElement">
+    <keyboard-shortcut first-keystroke="shift F6" />
+    <keyboard-shortcut first-keystroke="control X" second-keystroke="meta N" />
   </action>
   <action id="ReopenClosedTab">
     <keyboard-shortcut first-keystroke="meta Z" />
