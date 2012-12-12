@@ -15,8 +15,9 @@
 ;; (global-set-key [M-f2] 'previous-buffer)
 ;; (global-set-key "\C-[" 'previous-buffer)
 ;; (global-set-key "\C-]" 'next-buffer)
-(global-set-key (kbd "C-;") 'other-window)
-(global-set-key (kbd "C-'") 'switch-to-buffer)
+;; (global-set-key (kbd "C-;") 'other-window)
+(global-set-key (kbd "C-'") 'other-window)
+(global-set-key (kbd "C-M-'") 'switch-to-buffer)
 ;; (global-set-key (kbd "C-,") '( lambda() (interactive) (backward-delete-char 4))) ; for python indent back
 
 (c-set-offset 'substatement-open 0)
@@ -142,17 +143,18 @@
 ;; (set-frame-height (selected-frame) 1000)
 (put 'upcase-region 'disabled nil)
 
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(jde-complete-function (quote jde-complete-minibuf))
- '(jde-debugger (quote ("jdb")))
- '(jde-gen-println (quote ("\"System.out.println(\" ~ \");\"")))
- '(jde-jdk-doc-url "/Users/Aphrodite/Documents/jdk-6u30-apidocs/docs/api/index.html")
- '(jde-jdk-registry (quote (("1.6.0_26" . "/System/Library/Frameworks/JavaVM.framework/Versions/1.6"))))
- '(jde-resolve-relative-paths-p t))
+;; (custom-set-variables
+;;   ;; custom-set-variables was added by Custom.
+;;   ;; If you edit it by hand, you could mess it up, so be careful.
+;;   ;; Your init file should contain only one such instance.
+;;   ;; If there is more than one, they won't work right.
+;;  '(jde-complete-function (quote jde-complete-minibuf))
+;;  '(jde-debugger (quote ("jdb")))
+;;  '(jde-gen-println (quote ("\"System.out.println(\" ~ \");\"")))
+;;  '(jde-jdk-doc-url "/Users/Aphrodite/Documents/jdk-6u30-apidocs/docs/api/index.html")
+;;  '(jde-jdk-registry (quote (("1.6.0_26" . "/System/Library/Frameworks/JavaVM.framework/Versions/1.6"))))
+;;  '(jde-resolve-relative-paths-p t))
+
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -169,47 +171,6 @@
 (yas/load-directory yas/root-directory)
 (setq yas/triggers-in-field t)
 
-;; lisp
-;; (setq inferior-lisp-program "/usr/bin/sbcl")
-;; (add-to-list 'load-path "~/.emacs.d/plugins/slime")
-;; (require 'slime-autoloads)
-;; (slime-setup '(slime-fancy))
-;; (require 'slime)
-;; (slime-setup)
-;; (setq common-lisp-hyperspec-root "/Users/Aphrodite/Documents/LISP/HyperSpec/")
-;; (setq browse-url-browser-function
-;;       '(("/Users/Aphrodite/Documents/LISP/HyperSpec/" . w3m-browse-url)
-;;         ("." . browse-url-default-browser)))
-;; (defun lisp-indent-or-complete (&optional arg)
-;;   (interactive "p")
-;;   (if (or (looking-back "^\\s-*") (bolp))
-;;       (call-interactively 'lisp-indent-line)
-;;     (progn
-;;       (call-interactively 'slime-indent-and-complete-symbol))))
-      ;; (local-set-key (kbd "C-g") (lambda ()
-      ;;                              (interactive)
-      ;;                              (switch-to-buffer-other-window "*Completions**")
-      ;;                              (bury-buffer)
-      ;;                              (other-window 1))))))
-;; (eval-after-load "lisp-mode"
-;;   '(progn
-;;      (define-key lisp-mode-map (kbd "TAB") 'lisp-indent-or-complete)))
-
-;; ;; haskell
-;; (add-to-list 'load-path "~/.emacs.d/plugins/haskell-mode")
-;; (load "~/.emacs.d/plugins/haskell-mode/haskell-site-file")
-;; (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-;; (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-;; ;; (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-;; ;; (add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
-;; (add-hook 'inferior-haskell-mode-hook
-;; 	  (lambda () (define-key inferior-haskell-mode-map "\C-j"
-;;                        'comint-send-input)))
-;; ;; (add-hook 'haskell-mode-hook
-;; ;;           (lambda () (define-key haskell-mode-map "\C-c\C-g"
-;; ;;                        'haskell-indent-insert-guard)))
-
-
 ;; for cscope
 ;; (add-to-list 'load-path
 ;; 	     "~/.emacs.d/plugins/xcscope")
@@ -217,12 +178,6 @@
 ;; 	  '(lambda ()
 ;; 	     (require 'xcscope)))
 ;; ;; (define-key global-map "\C-j" 'cscope-select-entry-other-window)
-
-;; Replace path below to be where your matlab.el file is.
-;;(add-to-list 'load-path "~/.emacs.d/plugins/matlab-emacs")
-;;(load-library "matlab-load")
-;; Enable CEDET feature support for MATLAB code. (Optional)
-;; (matlab-cedet-setup)
 
 (defun compile-and-run-current-file ()
   "Execute or compile the current file.
@@ -432,4 +387,9 @@ File suffix is used to determine what program to run."
 ;; (load-theme 'solarized-dark t)
 
 (setq read-file-name-completion-ignore-case nil)
+
+(add-to-list 'load-path "~/.emacs.d/plugins/python-mode.el-6.0.10")
+(require 'python-mode)
+;(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode)) 
+
 (run-with-idle-timer 0.5 nil 'ns-toggle-fullscreen)
