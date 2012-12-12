@@ -1,0 +1,37 @@
+;; -*- emacs-lisp -*- <12/12/12 17:11:02 /Users/Aphrodite/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["scpc" "root" "i" nil]
+  ("uname" "Linux 2.6.32-279.2.1.el6.x86_64")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("file-exists" "test -e")
+  ("~" "/root")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl"))
+ (["scpc" "root" "172.16.82.244" nil]
+  ("uname" "Linux 2.6.32-131.12.1.el6.x86_64")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("readlink" "\\readlink")
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 0)
+  ("local-encoding" base64-encode-region)
+  ("local-decoding" base64-decode-region)
+  ("remote-encoding" "base64")
+  ("remote-decoding" "base64 -d -i")
+  ("ls" "/bin/ls --color=never")
+  ("uid-integer" 0)))

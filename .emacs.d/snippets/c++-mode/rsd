@@ -1,0 +1,5 @@
+# name : for (...; ...; ...) { ... } rsd
+# --
+for (int ${1:INDEX} = (int)(${2:CONTAINER}).size() - 1; $1 >= 0; --$1) {
+$0
+}

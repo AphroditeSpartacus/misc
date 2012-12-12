@@ -1,0 +1,3 @@
+# name : set cout precision
+# --
+cout << setiosflags(ios::fixed) << setprecision(${1:PRECISION});

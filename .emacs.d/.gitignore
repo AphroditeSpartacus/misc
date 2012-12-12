@@ -1,0 +1,6 @@
+*.elc
+*.pyc
+*.pyo
+el-get
+plugins
+themes

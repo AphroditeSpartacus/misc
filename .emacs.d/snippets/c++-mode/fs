@@ -1,0 +1,5 @@
+# name : for (...; ...; ...) { ... } fs
+# --
+for (int ${1:INDEX} = ${2:BEGIN}; $1 < (int)(${3:CONTAINER}).size(); ++$1) {
+$0
+}

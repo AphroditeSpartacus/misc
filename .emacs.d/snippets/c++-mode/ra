@@ -1,0 +1,5 @@
+# name : for (...; ...; ...) { ... } ra
+# --
+for (__typeof(($2).begin()) ${1:ITERATOR} = (${2:CONTAINER}).begin(); $1 != ($2).end(); ++$1) {
+$0
+}

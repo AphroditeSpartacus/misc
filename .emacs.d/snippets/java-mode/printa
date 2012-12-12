@@ -1,0 +1,3 @@
+#name : System.out.println(Arrays.deepToString())
+# --
+System.out.println(Arrays.deepToString($0));

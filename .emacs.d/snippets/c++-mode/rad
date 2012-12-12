@@ -1,0 +1,5 @@
+# name : for (...; ...; ...) { ... } rad
+# --
+for (__typeof(($2).rbegin()) ${1:ITERATOR} = (${2:CONTAINER}).rbegin(); $1 != ($2).rend(); ++$1) {
+$0
+}

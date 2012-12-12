@@ -1,0 +1,3 @@
+# name : translate type
+# --
+*({stringstream ss; ss << (${1:ITEM}); static ${2:TYPE} _; ss >> _; &_;})
