@@ -13,6 +13,7 @@
 ;; (require 'init-jedi)
 ;; (require 'init-w3m)
 ;; (require 'init-yasnippet)
+;; (require 'init-tramp-virtualenv)
 
 (require 'init-sdcv)
 
