@@ -1,3 +1,8 @@
-(add-hook 'python-mode-hook 'jedi:setup)
+;; 'jedi:setup
 ;; (setq jedi:setup-keys t)
-(global-set-key (kbd "C-;") 'jedi:complete)
+
+(add-hook 'python-mode-hook
+          (lambda ()
+            'jedi:setup
+            (setq jedi:get-in-function-call--d t)
+            (define-key python-mode-map (kbd "C-;") 'jedi:complete)))

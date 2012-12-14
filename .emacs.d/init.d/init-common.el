@@ -1,6 +1,7 @@
 (provide 'init-common)
 
 (setq init-dir "~/.emacs.d/")
+(setq el-get-dir (concat init-dir "el-get/"))
 (setq plugins-dir (concat init-dir "plugins/"))
 (setq themes-dir (concat init-dir "themes/"))
 

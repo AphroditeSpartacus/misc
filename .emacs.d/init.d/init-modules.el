@@ -1,6 +1,6 @@
 (provide 'init-modules)
 
-(defun compile-and-run-current-file ()
+(defun compile-and-run-current-file (debug testcase)
   "Execute or compile the current file.
 For example, if the current buffer is the file x.pl,
 then it'll call “perl x.pl” in a shell.
@@ -12,30 +12,42 @@ File suffix is used to determine what program to run."
     (setq basename (file-name-sans-extension (file-name-nondirectory fname)))
     (setq suffix (file-name-extension fname))
     (setq extention-alist ;; a keyed list of file suffix to comand-line program to run
-          '(
-            ("java" . "javac -d /tmp")
-            ;; ("java" . "javac -d /tmp -classpath /Users/Aphrodite/Documents/thinkInJava/src")
-	    ("cpp" . "g++ -Wall -o /tmp/a.out")
-            ;; ("cpp" . "g++ -Wall -o /tmp/a.out -lglut -lGL -lGLU -lm -I /Users/Aphrodite/program/openGL/src/examples/src/shared -I /usr/include/GL")
-	    ("c"   . "gcc -Wall -o /tmp/a.out")
-	    ("py"  . "/usr/bin/time python")
-            ("hs"  . "ghc -o /tmp/a.out -outputdir /tmp -tmpdir /tmp")
-            ("lisp" . "/usr/bin/time sbcl --script")
-            ;; ("sh" . "bash")
-            )
+          (if debug
+              '(
+                ("cpp" . "g++ -DDEBUG -Wall -o /tmp/a.out")
+                ("c"   . "gcc -DDEBUG -Wall -o /tmp/a.out")
+                ("py"  . "/usr/bin/time python")
+                ("sh" . "bash")
+                )
+            '(
+              ("java" . "javac -d /tmp")
+              ("cpp" . "g++ -Wall -o /tmp/a.out")
+              ("c"   . "gcc -Wall -o /tmp/a.out")
+              ("py"  . "/usr/bin/time python")
+              ("hs"  . "ghc -o /tmp/a.out -outputdir /tmp -tmpdir /tmp")
+              ("lisp" . "/usr/bin/time sbcl --script")
+              ("sh" . "bash")
+              ))
           )
     (setq fileStr-alist
-	  `(
-            ("java" . ,(concat " && /usr/bin/time java -classpath /tmp " basename))
-            ;; ("java" . ,(concat " && /usr/bin/time java -classpath /Users/Aphrodite/Documents/thinkInJava/src -classpath /tmp " basename))
-            ;; ("java" . ,fname)
-	    ("cpp" . " && /usr/bin/time /tmp/a.out")
-	    ("c"   . " && /usr/bin/time /tmp/a.out")
-	    ("py"  . "")
-            ("hs"  . " && /usr/bin/time /tmp/a.out")
-            ("lisp" . "")
-	    )
-	  )
+          (if (not testcase)
+              `(
+                ("java" . ,(concat " && /usr/bin/time java -classpath /tmp " basename))
+                ("cpp" . " && /usr/bin/time /tmp/a.out")
+                ("c"   . " && /usr/bin/time /tmp/a.out")
+                ("py"  . "")
+                ("hs"  . " && /usr/bin/time /tmp/a.out")
+                ("lisp" . "")
+                )
+            `(
+              ("java" . ,(concat " && /usr/bin/time java -classpath /tmp " basename))
+              ("cpp" . ,(concat " && /usr/bin/time /tmp/a.out < " testcase))
+              ("c"   . " && /usr/bin/time /tmp/a.out")
+              ("py"  . "")
+              ("hs"  . " && /usr/bin/time /tmp/a.out")
+              ("lisp" . "")
+              ))
+          )
     (setq progName (cdr (assoc suffix extention-alist)))
     (setq fileStr (cdr (assoc suffix fileStr-alist)))
     (setq cmdStr (concat progName " \""   fname "\"" fileStr))
@@ -45,37 +57,24 @@ File suffix is used to determine what program to run."
 	  (async-shell-command cmdStr))
       (message "No recognized program file suffix for this file.")
       )))
-(defun compile-and-run-current-file-debug ()
-  (interactive)
-  (let (extention-alist fileStr-alist fname suffix progName cmdStr)
-    (setq extention-alist ;; a keyed list of file suffix to comand-line program to run
-          '(
-	    ("cpp" . "g++ -DDEBUG -Wall -o /tmp/a.out")
-	    ("c"   . "gcc -DDEBUG -Wall -o /tmp/a.out")
-	    ("py"  . "/usr/bin/time python")
-            ;; ("sh" . "bash")
-            )
-          )
-    (setq fileStr-alist
-	  '(
-	    ("cpp" . " && /usr/bin/time /tmp/a.out")
-	    ("c"   . " && /usr/bin/time /tmp/a.out")
-	    ("py"  . "")
-	    )
-	  )
-    (setq fname (buffer-file-name))
-    (setq suffix (file-name-extension fname))
-    (setq progName (cdr (assoc suffix extention-alist)))
-    (setq fileStr (cdr (assoc suffix fileStr-alist)))
-    (setq cmdStr (concat progName " \""   fname "\"" fileStr))
-    (if progName
-	(progn
-	  (message "Running...")
-	  (async-shell-command cmdStr))
-      (message "No recognized program file suffix for this file.")
-      )))
-(global-set-key "\M-r" 'compile-and-run-current-file)
-(global-set-key "\C-\M-r" 'compile-and-run-current-file-debug)
+
+(global-set-key "\M-r" '(lambda() (interactive) (compile-and-run-current-file nil nil)))
+(global-set-key "\C-\M-r" '(lambda() (interactive) (compile-and-run-current-file t nil)))
+
+(global-set-key "\M-1" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/1.input")))
+(global-set-key (kbd "C-M-1") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/1.input")))
+
+(global-set-key "\M-2" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/1.input")))
+(global-set-key (kbd "C-M-2") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/2.input")))
+
+(global-set-key "\M-3" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/1.input")))
+(global-set-key (kbd "C-M-3") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/3.input")))
+
+(global-set-key "\M-4" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/1.input")))
+(global-set-key (kbd "C-M-4") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/4.input")))
+
+(global-set-key "\M-5" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/5.input")))
+(global-set-key (kbd "C-M-5") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/5.input")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
