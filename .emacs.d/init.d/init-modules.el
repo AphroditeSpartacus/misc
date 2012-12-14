@@ -85,7 +85,14 @@ File suffix is used to determine what program to run."
             (lines-size (- (region-end) (region-beginning))))
         (comment-region (region-beginning) (region-end))
         (insert lines)
-        (backward-char lines-size))))
+        (backward-char lines-size))
+    (let ((current-line (thing-at-point 'line))
+          (start (line-beginning-position))
+          (end (line-end-position)))
+      (beginning-of-line)
+      (insert current-line)
+      (comment-region start end))))
+
 (global-set-key (kbd "C-M-;") 'comment-and-copy)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -130,3 +137,41 @@ File suffix is used to determine what program to run."
   (forward-line -1)
   (start-newline-next))
 (global-set-key (kbd "C-o") 'start-newline-prev)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; (defun select-current-line ()
+;;   "Select the current line"
+;;   (interactive)
+;;   (end-of-line) ; move to end of line
+;;   (set-mark (line-beginning-position)))
+
+(defun select-current-line ()
+  "Select the current line"
+  (interactive)
+  (let ((start (line-beginning-position)))
+    (next-line) ; move to next line
+    (beginning-of-line)
+    (set-mark start)))
+
+(global-set-key (kbd "C-x M-l") 'downcase-word)
+(global-set-key (kbd "M-l") 'select-current-line)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun duplicate-current-line (&optional n)
+  "duplicate current line, make more than 1 copy given a numeric argument"
+  (interactive "p")
+  (save-excursion
+    (let ((nb (or n 1))
+    	  (current-line (thing-at-point 'line)))
+      ;; when on last line, insert a newline first
+      (when (or (= 1 (forward-line 1)) (eq (point) (point-max)))
+    	(insert "\n"))
+
+      ;; now insert as many time as requested
+      (while (> n 0)
+    	(insert current-line)
+    	(decf n)))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
