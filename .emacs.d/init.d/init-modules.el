@@ -7,6 +7,7 @@ then it'll call “perl x.pl” in a shell.
 The file can be php, perl, python, ruby, javascript, bash, ocaml, java.
 File suffix is used to determine what program to run."
   (interactive)
+  (save-buffer)
   (let (extention-alist fileStr-alist fname suffix progName cmdStr)
     (setq fname (buffer-file-name))
     (setq basename (file-name-sans-extension (file-name-nondirectory fname)))
@@ -97,11 +98,11 @@ File suffix is used to determine what program to run."
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun kill-whole-line-and-move-end-of-line()
+(defun kill-whole-line-and-move-indentation-of-line()
   (interactive)
     (kill-whole-line)
-    (move-end-of-line nil))
-(global-set-key (kbd "C-M-k") 'kill-whole-line-and-move-end-of-line)
+    (back-to-indentation))
+(global-set-key (kbd "C-M-k") 'kill-whole-line-and-move-indentation-of-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

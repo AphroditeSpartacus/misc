@@ -15,6 +15,7 @@
 ;; (require 'init-yasnippet)
 ;; (require 'init-tramp-virtualenv)
 
+(require 'init-winner-mode)
 (require 'init-sdcv)
 
 (require 'init-mode-hook)
