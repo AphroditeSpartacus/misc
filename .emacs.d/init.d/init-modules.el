@@ -188,8 +188,9 @@ File suffix is used to determine what program to run."
 
 (defun move-beginning-or-indentation-of-line ()
   (interactive)
-  (if (eq (point) (line-beginning-position))
-      (back-to-indentation)
-    (beginning-of-line)))
+  (let ((current-position (point)))
+    (back-to-indentation)
+    (if (eq current-position (point))
+        (beginning-of-line))))
 
 (global-set-key (kbd "C-a") 'move-beginning-or-indentation-of-line)
