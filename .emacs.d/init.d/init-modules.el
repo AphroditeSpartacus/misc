@@ -134,8 +134,13 @@ File suffix is used to determine what program to run."
 
 (defun start-newline-prev ()
   (interactive)
-  (forward-line -1)
-  (start-newline-next))
+  (if (eq (line-beginning-position) (point-min))
+      (progn
+        (beginning-of-line)
+        (open-line 1))
+    (progn
+      (forward-line -1)
+      (start-newline-next))))
 (global-set-key (kbd "C-o") 'start-newline-prev)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -150,8 +155,13 @@ File suffix is used to determine what program to run."
   "Select the current line"
   (interactive)
   (let ((start (line-beginning-position)))
-    (next-line) ; move to next line
-    (beginning-of-line)
+      ;; (when (or (= 1 (forward-line 1)) (eq (point) (point-max)))
+      ;;   (insert "\n"))
+    (if (eq (line-end-position) (point-max))
+        (end-of-line) ; move to end of line
+      (progn
+        (next-line) ; move to next line
+        (beginning-of-line)))
     (set-mark start)))
 
 (global-set-key (kbd "C-x M-l") 'downcase-word)
@@ -175,3 +185,11 @@ File suffix is used to determine what program to run."
     	(decf n)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun move-beginning-or-indentation-of-line ()
+  (interactive)
+  (if (eq (point) (line-beginning-position))
+      (back-to-indentation)
+    (beginning-of-line)))
+
+(global-set-key (kbd "C-a") 'move-beginning-or-indentation-of-line)

@@ -17,7 +17,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (blink-cursor-mode -1)
-;; (show-paren-mode t)
+(show-paren-mode t)
 (transient-mark-mode t)
 (global-auto-revert-mode t)             ;auto revert file
 (file-name-shadow-mode t)

@@ -6,7 +6,8 @@
       ;; (set-frame-font "Monaco-15")
       (set-frame-font "Menlo-15")
       ;; (set-cursor-color "orchid")
-      (set-cursor-color "LightSteelBlue4")
+      ;; (set-cursor-color "LightSteelBlue4")
+      (set-cursor-color "SkyBlue4")
       ;; (set-frame-parameter (selected-frame) 'alpha '(95 90))
       ))
 
