@@ -10,8 +10,8 @@
 (global-set-key "\C-\M-h" 'backward-kill-word)
 (global-set-key [C-left] 'previous-buffer)
 (global-set-key [C-right] 'next-buffer)
-(global-set-key (kbd "C-'") 'switch-to-buffer)
-(global-set-key "\C-]" 'other-window)
+;; (global-set-key (kbd "C-'") 'switch-to-buffer)
+(global-set-key (kbd "C-'") 'other-window)
 (global-set-key "\M-[" 'previous-multiframe-window)
 (global-set-key "\M-]" 'next-multiframe-window)
 

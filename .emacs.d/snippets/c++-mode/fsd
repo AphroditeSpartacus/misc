@@ -1,5 +1,5 @@
 # name : for (...; ...; ...) { ... } fsd
 # --
-for (int ${1:INDEX} = (int)(${2:CONTAINER}).size() - 1; $1 >= ${3:0}; --$1) {
+for (size_t ${1:INDEX} = (${2:CONTAINER}).size() - 1; $1 >= ${3:0}; --$1) {
 $0
 }

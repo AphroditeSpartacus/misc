@@ -1,5 +1,5 @@
 # name : for (...; ...; ...) { ... } rs
 # --
-for (int ${1:INDEX} = 0; $1 < (int)(${2:CONTAINER}).size(); ++$1) {
+for (size_t ${1:INDEX} = 0; $1 < (${2:CONTAINER}).size(); ++$1) {
 $0
 }
