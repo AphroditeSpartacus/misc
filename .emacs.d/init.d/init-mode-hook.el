@@ -56,3 +56,7 @@
 	  (lambda ()
             (define-key isearch-mode-map "\C-h" 'isearch-delete-char)
             (define-key isearch-mode-map "\C-j" 'isearch-exit)))
+
+(add-hook 'Info-mode-hook
+	  (lambda ()
+            (define-key Info-mode-map "\C-j" 'Info-follow-nearest-node)))

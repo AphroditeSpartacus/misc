@@ -32,7 +32,7 @@
              ;; (local-set-key (kbd "k") 'previous-line)
              ;; (local-set-key (kbd "SPC") 'scroll-up)
              ;; (local-set-key (kbd "DEL") 'scroll-down)
-             (local-set-key (kbd "C-g") (lambda ()
+             (local-set-key (kbd "q") (lambda ()
                                           (interactive)
                                           (if (eq onewindow t)
                                               (delete-window)
