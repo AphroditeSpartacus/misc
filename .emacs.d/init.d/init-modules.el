@@ -161,7 +161,7 @@ File suffix is used to determine what program to run."
     (if (eq (line-end-position) (point-max))
         (end-of-line) ; move to end of line
       (progn
-        (next-line) ; move to next line
+        (next-logical-line) ; move to next line
         (beginning-of-line)))
     (set-mark start)))
 
