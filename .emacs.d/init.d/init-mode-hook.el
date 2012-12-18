@@ -60,3 +60,17 @@
 (add-hook 'Info-mode-hook
 	  (lambda ()
             (define-key Info-mode-map "\C-j" 'Info-follow-nearest-node)))
+
+(add-hook 'w3m-mode-hook
+	  (lambda ()
+            (define-key w3m-mode-map "\C-j" 'w3m-view-this-url)
+            (define-key w3m-mode-map "\M-[" nil)
+            (define-key w3m-mode-map "\M-]" nil)))
+
+(add-hook 'dired-mode-hook
+	  (lambda ()
+            (define-key dired-mode-map "\C-j" 'dired-find-file)))
+
+(add-hook 'help-mode-hook
+	  (lambda ()
+            (define-key help-mode-map "\C-j" 'push-button)))
