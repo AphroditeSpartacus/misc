@@ -58,6 +58,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
   ;; name     sRGB      Gen RGB   256       16              8
   '((base03  "#002b36" "#042028" "#1c1c1c" "brightblack"   "black")
     (base02  "#073642" "#0a2832" "#262626" "black"         "black")
+    (base09  "#073642" "#0a3842" "#262626" "black"         "black") ; aphrorhpa
     (base01  "#586e75" "#465a61" "#585858" "brightgreen"   "green")
     (base00  "#657b83" "#52676f" "#626262" "brightyellow"  "yellow")
     (base0   "#839496" "#708183" "#808080" "brightblue"    "blue")
@@ -89,6 +90,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (nth index (assoc name solarized-colors)))))
     (let ((base03      (find-color 'base03))
           (base02      (find-color 'base02))
+          (base09      (find-color 'base09)) ; aphrorhpa
           (base01      (find-color 'base01))
           (base00      (find-color 'base00))
           (base0       (find-color 'base0))
@@ -129,6 +131,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
         (let ((bg-back   `(:background ,back))
               (bg-base03 `(:background ,base03))
               (bg-base02 `(:background ,base02))
+              (bg-base09 `(:background ,base09)) ; aphrorhpa
               (bg-base01 `(:background ,base01))
               (bg-base00 `(:background ,base00))
               (bg-base0 `(:background ,base0))
@@ -143,7 +146,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
               (bg-violet `(:background ,violet))
               (bg-blue `(:background ,blue))
               (bg-cyan `(:background ,cyan))
-              
+
               (fg-base03 `(:foreground ,base03))
               (fg-base02 `(:foreground ,base02))
               (fg-base01 `(:foreground ,base01))
@@ -201,7 +204,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (mode-line-inactive ; StatusLineNC
               ((t (,@fg-base00 ,@bg-base02 ,@fmt-revbb :box nil))))
              ;; (region ((t (,@fg-base01 ,@bg-base03 ,@fmt-revbb)))) ; Visual ; aphrorhpa
-             (region ((t (,@fmt-none ,@bg-base02)))) ; Visual
+             (region ((t (,@fmt-none ,@bg-base09)))) ; Visual ; aphrorhpa
              (secondary-selection ((t (,@bg-base02))))
              (shadow ((t (,@fg-base01))))
              (trailing-whitespace ((t (,@fmt-revr ,@fg-red))))
