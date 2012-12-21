@@ -13,11 +13,16 @@
 ;; (global-hl-line-mode t)
 ;; (global-linum-mode t)
 (setq column-number-mode t)
+
 (setq menu-bar-mode nil)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (blink-cursor-mode -1)
+
+(setq show-paren-delay 0)
+(setq show-paren-style 'parenthesis)
 (show-paren-mode t)
+
 (transient-mark-mode t)
 (global-auto-revert-mode t)             ;auto revert file
 (file-name-shadow-mode t)
