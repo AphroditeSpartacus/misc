@@ -4,8 +4,7 @@
 (setq mac-command-modifier 'meta)
 
 (global-set-key "\C-x?" 'help-command)
-(global-set-key "\C-h" 'backward-delete-char)
-;; (global-set-key "\C-h" 'autopair-backspace)
+(global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\M-g" 'goto-line)
 (global-set-key "\C-\M-h" 'backward-kill-word)
 (global-set-key [C-left] 'previous-buffer)
