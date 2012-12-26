@@ -301,7 +301,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (font-lock-comment-delimiter-face ; Comment
               ((t (,@fmt-ital ,@fg-base01))))
              (font-lock-preprocessor-face ; PreProc
-              ((t (,@fmt-none ,@fg-orange))))
+              ;; ((t (,@fmt-none ,@fg-orange)))) ; aphrorhpa
+              ((t (,@fmt-none ,@fg-violet)))) ; aphrorhpa
              (font-lock-reference-face ((t (,@fmt-none ,@fg-cyan))))
              (font-lock-negation-char-face ((t (,@fmt-none ,@fg-red))))
              (font-lock-other-type-face ((t (,@fmt-ital ,@fg-blue))))
