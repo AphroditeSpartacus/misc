@@ -111,8 +111,8 @@ File suffix is used to determine what program to run."
          (newalpha (+ incr oldalpha)))
     (when (and (<= frame-alpha-lower-limit newalpha) (>= 100 newalpha))
       (modify-frame-parameters frame (list (cons 'alpha newalpha))))))
-(global-set-key (kbd "M-C-8") '(lambda () (interactive) (adjust-opacity nil -5)))
-(global-set-key (kbd "M-C-9") '(lambda () (interactive) (adjust-opacity nil 5)))
+(global-set-key (kbd "C-M-8") '(lambda () (interactive) (adjust-opacity nil -5)))
+(global-set-key (kbd "C-M-9") '(lambda () (interactive) (adjust-opacity nil 5)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -159,17 +159,30 @@ File suffix is used to determine what program to run."
 (defun select-current-line ()
   "Select the current line"
   (interactive)
-  (let ((start (line-beginning-position)))
-      ;; (when (or (= 1 (forward-line 1)) (eq (point) (point-max)))
-      ;;   (insert "\n"))
-    (if (eq (line-end-position) (point-max))
-        (end-of-line) ; move to end of line
-      (progn
-        (next-logical-line) ; move to next line
-        (beginning-of-line)))
+  (let ((start (line-beginning-position))
+        (distance (- (line-end-position) (point))))
+    (end-of-line)
+    ;; (if (eq (line-end-position) (point-max))
+    ;;     (end-of-line) ; move to end of line
+    ;;   (progn
+    ;;     (next-logical-line) ; move to next line
+    ;;     (beginning-of-line)))
     (set-mark start)))
 
 (global-set-key (kbd "M-l") 'select-current-line)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun comment-uncomment ()
+  (interactive)
+  (let ((start (line-beginning-position))
+        (distance (- (line-end-position) (point))))
+    (end-of-line)
+    (set-mark start)
+    (comment-dwim nil)
+    (backward-char distance)))
+
+(global-set-key (kbd "M-;") 'comment-uncomment)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -187,6 +200,8 @@ File suffix is used to determine what program to run."
       (while (> n 0)
     	(insert current-line)
     	(decf n)))))
+
+;; (global-set-key (kbd "C-M-l") 'duplicate-current-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

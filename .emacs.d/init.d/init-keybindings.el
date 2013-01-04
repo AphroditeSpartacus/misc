@@ -19,6 +19,8 @@
 (global-set-key (kbd "C-x M-l") 'downcase-word)
 (global-set-key (kbd "C-x M-u") 'upcase-word)
 
+(global-set-key (kbd "C-x M-;") 'comment-dwim)
+
 (global-set-key "\M-p" '(lambda() (interactive) (move-to-window-line 0)))
 (global-set-key "\M-n" '(lambda() (interactive) (move-to-window-line -1)))
 
