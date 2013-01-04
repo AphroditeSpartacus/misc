@@ -65,13 +65,13 @@ File suffix is used to determine what program to run."
 (global-set-key "\M-1" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/1.input")))
 (global-set-key (kbd "C-M-1") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/1.input")))
 
-(global-set-key "\M-2" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/1.input")))
+(global-set-key "\M-2" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/2.input")))
 (global-set-key (kbd "C-M-2") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/2.input")))
 
-(global-set-key "\M-3" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/1.input")))
+(global-set-key "\M-3" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/3.input")))
 (global-set-key (kbd "C-M-3") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/3.input")))
 
-(global-set-key "\M-4" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/1.input")))
+(global-set-key "\M-4" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/4.input")))
 (global-set-key (kbd "C-M-4") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/4.input")))
 
 (global-set-key "\M-5" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/5.input")))

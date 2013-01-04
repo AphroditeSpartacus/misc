@@ -1,5 +1,5 @@
 # name : for (...; ...; ...) { ... } rsd
 # --
-for (size_t ${1:INDEX} = (${2:CONTAINER}).size() - 1; $1 >= 0; --$1) {
+for (int ${1:INDEX} = (${2:CONTAINER}).size() - 1; $1 >= 0; --$1) {
 $0
 }
