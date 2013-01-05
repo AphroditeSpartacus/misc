@@ -150,37 +150,60 @@ File suffix is used to determine what program to run."
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; (defun select-current-line ()
-;;   "Select the current line"
-;;   (interactive)
-;;   (end-of-line) ; move to end of line
-;;   (set-mark (line-beginning-position)))
-
 (defun select-current-line ()
   "Select the current line"
   (interactive)
   (let ((start (line-beginning-position))
         (distance (- (line-end-position) (point))))
     (end-of-line)
-    ;; (if (eq (line-end-position) (point-max))
-    ;;     (end-of-line) ; move to end of line
-    ;;   (progn
-    ;;     (next-logical-line) ; move to next line
-    ;;     (beginning-of-line)))
     (set-mark start)))
-
-(global-set-key (kbd "M-l") 'select-current-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun comment-uncomment ()
+(defun select-current-line-with-newline ()
+  "Select the current line with newline"
   (interactive)
   (let ((start (line-beginning-position))
         (distance (- (line-end-position) (point))))
-    (end-of-line)
-    (set-mark start)
-    (comment-dwim nil)
-    (backward-char distance)))
+    (if (eq (line-end-position) (point-max))
+        (end-of-line) ; move to end of line
+      (progn
+        (next-logical-line) ; move to next line
+        (beginning-of-line)))
+    (set-mark start)))
+
+(global-set-key (kbd "M-l") 'select-current-line-with-newline)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun copy-current-line()
+  (interactive)
+  (if (eq (line-end-position) (point-max))
+      (kill-ring-save (line-beginning-position) (+ (line-end-position) 0))
+      (kill-ring-save (line-beginning-position) (+ (line-end-position) 1))))
+
+(global-set-key (kbd "C-M-w") 'copy-current-line)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun is-empty-line ()
+  "copy from python-mode.el. Returns t if cursor is at an line with nothing but whitespace-characters, nil otherwise."
+  (interactive "p")
+  (save-excursion
+    (progn
+      (beginning-of-line)
+      (looking-at "\\s-*$"))))
+
+(defun comment-uncomment ()
+  (interactive)
+  (if (and (not mark-active) (not (is-empty-line)))
+      (let ((start (line-beginning-position))
+            (distance (- (line-end-position) (point))))
+        (end-of-line)
+        (set-mark start)
+        (comment-dwim nil)
+        (backward-char (min distance (- (line-end-position) (line-beginning-position)))))
+    (comment-dwim nil)))
 
 (global-set-key (kbd "M-;") 'comment-uncomment)
 
@@ -199,9 +222,10 @@ File suffix is used to determine what program to run."
       ;; now insert as many time as requested
       (while (> n 0)
     	(insert current-line)
-    	(decf n)))))
+    	(decf n))))
+  (next-logical-line))
 
-;; (global-set-key (kbd "C-M-l") 'duplicate-current-line)
+(global-set-key (kbd "C-M-l") 'duplicate-current-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -213,3 +237,23 @@ File suffix is used to determine what program to run."
         (beginning-of-line))))
 
 (global-set-key (kbd "C-a") 'move-beginning-or-indentation-of-line)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun mark-beginning-of-line ()
+  (interactive)
+  (set-mark (line-beginning-position)))
+
+;; set key in init-mode-hook.el
+;; (global-set-key (kbd "C-M-a") 'mark-beginning-of-line)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun mark-end-of-line ()
+  (interactive)
+  (set-mark (line-end-position)))
+
+;; set key in init-mode-hook.el
+;; (global-set-key (kbd "C-M-e") 'mark-end-of-line)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

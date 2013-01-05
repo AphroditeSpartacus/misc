@@ -28,7 +28,8 @@
             ;; (my-common-mode-auto-pair)
             ;; (c-toggle-auto-hungry-state 1)
             ;; (setq c-default-style "linux")
-            ;; (define-key c-mode-map "\C-h" 'c-electric-backspace)
+            (define-key c-mode-map "\C-\M-a" 'mark-beginning-of-line)
+            (define-key c-mode-map "\C-\M-e" 'mark-end-of-line)
             (define-key c-mode-map "\C-\M-h" 'backward-kill-word)))
 
 (add-hook 'c++-mode-hook
@@ -37,7 +38,8 @@
             ;; (my-common-mode-auto-pair)
             ;; (c-toggle-auto-hungry-state 1)
             ;; (setq c-default-style "linux")
-            ;; (define-key c++-mode-map "\C-h" 'c-electric-backspace)
+            (define-key c++-mode-map "\C-\M-a" 'mark-beginning-of-line)
+            (define-key c++-mode-map "\C-\M-e" 'mark-end-of-line)
             (define-key c++-mode-map "\C-\M-h" 'backward-kill-word)))
 
 (add-hook 'java-mode-hook
@@ -46,10 +48,14 @@
             ;; (my-common-mode-auto-pair)
             ;; (c-toggle-auto-hungry-state 1)
             ;; (define-key java-mode-map "\C-h" 'c-electric-backspace)
+            (define-key java-mode-map "\C-\M-a" 'mark-beginning-of-line)
+            (define-key java-mode-map "\C-\M-e" 'mark-end-of-line)
             (define-key java-mode-map "\C-\M-h" 'backward-kill-word)))
 
 (add-hook 'python-mode-hook
 	  (lambda ()
+            (define-key python-mode-map "\C-\M-a" 'mark-beginning-of-line)
+            (define-key python-mode-map "\C-\M-e" 'mark-end-of-line)
             (define-key python-mode-map "\C-\M-h" 'backward-kill-word)))
 
 (add-hook 'isearch-mode-hook
