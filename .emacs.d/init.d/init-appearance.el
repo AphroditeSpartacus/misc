@@ -10,6 +10,8 @@
 ;; (load-theme 'solarized-light t)
 (load-theme 'solarized-dark t)
 
+(set-fontset-font "fontset-default" 'unicode '("Hei" . "unicode-ttf"))
+
 (if (display-graphic-p)
     (progn
       ;; (set-frame-font "Monofur-15")

@@ -1,7 +1,12 @@
 (provide 'init-keybindings)
 
 ;; mac keyboard remap
-(setq mac-command-modifier 'meta)
+;; (setq mac-command-modifier 'meta)
+(when (eq system-type 'darwin) ;; mac specific settings
+  (setq mac-option-modifier 'alt)
+  (setq mac-command-modifier 'meta)
+  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+  )
 
 (global-set-key "\C-x?" 'help-command)
 (global-set-key "\C-h" 'delete-backward-char)
@@ -9,10 +14,10 @@
 (global-set-key "\C-\M-h" 'backward-kill-word)
 (global-set-key [C-left] 'previous-buffer)
 (global-set-key [C-right] 'next-buffer)
-(global-set-key (kbd "C-'") 'switch-to-buffer)
 ;; (global-set-key (kbd "C-'") 'other-window)
-(global-set-key "\M-]" 'previous-multiframe-window)
-(global-set-key "\M-[" 'next-multiframe-window)
+(global-set-key (kbd "C-'") 'next-multiframe-window)
+(global-set-key (kbd "C-M-'") 'previous-multiframe-window)
+(global-set-key (kbd "C-]") 'switch-to-buffer)
 
 (global-set-key "\C-x " 'just-one-space)
 

@@ -24,7 +24,7 @@
 
 (add-hook 'c-mode-hook
 	  (lambda ()
-            (setq c-basic-offset 4)
+            ;; (setq c-basic-offset 4)
             ;; (my-common-mode-auto-pair)
             ;; (c-toggle-auto-hungry-state 1)
             ;; (setq c-default-style "linux")
@@ -34,7 +34,7 @@
 
 (add-hook 'c++-mode-hook
 	  (lambda ()
-            (setq c-basic-offset 4)
+            ;; (setq c-basic-offset 4)
             ;; (my-common-mode-auto-pair)
             ;; (c-toggle-auto-hungry-state 1)
             ;; (setq c-default-style "linux")

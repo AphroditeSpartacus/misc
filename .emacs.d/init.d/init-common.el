@@ -43,3 +43,5 @@
 
 (setq display-time-24hr-format t)
 (display-time-mode 1) ;; show time
+
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
