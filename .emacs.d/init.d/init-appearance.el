@@ -10,7 +10,11 @@
 ;; (load-theme 'solarized-light t)
 (load-theme 'solarized-dark t)
 
-(set-fontset-font "fontset-default" 'unicode '("Hei" . "unicode-ttf"))
+(set-fontset-font
+    (frame-parameter nil 'font)
+    'han
+    ;; (font-spec :family "Hei" ))
+    (font-spec :family "Hiragino Sans GB" ))
 
 (if (display-graphic-p)
     (progn
