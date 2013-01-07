@@ -17,7 +17,7 @@
 ;; (global-set-key (kbd "C-'") 'other-window)
 (global-set-key (kbd "C-'") 'next-multiframe-window)
 (global-set-key (kbd "C-M-'") 'previous-multiframe-window)
-(global-set-key (kbd "C-]") 'switch-to-buffer)
+;; (global-set-key (kbd "C-]") 'switch-to-buffer)
 
 (global-set-key "\C-x " 'just-one-space)
 
