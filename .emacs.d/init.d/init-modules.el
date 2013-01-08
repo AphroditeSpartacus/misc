@@ -134,7 +134,8 @@ File suffix is used to determine what program to run."
 
 ;; (global-set-key (kbd "C-M-o") 'start-newline-next)
 ;; (global-set-key (kbd "C-M-j") 'start-newline-next)
-(global-set-key (kbd "M-j") 'start-newline-next)
+(global-set-key (kbd "M-j") 'newline-and-indent)
+(global-set-key (kbd "C-j") 'start-newline-next)
 
 (defun start-newline-prev ()
   (interactive)
@@ -276,3 +277,38 @@ File suffix is used to determine what program to run."
                                      plain-tex-mode))
                 (let ((mark-even-if-inactive transient-mark-mode))
                   (indent-region (region-beginning) (region-end) nil))))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Switch fromm *.<impl> to *.<head> and vice versa
+(defun switch-cc-to-h ()
+  (interactive)
+  (when (string-match "^\\(.*\\)\\.\\([^.]*\\)$" buffer-file-name)
+    (let ((name (match-string 1 buffer-file-name))
+ 	  (suffix (match-string 2 buffer-file-name)))
+      (cond ((string-match suffix "c\\|cc\\|C\\|cpp")
+ 	     (cond ((file-exists-p (concat name ".h"))
+ 		    (find-file (concat name ".h"))
+                    )
+ 		   ((file-exists-p (concat name ".hh"))
+ 		    (find-file (concat name ".hh"))
+                    )
+                   ))
+ 	    ((string-match suffix "h\\|hh")
+ 	     (cond ((file-exists-p (concat name ".cc"))
+ 		    (find-file (concat name ".cc"))
+                    )
+ 		   ((file-exists-p (concat name ".C"))
+ 		    (find-file (concat name ".C"))
+                    )
+ 		   ((file-exists-p (concat name ".cpp"))
+ 		    (find-file (concat name ".cpp"))
+                    )
+ 		   ((file-exists-p (concat name ".c"))
+ 		    (find-file (concat name ".c"))
+                    )))))))
+
+(global-set-key (kbd "C-]") 'switch-cc-to-h)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

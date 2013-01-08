@@ -9,6 +9,8 @@
 
 (setq frame-title-format "FIGHTING")
 
+(fset 'yes-or-no-p 'y-or-n-p)
+
 (setq inhibit-startup-message t) ;;close startup message
 ;; (global-hl-line-mode t)
 ;; (global-linum-mode t)
@@ -21,7 +23,7 @@
 
 (setq show-paren-delay 0)
 (setq show-paren-style 'parenthesis)
-(show-paren-mode t)
+;; (show-paren-mode t)
 
 (transient-mark-mode t)
 (global-auto-revert-mode t)             ;auto revert file
