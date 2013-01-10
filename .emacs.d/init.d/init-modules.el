@@ -59,23 +59,40 @@ File suffix is used to determine what program to run."
       (message "No recognized program file suffix for this file.")
       )))
 
-(global-set-key "\M-r" '(lambda() (interactive) (compile-and-run-current-file nil nil)))
-(global-set-key "\C-\M-r" '(lambda() (interactive) (compile-and-run-current-file t nil)))
+;; (global-set-key "\M-r" '(lambda() (interactive) (compile-and-run-current-file nil nil)))
+;; (global-set-key "\C-\M-r" '(lambda() (interactive) (compile-and-run-current-file t nil)))
 
-(global-set-key "\M-1" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/1.input")))
-(global-set-key (kbd "C-M-1") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/1.input")))
+(defun compile-and-run (&optional n)
+  (interactive "P")
+  (let ((testcase
+         (if (not n) nil
+           (if (= n 1) "/tmp/input-1"
+             (if (= n 2) "/tmp/input-2"
+               (if (= n 3) "/tmp/input-3"
+                 (if (= n 4) "/tmp/input-4"
+                   (if (= n 5) "/tmp/input-5"
+                     (if (= n 6) "/tmp/input-6"
+                       (if (= n 7) "/tmp/input-7"
+                         (if (= n 8) "/tmp/input-8"
+                           (if (= n 9) "/tmp/input-9"))))))))))))
+    (compile-and-run-current-file nil testcase)))
+(global-set-key (kbd "M-r") 'compile-and-run)
 
-(global-set-key "\M-2" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/2.input")))
-(global-set-key (kbd "C-M-2") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/2.input")))
-
-(global-set-key "\M-3" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/3.input")))
-(global-set-key (kbd "C-M-3") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/3.input")))
-
-(global-set-key "\M-4" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/4.input")))
-(global-set-key (kbd "C-M-4") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/4.input")))
-
-(global-set-key "\M-5" '(lambda() (interactive) (compile-and-run-current-file nil "/tmp/5.input")))
-(global-set-key (kbd "C-M-5") '(lambda() (interactive) (compile-and-run-current-file t "/tmp/5.input")))
+(defun compile-and-run-debug (&optional n)
+  (interactive "P")
+  (let ((testcase
+         (if (not n) nil
+           (if (= n 1) "/tmp/input-1"
+             (if (= n 2) "/tmp/input-2"
+               (if (= n 3) "/tmp/input-3"
+                 (if (= n 4) "/tmp/input-4"
+                   (if (= n 5) "/tmp/input-5"
+                     (if (= n 6) "/tmp/input-6"
+                       (if (= n 7) "/tmp/input-7"
+                         (if (= n 8) "/tmp/input-8"
+                           (if (= n 9) "/tmp/input-9"))))))))))))
+    (compile-and-run-current-file t testcase)))
+(global-set-key (kbd "C-M-r") 'compile-and-run-debug)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -100,8 +117,12 @@ File suffix is used to determine what program to run."
 
 (defun kill-whole-line-and-move-indentation-of-line()
   (interactive)
+  (let ((distance-from-beginning-of-line
+         (- (point) (line-beginning-position))))
     (kill-whole-line)
-    (back-to-indentation))
+    (let ((forward-distance (min distance-from-beginning-of-line
+                                 (- (line-end-position) (line-beginning-position)))))
+      (forward-char forward-distance))))
 (global-set-key (kbd "C-M-k") 'kill-whole-line-and-move-indentation-of-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -148,6 +169,14 @@ File suffix is used to determine what program to run."
       (start-newline-next))))
 
 (global-set-key (kbd "C-o") 'start-newline-prev)
+
+(defun kill-whole-line-and-move-next-line()
+  (interactive)
+  (kill-whole-line)
+  (start-newline-next))
+
+(global-set-key (kbd "C-x C-m") 'newline)
+(global-set-key (kbd "C-m") 'kill-whole-line-and-move-next-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -309,6 +338,5 @@ File suffix is used to determine what program to run."
                     )))))))
 
 (global-set-key (kbd "C-]") 'switch-cc-to-h)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
