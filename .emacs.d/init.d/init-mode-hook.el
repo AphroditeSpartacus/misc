@@ -1,32 +1,10 @@
 (provide 'init-mode-hook)
 
-;; (add-to-list 'load-path "/Users/Aphrodite/.emacs.d/plugins/autopair")
-;; (require 'autopair)
-;; (autopair-global-mode)
-
-;; (defun my-common-mode-auto-pair ()
-;;   (interactive)
-;;   (make-local-variable 'skeleton-pair-alist)
-;;   (setq skeleton-pair-alist '(
-;;                               ;; (? ? _ "''")
-;;                               ;; (? ? _ """")
-;;                               ;; (? ? _ "()")
-;;                               ;; (? ? _ "[]")
-;;                               (?{ \n > _ \n ?} >)))
-;;   (setq skeleton-pair t)
-;;   ;; (local-set-key (kbd "(") 'skeleton-pair-insert-maybe)
-;;   ;; (local-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
-;;   ;; (local-set-key (kbd "\'") 'skeleton-pair-insert-maybe)
-;;   ;; (local-set-key (kbd "[") 'skeleton-pair-insert-maybe)
-;;   (local-set-key (kbd "{") 'skeleton-pair-insert-maybe))
-
-(c-set-offset 'substatement-open 0)
-
 (add-hook 'c-mode-hook
 	  (lambda ()
             ;; (setq c-basic-offset 4)
-            ;; (my-common-mode-auto-pair)
             ;; (setq c-default-style "linux")
+            ;; (c-set-offset 'substatement-open 0)
             (c-toggle-auto-hungry-state 1)
             (define-key c-mode-map "\C-h" 'c-electric-backspace)
             (define-key c-mode-map "\C-\M-a" 'mark-beginning-of-line)
@@ -35,9 +13,8 @@
 
 (add-hook 'c++-mode-hook
 	  (lambda ()
-            ;; (setq c-basic-offset 4)
-            ;; (my-common-mode-auto-pair)
-            ;; (setq c-default-style "linux")
+            (c-set-style "stroustrup")
+            (setq c-basic-offset 2)
             (c-toggle-auto-hungry-state 1)
             (define-key c++-mode-map "\C-h" 'c-electric-backspace)
             (define-key c++-mode-map "\C-\M-a" 'mark-beginning-of-line)
@@ -46,8 +23,7 @@
 
 (add-hook 'java-mode-hook
 	  (lambda ()
-            (setq c-basic-offset 2)
-            ;; (my-common-mode-auto-pair)
+            ;; (setq c-basic-offset 2)
             (c-toggle-auto-hungry-state 1)
             (define-key java-mode-map "\C-h" 'c-electric-backspace)
             (define-key java-mode-map "\C-\M-a" 'mark-beginning-of-line)

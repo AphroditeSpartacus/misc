@@ -1,7 +1,10 @@
 (require 'auto-complete-config)
 
-(setq ac-auto-start nil)
 (add-to-list 'ac-dictionary-directories (concat el-get-dir "auto-complete/dict"))
+
+(setq ac-auto-start nil)
+(setq ac-fuzzy-enable t)
+(setq ac-use-quick-help nil)
 
 (global-auto-complete-mode t)
 
