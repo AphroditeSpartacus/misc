@@ -14,7 +14,7 @@
 (add-hook 'c++-mode-hook
 	  (lambda ()
             (c-set-style "stroustrup")
-            (setq c-basic-offset 2)
+            ;; (setq c-basic-offset 2)
             (c-toggle-auto-hungry-state 1)
             (define-key c++-mode-map "\C-h" 'c-electric-backspace)
             (define-key c++-mode-map "\C-\M-a" 'mark-beginning-of-line)
