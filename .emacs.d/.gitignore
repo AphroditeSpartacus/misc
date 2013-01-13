@@ -8,4 +8,5 @@ el-get
 plugins
 themes
 .mc-lists.el
+srecode-map.el
 semanticdb

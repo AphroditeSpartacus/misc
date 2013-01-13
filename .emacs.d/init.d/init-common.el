@@ -6,6 +6,7 @@
 (setq themes-dir (concat init-dir "themes/"))
 
 (add-to-list 'exec-path "/usr/local/bin")
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 
 (setq frame-title-format "FIGHTING")
 
