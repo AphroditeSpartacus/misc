@@ -14,7 +14,7 @@
 (add-hook 'c++-mode-hook
 	  (lambda ()
             (c-set-style "stroustrup")
-            ;; (setq c-basic-offset 2)
+            (setq c-basic-offset 2)
             (c-toggle-auto-hungry-state 1)
             (define-key c++-mode-map "\C-h" 'c-electric-backspace)
             (define-key c++-mode-map "\C-\M-a" 'mark-beginning-of-line)
@@ -32,6 +32,8 @@
 
 (add-hook 'python-mode-hook
 	  (lambda ()
+            (define-key python-mode-map (kbd "C-M-j") 'py-newline-and-indent)
+            (define-key python-mode-map (kbd "C-j") 'start-newline-next)
             (define-key python-mode-map "\C-h" 'py-electric-backspace)
             (define-key python-mode-map "\C-\M-a" 'mark-beginning-of-line)
             (define-key python-mode-map "\C-\M-e" 'mark-end-of-line)

@@ -1,7 +1,6 @@
 (provide 'init-keybindings)
 
 ;; mac keyboard remap
-;; (setq mac-command-modifier 'meta)
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq mac-option-modifier 'alt)
   (setq mac-command-modifier 'meta)
@@ -21,21 +20,8 @@
 
 (global-set-key "\C-x " 'just-one-space)
 
-(global-set-key (kbd "C-x M-l") 'downcase-word)
-(global-set-key (kbd "C-x M-u") 'upcase-word)
-(global-set-key (kbd "C-x M-;") 'comment-dwim)
-(global-set-key (kbd "C-x C-M-w") 'append-next-kill)
-
 (global-set-key "\M-p" '(lambda() (interactive) (move-to-window-line 0)))
 (global-set-key "\M-n" '(lambda() (interactive) (move-to-window-line -1)))
-
-;; (setq skeleton-pair t)
-;; (global-set-key (kbd "(") 'skeleton-pair-insert-maybe)
-;; (global-set-key (kbd "[") 'skeleton-pair-insert-maybe)
-;; ;; (local-set-key (kbd "{") 'skeleton-pair-insert-maybe)
-;; (global-set-key (kbd "'") 'skeleton-pair-insert-maybe)
-;; (global-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
-;; (global-set-key (kbd "`") 'skeleton-pair-insert-maybe)
 
 (global-set-key (kbd "C-x M-t") 'transpose-words)
 (global-set-key (kbd "C-x C-M-t") 'transpose-sexps)

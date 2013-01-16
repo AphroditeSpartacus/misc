@@ -153,9 +153,7 @@ File suffix is used to determine what program to run."
   (end-of-line)
   (newline-and-indent))
 
-;; (global-set-key (kbd "C-M-o") 'start-newline-next)
-;; (global-set-key (kbd "C-M-j") 'start-newline-next)
-(global-set-key (kbd "M-j") 'newline-and-indent)
+(global-set-key (kbd "C-M-j") 'newline-and-indent)
 (global-set-key (kbd "C-j") 'start-newline-next)
 
 (defun start-newline-prev ()
@@ -175,8 +173,8 @@ File suffix is used to determine what program to run."
   (kill-whole-line)
   (start-newline-next))
 
-(global-set-key (kbd "C-x C-m") 'newline)
-(global-set-key (kbd "C-m") 'kill-whole-line-and-move-next-line)
+(global-set-key (kbd "C-x M-k") 'kill-sentence)
+(global-set-key (kbd "M-k") 'kill-whole-line-and-move-next-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -202,6 +200,7 @@ File suffix is used to determine what program to run."
         (beginning-of-line)))
     (set-mark start)))
 
+(global-set-key (kbd "C-x M-l") 'downcase-word)
 (global-set-key (kbd "M-l") 'select-current-line-with-newline)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -212,6 +211,7 @@ File suffix is used to determine what program to run."
       (kill-ring-save (line-beginning-position) (+ (line-end-position) 0))
       (kill-ring-save (line-beginning-position) (+ (line-end-position) 1))))
 
+(global-set-key (kbd "C-x C-M-w") 'append-next-kill)
 (global-set-key (kbd "C-M-w") 'copy-current-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -235,6 +235,7 @@ File suffix is used to determine what program to run."
         (backward-char (min distance (- (line-end-position) (line-beginning-position)))))
     (comment-dwim nil)))
 
+(global-set-key (kbd "C-x M-;") 'comment-dwim)
 (global-set-key (kbd "M-;") 'comment-uncomment)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
