@@ -240,6 +240,18 @@ File suffix is used to determine what program to run."
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defun duplicate-selected-lines ()
+  (interactive)
+  (if mark-active
+      (let ((lines (buffer-substring-no-properties (region-beginning) (region-end)))
+            (lines-size (- (region-end) (region-beginning))))
+        (insert lines))
+    (let ((current-line (thing-at-point 'line))
+          (start (line-beginning-position))
+          (end (line-end-position)))
+      (beginning-of-line)
+      (insert current-line))))
+
 (defun duplicate-current-line (&optional n)
   "duplicate current line, make more than 1 copy given a numeric argument"
   (interactive "p")
@@ -249,14 +261,19 @@ File suffix is used to determine what program to run."
       ;; when on last line, insert a newline first
       (when (or (= 1 (forward-line 1)) (eq (point) (point-max)))
     	(insert "\n"))
-
       ;; now insert as many time as requested
       (while (> n 0)
     	(insert current-line)
     	(decf n))))
   (next-logical-line))
 
-(global-set-key (kbd "C-M-l") 'duplicate-current-line)
+(defun duplicate-lines ()
+  (interactive)
+  (if mark-active
+      (duplicate-selected-lines)
+    (duplicate-current-line 1)))
+
+(global-set-key (kbd "C-M-l") 'duplicate-lines)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -339,5 +356,59 @@ File suffix is used to determine what program to run."
                     )))))))
 
 (global-set-key (kbd "C-]") 'switch-cc-to-h)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(global-set-key
+ (kbd "M-1")
+ '(lambda () (interactive) (switch-to-buffer-other-window "1")))
+
+(global-set-key
+ (kbd "M-2")
+ '(lambda () (interactive) (switch-to-buffer-other-window "2")))
+
+(global-set-key
+ (kbd "M-3")
+ '(lambda () (interactive) (switch-to-buffer-other-window "3")))
+
+(global-set-key
+ (kbd "M-4")
+ '(lambda () (interactive) (switch-to-buffer-other-window "4")))
+
+(global-set-key
+ (kbd "M-5")
+ '(lambda () (interactive) (switch-to-buffer-other-window "5")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun bury-target (target)
+  (interactive)
+  (let ((target-window (get-buffer-window (get-buffer target)))
+        (buffer-window-aux (get-buffer-window)))
+    (if (eq target-window buffer-window-aux)
+        (setq target-window nil))
+    (other-window 1)
+    (while (and (not (equal (get-buffer-window) buffer-window-aux))
+                (not (equal (get-buffer-window) target-window)))
+      (other-window 1))
+    (if (equal (get-buffer-window) target-window)
+        (bury-buffer))
+    (while (not (equal (get-buffer-window) buffer-window-aux))
+      (other-window 1))))
+
+(global-set-key (kbd "C-x M-t") 'transpose-words)
+(global-set-key (kbd "C-x C-M-t") 'transpose-sexps)
+
+(global-set-key (kbd "M-t")
+                (lambda()
+                  (interactive)
+                  (save-buffer)
+                  (compile "make -k")
+                  (bury-target "*compilation*")))
+
+(global-set-key (kbd "C-M-t")
+                (lambda()
+                  (interactive)
+                  (shell-command "open *.app")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
