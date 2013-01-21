@@ -20,7 +20,7 @@
     (progn
       ;; (set-frame-font "Monofur-15")
       ;; (set-frame-font "Monaco-15")
-      (set-frame-font "Menlo-15")
+      (set-frame-font "Menlo-15" nil t)
       ;; (set-cursor-color "orchid")
       ;; (set-cursor-color "LightSteelBlue4")
       (set-cursor-color "SkyBlue4")

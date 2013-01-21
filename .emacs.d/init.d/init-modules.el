@@ -396,6 +396,13 @@ File suffix is used to determine what program to run."
     (while (not (equal (get-buffer-window) buffer-window-aux))
       (other-window 1))))
 
+;; (setq special-display-buffer-names
+;;       `(("*compilation*" . ((name . "*compilation*")
+;;                             ,@default-frame-alist
+;;                             ;; (left . (- 1))
+;;                             ;; (top . 0)))))
+;;                             (font . "Menlo-15")))))
+
 (global-set-key (kbd "C-x M-t") 'transpose-words)
 (global-set-key (kbd "C-x C-M-t") 'transpose-sexps)
 
@@ -404,11 +411,16 @@ File suffix is used to determine what program to run."
                   (interactive)
                   (save-buffer)
                   (compile "make -k")
-                  (bury-target "*compilation*")))
+                  (bury-target "*compilation*")
+                  ))
 
 (global-set-key (kbd "C-M-t")
                 (lambda()
                   (interactive)
                   (shell-command "open *.app")))
+
+(defun show-compilation-result ()
+  (interactive)
+  (switch-to-buffer-other-frame "*compilation*"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
