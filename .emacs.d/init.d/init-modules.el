@@ -359,25 +359,25 @@ File suffix is used to determine what program to run."
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(global-set-key
- (kbd "M-1")
- '(lambda () (interactive) (switch-to-buffer-other-window "1")))
+;; (global-set-key
+;;  (kbd "M-1")
+;;  '(lambda () (interactive) (switch-to-buffer-other-window "1")))
 
-(global-set-key
- (kbd "M-2")
- '(lambda () (interactive) (switch-to-buffer-other-window "2")))
+;; (global-set-key
+;;  (kbd "M-2")
+;;  '(lambda () (interactive) (switch-to-buffer-other-window "2")))
 
-(global-set-key
- (kbd "M-3")
- '(lambda () (interactive) (switch-to-buffer-other-window "3")))
+;; (global-set-key
+;;  (kbd "M-3")
+;;  '(lambda () (interactive) (switch-to-buffer-other-window "3")))
 
-(global-set-key
- (kbd "M-4")
- '(lambda () (interactive) (switch-to-buffer-other-window "4")))
+;; (global-set-key
+;;  (kbd "M-4")
+;;  '(lambda () (interactive) (switch-to-buffer-other-window "4")))
 
-(global-set-key
- (kbd "M-5")
- '(lambda () (interactive) (switch-to-buffer-other-window "5")))
+;; (global-set-key
+;;  (kbd "M-5")
+;;  '(lambda () (interactive) (switch-to-buffer-other-window "5")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

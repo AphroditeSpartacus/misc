@@ -14,12 +14,13 @@
 (add-hook 'c++-mode-hook
 	  (lambda ()
             (c-set-style "stroustrup")
-            ;; (setq c-basic-offset 2)
+            (setq c-basic-offset 2)
             (c-toggle-auto-hungry-state 1)
             (define-key c++-mode-map "\C-h" 'c-electric-backspace)
             (define-key c++-mode-map "\C-\M-a" 'mark-beginning-of-line)
             (define-key c++-mode-map "\C-\M-e" 'mark-end-of-line)
-            (define-key c++-mode-map "\C-\M-h" 'backward-kill-word)))
+            (define-key c++-mode-map "\C-\M-h" 'backward-kill-word)
+            ))
 
 (add-hook 'java-mode-hook
 	  (lambda ()
@@ -88,7 +89,9 @@
 ;;                             '(("\\<\\(slots\\|signals\\)\\>" . font-lock-type-face)))
 ;;     ;; make new font for rest of qt keywords
 ;;     (make-face 'qt-keywords-face)
-;;     (set-face-foreground 'qt-keywords-face "BlueViolet")
+;;     ;; (set-face-foreground 'qt-keywords-face "BlueViolet")
+;;     ;; from solarized-definitions.el: green color.
+;;     (set-face-foreground 'qt-keywords-face "#728a05")
 ;;     ;; qt keywords
 ;;     (font-lock-add-keywords 'c++-mode
 ;;                             '(("\\<Q_OBJECT\\>" . 'qt-keywords-face)))
@@ -99,5 +102,28 @@
 ;;     ))
 
 ;; (add-hook 'c-mode-common-hook 'jk/c-mode-common-hook)
+
+(defun qt/c-mode-common-hook ()
+  ;; qt keywords and stuff ...
+  ;; set up indenting correctly for new qt kewords
+  (setq c-protection-key (concat "\\<\\(public\\|public slot\\|protected"
+                                 "\\|protected slot\\|private\\|private slot"
+                                 "\\)\\>")
+        c-C++-access-key (concat "\\<\\(signals\\|public\\|protected\\|private"
+                                 "\\|public slots\\|protected slots\\|private slots"
+                                 "\\)\\>[ \t]*:"))
+  (progn
+    (font-lock-add-keywords 'c++-mode '(("\\<\\(slots\\|signals\\)\\>" . font-lock-keyword-face)))
+    (font-lock-add-keywords 'c++-mode '(("\\<Q_OBJECT\\>" . font-lock-type-face)))
+    (font-lock-add-keywords 'c++-mode '(("\\<SIGNAL\\|SLOT\\>" . font-lock-type-face)))
+    ))
+
+(add-hook 'c-mode-common-hook 'qt/c-mode-common-hook)
+
+;; (defun qt/xx ()
+;;   (interactive)
+;;   (setq c-C++-access-key "\\<\\(slots\\|signals\\|private\\|protected\\|public\\)\\>[ \t]*[(slots\\|signals)]*[ \t]*:")
+;;   (font-lock-add-keywords 'c++-mode '(("\\<\\(Q_OBJECT\\|public slots\\|public signals\\|private slots\\|private signals\\|protected slots\\|protected signals\\)\\>" . font-lock-type-face))))
+;; (add-hook 'c++-mode-hook 'qt/xx)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
