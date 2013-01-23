@@ -57,7 +57,10 @@ File suffix is used to determine what program to run."
 	  (message "Running...")
 	  (async-shell-command cmdStr))
       (message "No recognized program file suffix for this file.")
-      )))
+      )
+    (if (> (length (frame-list)) 1)
+        (bury-target "*Async Shell Command*"))
+    ))
 
 ;; (global-set-key "\M-r" '(lambda() (interactive) (compile-and-run-current-file nil nil)))
 ;; (global-set-key "\C-\M-r" '(lambda() (interactive) (compile-and-run-current-file t nil)))
@@ -411,7 +414,8 @@ File suffix is used to determine what program to run."
                   (interactive)
                   (save-buffer)
                   (compile "make -k")
-                  (bury-target "*compilation*")
+                  (if (> (length (frame-list)) 1)
+                      (bury-target "*compilation*"))
                   ))
 
 (global-set-key (kbd "C-M-t")
@@ -422,5 +426,11 @@ File suffix is used to determine what program to run."
 (defun show-compilation-result ()
   (interactive)
   (switch-to-buffer-other-frame "*compilation*"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun show-run-result ()
+  (interactive)
+  (switch-to-buffer-other-frame "*Async Shell Command*"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
