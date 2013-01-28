@@ -33,5 +33,6 @@
   ;; (local-set-key "\C-c?" 'semantic-ia-complete-symbol-menu)
   ;; (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
   ;; (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle))
+  (local-set-key (kbd "C-c , s") 'semantic-ia-show-summary)
   (local-set-key (kbd "C-c , d") 'semantic-ia-fast-jump))
 (add-hook 'c-mode-common-hook 'my-cedet-hook)

@@ -7,6 +7,8 @@
   (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
   )
 
+(define-key key-translation-map (kbd "\C-j") 'RET)
+
 (global-set-key "\C-x?" 'help-command)
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\M-g" 'goto-line)
