@@ -156,8 +156,7 @@ File suffix is used to determine what program to run."
   (end-of-line)
   (newline-and-indent))
 
-(global-set-key (kbd "C-M-j") 'newline-and-indent)
-(global-set-key (kbd "C-j") 'start-newline-next)
+(global-set-key (kbd "C-M-j") 'start-newline-next)
 
 (defun start-newline-prev ()
   (interactive)

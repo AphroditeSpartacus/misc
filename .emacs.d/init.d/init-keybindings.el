@@ -7,12 +7,16 @@
   (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
   )
 
-(define-key key-translation-map (kbd "\C-j") 'RET)
-
 (global-set-key "\C-x?" 'help-command)
-(global-set-key "\C-h" 'delete-backward-char)
+(define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
+
+(define-key key-translation-map (kbd "C-j") (kbd "<RET>"))
+(global-set-key (kbd "<RET>") 'newline-and-indent)
+
+(define-key key-translation-map (kbd "C-M-h") (kbd "<M-DEL>"))
+(global-set-key (kbd "C-x <M-DEL>") 'mark-defun)
+
 (global-set-key "\M-g" 'goto-line)
-(global-set-key "\C-\M-h" 'backward-kill-word)
 (global-set-key [C-left] 'previous-buffer)
 (global-set-key [C-right] 'next-buffer)
 (global-set-key (kbd "C-'") 'other-window)
