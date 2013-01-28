@@ -2,7 +2,7 @@
        '(
          global-semanticdb-minor-mode
          global-semantic-mru-bookmark-mode
-         global-semantic-highlight-func-mode
+         ;; global-semantic-highlight-func-mode
          ;; global-semantic-stickyfunc-mode
          global-semantic-idle-local-symbol-highlight-mode
          ;; global-semantic-idle-scheduler-mode
