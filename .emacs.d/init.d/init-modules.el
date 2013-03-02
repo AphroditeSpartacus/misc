@@ -211,7 +211,7 @@ File suffix is used to determine what program to run."
   (interactive)
   (if (eq (line-end-position) (point-max))
       (kill-ring-save (line-beginning-position) (+ (line-end-position) 0))
-      (kill-ring-save (line-beginning-position) (+ (line-end-position) 1))))
+    (kill-ring-save (line-beginning-position) (+ (line-end-position) 1))))
 
 (global-set-key (kbd "C-x C-M-w") 'append-next-kill)
 (global-set-key (kbd "C-M-w") 'copy-current-line)

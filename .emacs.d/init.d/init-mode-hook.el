@@ -2,10 +2,10 @@
 
 (defun my/c-mode-common-hook ()
   (c-set-style "stroustrup")
-  (setq c-basic-offset 4)
-  (c-toggle-auto-hungry-state 1)
-  (local-set-key (kbd "C-M-a") 'mark-beginning-of-line)
-  (local-set-key (kbd "C-M-e") 'mark-end-of-line)
+  ;; (setq c-basic-offset 2)
+  ;; (c-toggle-auto-hungry-state 1)
+  ;; (local-set-key (kbd "C-M-a") 'mark-beginning-of-line)
+  ;; (local-set-key (kbd "C-M-e") 'mark-end-of-line)
   )
 
 (add-hook 'c-mode-common-hook 'my/c-mode-common-hook)
@@ -32,8 +32,6 @@
 (add-hook 'python-mode-hook
 	  (lambda ()
             (define-key python-mode-map (kbd "<DEL>") 'py-electric-backspace)
-            (define-key python-mode-map "\C-\M-a" 'mark-beginning-of-line)
-            (define-key python-mode-map "\C-\M-e" 'mark-end-of-line)
             ))
 
 (add-hook 'w3m-mode-hook

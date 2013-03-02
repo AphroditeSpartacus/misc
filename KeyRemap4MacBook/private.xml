@@ -4,6 +4,8 @@
     <item>
       <name>Aphrodite is happy</name>
       <identifier>private.Aphrodite_is_happy</identifier>
+      <!-- see /Library/org.pqrs/KeyRemap4MacBook/prefpane/checkbox.xml -->
+      <autogen>--KeyToKey-- KeyCode::TAB, VK_COMMAND, KeyCode::TAB, ModifierFlag::COMMAND_L</autogen>
       <autogen>--KeyToKey-- KeyCode::QUOTE, KeyCode::CONTROL_R</autogen>
       <autogen>--KeyToKey-- KeyCode::TAB, KeyCode::QUOTE</autogen>
       <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::TAB</autogen>

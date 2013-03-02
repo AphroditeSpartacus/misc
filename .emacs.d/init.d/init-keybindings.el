@@ -19,6 +19,7 @@
 (global-set-key "\M-g" 'goto-line)
 (global-set-key [C-left] 'previous-buffer)
 (global-set-key [C-right] 'next-buffer)
+;; (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-'") 'other-window)
 (global-set-key (kbd "M-[") 'next-multiframe-window)
 (global-set-key (kbd "M-]") 'previous-multiframe-window)
