@@ -4,8 +4,6 @@
   (c-set-style "stroustrup")
   ;; (setq c-basic-offset 2)
   ;; (c-toggle-auto-hungry-state 1)
-  ;; (local-set-key (kbd "C-M-a") 'mark-beginning-of-line)
-  ;; (local-set-key (kbd "C-M-e") 'mark-end-of-line)
   )
 
 (add-hook 'c-mode-common-hook 'my/c-mode-common-hook)
