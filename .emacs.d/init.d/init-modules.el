@@ -357,7 +357,7 @@ File suffix is used to determine what program to run."
  		    (find-file (concat name ".c"))
                     )))))))
 
-(global-set-key (kbd "C-]") 'switch-cc-to-h)
+(global-set-key (kbd "C-.") 'switch-cc-to-h)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -421,6 +421,7 @@ File suffix is used to determine what program to run."
                 (lambda()
                   (interactive)
                   (shell-command "open *.app")))
+                  ;; (shell-command "./*.app/Contents/MacOS/*")))
 
 (defun show-compilation-result ()
   (interactive)

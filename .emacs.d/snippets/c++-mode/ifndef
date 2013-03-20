@@ -1,0 +1,8 @@
+# name : #ifndef ... #define ... #endif
+# --
+#ifndef ${1:MACRO}
+#define $1
+
+$0
+
+#endif
