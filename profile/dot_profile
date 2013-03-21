@@ -1,0 +1,42 @@
+export PS1="\n\033[30;36m[\u@\h \w]\033[0m\n\$ "
+export PATH=~/bin:$PATH
+alias ls='ls -G'
+alias ll='ls -l'
+alias grep='grep --color'
+
+export LESS=-cx4MgIR
+export LESSGLOBALTAGS=global
+
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+export EDITOR=vim
+#export EDITOR=charm
+
+# git completion
+source ~/.git-completion.bash
+
+# for pyqt
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+# for vtk
+# export PYTHONPATH=/usr/local/Cellar/vtk/5.10.0/lib/python2.7/site-packages/:$PYTHONPATH
+
+# MacPorts Installer addition on 2011-11-27_at_16:33:03: adding an appropriate PATH variable for use with MacPorts.
+# export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .profile.pysave
+#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+#export PATH
+
+if [ -z $TMUX ]
+then
+    tmux
+fi
