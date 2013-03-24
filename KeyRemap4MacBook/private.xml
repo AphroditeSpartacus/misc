@@ -9,6 +9,7 @@
       <autogen>--KeyToKey-- KeyCode::QUOTE, KeyCode::CONTROL_R</autogen>
       <autogen>--KeyToKey-- KeyCode::TAB, KeyCode::QUOTE</autogen>
       <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::TAB</autogen>
+      <autogen>--KeyToKey-- KeyCode::OPTION_R, KeyCode::TAB</autogen>
     </item>
   </list>
 </root>

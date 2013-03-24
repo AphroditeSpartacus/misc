@@ -2,7 +2,7 @@
 
 (defun my/c-mode-common-hook ()
   (c-set-style "stroustrup")
-  ;; (setq c-basic-offset 2)
+  (setq c-basic-offset 2)
   ;; (c-toggle-auto-hungry-state 1)
   )
 
