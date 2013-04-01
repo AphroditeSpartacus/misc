@@ -12,17 +12,23 @@ File suffix is used to determine what program to run."
     (setq fname (buffer-file-name))
     (setq basename (file-name-sans-extension (file-name-nondirectory fname)))
     (setq suffix (file-name-extension fname))
+    (setq cpp-command (if (file-newer-than-file-p fname "/tmp/a.out")
+                          "g++ -Wall -o /tmp/a.out"
+                        ":"))
+    (setq cpp-debug-command (if (file-newer-than-file-p fname "/tmp/a.out")
+                          "g++ -DDEBUG -Wall -o /tmp/a.out"
+                        ":"))
     (setq extention-alist ;; a keyed list of file suffix to comand-line program to run
           (if debug
-              '(
-                ("cpp" . "g++ -DDEBUG -Wall -o /tmp/a.out")
+              `(
+                ("cpp" . ,cpp-debug-command)
                 ("c"   . "gcc -DDEBUG -Wall -o /tmp/a.out")
                 ("py"  . "/usr/bin/time python")
                 ("sh" . "bash")
                 )
-            '(
+            `(
               ("java" . "javac -d /tmp")
-              ("cpp" . "g++ -Wall -o /tmp/a.out")
+              ("cpp" . ,cpp-command)
               ("c"   . "gcc -Wall -o /tmp/a.out")
               ("py"  . "/usr/bin/time python")
               ("hs"  . "ghc -o /tmp/a.out -outputdir /tmp -tmpdir /tmp")

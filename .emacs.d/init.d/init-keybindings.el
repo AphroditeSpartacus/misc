@@ -21,8 +21,8 @@
 (global-set-key [C-right] 'next-buffer)
 ;; (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-'") 'other-window)
-(global-set-key (kbd "M-[") 'next-multiframe-window)
-(global-set-key (kbd "M-]") 'previous-multiframe-window)
+(global-set-key (kbd "M-[") 'previous-multiframe-window)
+(global-set-key (kbd "M-]") 'next-multiframe-window)
 (global-set-key (kbd "C-M-'") 'previous-multiframe-window)
 ;; (global-set-key (kbd "C-]") 'switch-to-buffer)
 
