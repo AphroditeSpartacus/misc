@@ -103,6 +103,26 @@ File suffix is used to determine what program to run."
     (compile-and-run-current-file t testcase)))
 (global-set-key (kbd "C-M-r") 'compile-and-run-debug)
 
+(global-set-key [f1] '(lambda() (interactive) (compile-and-run 1)))
+(global-set-key [f2] '(lambda() (interactive) (compile-and-run 2)))
+(global-set-key [f3] '(lambda() (interactive) (compile-and-run 3)))
+(global-set-key [f4] '(lambda() (interactive) (compile-and-run 4)))
+(global-set-key [f5] '(lambda() (interactive) (compile-and-run 5)))
+(global-set-key [f6] '(lambda() (interactive) (compile-and-run 6)))
+(global-set-key [f7] '(lambda() (interactive) (compile-and-run 7)))
+(global-set-key [f8] '(lambda() (interactive) (compile-and-run 8)))
+(global-set-key [f9] '(lambda() (interactive) (compile-and-run 9)))
+
+(global-set-key [M-f1] '(lambda() (interactive) (compile-and-run-debug 1)))
+(global-set-key [M-f2] '(lambda() (interactive) (compile-and-run-debug 2)))
+(global-set-key [M-f3] '(lambda() (interactive) (compile-and-run-debug 3)))
+(global-set-key [M-f4] '(lambda() (interactive) (compile-and-run-debug 4)))
+(global-set-key [M-f5] '(lambda() (interactive) (compile-and-run-debug 5)))
+(global-set-key [M-f6] '(lambda() (interactive) (compile-and-run-debug 6)))
+(global-set-key [M-f7] '(lambda() (interactive) (compile-and-run-debug 7)))
+(global-set-key [M-f8] '(lambda() (interactive) (compile-and-run-debug 8)))
+(global-set-key [M-f9] '(lambda() (interactive) (compile-and-run-debug 9)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun comment-and-copy()
