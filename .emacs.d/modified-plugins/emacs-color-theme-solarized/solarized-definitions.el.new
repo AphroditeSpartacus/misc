@@ -204,6 +204,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (mode-line-inactive ; StatusLineNC
               ((t (,@fg-base00 ,@bg-base02 ,@fmt-revbb :box nil))))
              ;; (region ((t (,@fg-base01 ,@bg-base03 ,@fmt-revbb)))) ; Visual ; aphrorhpa
+             ;; (region ((t (,@fmt-none ,@bg-base02)))) ; Visual ; aphrorhpa
              (region ((t (,@fmt-none ,@bg-base09)))) ; Visual ; aphrorhpa
              (secondary-selection ((t (,@bg-base02))))
              (shadow ((t (,@fg-base01))))

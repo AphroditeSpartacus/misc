@@ -228,8 +228,8 @@ File suffix is used to determine what program to run."
         (beginning-of-line)))
     (set-mark start)))
 
-(global-set-key (kbd "C-x M-l") 'downcase-word)
-(global-set-key (kbd "M-l") 'select-current-line-with-newline)
+;; (global-set-key (kbd "C-x M-l") 'downcase-word)
+;; (global-set-key (kbd "M-l") 'select-current-line-with-newline)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
