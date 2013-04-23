@@ -8,7 +8,15 @@
 ;; ;; (setq qt-dir "/usr/local/Cellar/qt/4.8.3/include/")
 (setq qt-dir "/usr/local/Cellar/qt/4.8.4/include/")
 
+;; (when (file-exists-p qt-dir)
+;;   (setq ac-clang-flags
+;;         (mapcar (lambda (f) (concat "-I" f))
+;;                 (directory-files qt-dir t "Qt\\w+"))))
+
 (when (file-exists-p qt-dir)
   (setq ac-clang-flags
         (mapcar (lambda (f) (concat "-I" f))
-                (directory-files qt-dir t "Qt\\w+"))))
+                (append
+                 (directory-files qt-dir t "Qt\\w+")
+                 (split-string "/opt/local/include
+                               /opt/local/include/rpm")))))

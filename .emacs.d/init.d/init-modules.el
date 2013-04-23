@@ -460,3 +460,31 @@ File suffix is used to determine what program to run."
   (switch-to-buffer-other-frame "*Async Shell Command*"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defadvice isearch-forward (around sycao/search-region)
+  "if there is an active region, search from it directly"
+  (if (region-active-p)
+      (progn
+        (let ((beg (region-beginning))
+              (end (region-end)))
+          (deactivate-mark)
+          (isearch-mode t t nil nil)
+          (isearch-yank-string (buffer-substring-no-properties beg end))))
+    ad-do-it))
+
+(ad-activate 'isearch-forward)
+
+(defadvice isearch-backward (around sycao/search-region)
+  "if there is an active region, search from it directly"
+  (if (region-active-p)
+      (progn
+        (let ((beg (region-beginning))
+              (end (region-end)))
+          (deactivate-mark)
+          (isearch-mode t t nil nil)
+          (isearch-yank-string (buffer-substring-no-properties beg end))))
+    ad-do-it))
+
+(ad-activate 'isearch-backward)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
