@@ -18,5 +18,4 @@
         (mapcar (lambda (f) (concat "-I" f))
                 (append
                  (directory-files qt-dir t "Qt\\w+")
-                 (split-string "/opt/local/include
-                               /opt/local/include/rpm")))))
+                 (split-string "")))))
