@@ -23,7 +23,8 @@
       (set-frame-font "Menlo-15" nil t)
       ;; (set-cursor-color "orchid")
       ;; (set-cursor-color "LightSteelBlue4")
-      (set-cursor-color "SkyBlue4")
+      ;; (set-cursor-color "SkyBlue4")
+      (set-cursor-color "orchid4")
       ;; (set-frame-parameter (selected-frame) 'alpha '(95 90))
       ))
 

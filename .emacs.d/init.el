@@ -22,3 +22,5 @@
 (require 'init-modules)
 
 (require 'init-appearance)
+
+(require 'douban-music-mode)

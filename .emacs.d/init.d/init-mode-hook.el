@@ -27,10 +27,10 @@
 ;;             (define-key c++-mode-map "\C-\M-e" 'mark-end-of-line)
 ;;             ))
 
-(add-hook 'python-mode-hook
-	  (lambda ()
-            (define-key python-mode-map (kbd "<DEL>") 'py-electric-backspace)
-            ))
+;; (add-hook 'python-mode-hook
+;; 	  (lambda ()
+;;             (define-key python-mode-map (kbd "<DEL>") 'py-electric-backspace)
+;;             ))
 
 (add-hook 'w3m-mode-hook
 	  (lambda ()
