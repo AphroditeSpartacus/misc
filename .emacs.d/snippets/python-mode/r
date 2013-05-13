@@ -1,0 +1,5 @@
+# name: for ... in ... : ....
+# key: r
+# --
+for ${VAR} in ${COLLECTION}:
+    $0
