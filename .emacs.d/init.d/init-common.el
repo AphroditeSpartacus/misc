@@ -48,3 +48,5 @@
 (display-time-mode 1) ;; show time
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+(setq browse-url-browser-function 'w3m-browse-url)

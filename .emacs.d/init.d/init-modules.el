@@ -461,7 +461,7 @@ File suffix is used to determine what program to run."
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defadvice isearch-forward (around sycao/search-region)
+(defadvice isearch-forward (around iai/search-region)
   "if there is an active region, search from it directly"
   (if (region-active-p)
       (progn
@@ -474,7 +474,7 @@ File suffix is used to determine what program to run."
 
 (ad-activate 'isearch-forward)
 
-(defadvice isearch-backward (around sycao/search-region)
+(defadvice isearch-backward (around iai/search-region)
   "if there is an active region, search from it directly"
   (if (region-active-p)
       (progn
