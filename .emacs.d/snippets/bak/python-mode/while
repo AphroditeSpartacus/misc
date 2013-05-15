@@ -1,5 +1,5 @@
 # name: while ... : ...
 # key: while
 # --
-while $0:
-    
+while ${CONDITION}:
+    $0
