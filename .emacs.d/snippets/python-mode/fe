@@ -1,0 +1,4 @@
+# name: for ... in range(BEGIN, END + 1): ...
+# --
+for ${1:VAR} in range(${2:BEGIN}, ${3:END} + 1):
+    $0

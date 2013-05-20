@@ -1,5 +1,4 @@
-# name: for ... in ... : ....
-# key: r
+# name: for ... in range(END): ...
 # --
-for ${VAR} in ${COLLECTION}:
+for ${1:VAR} in range(${2:END}):
     $0
