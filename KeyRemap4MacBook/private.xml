@@ -10,7 +10,7 @@
       <autogen>--KeyToKey-- KeyCode::TAB, KeyCode::QUOTE</autogen>
       <!-- <autogen>KeyToKey KeyCode::COMMAND_R, KeyCode::TAB</autogen> -->
       <!-- <autogen>KeyToKey KeyCode::OPTION_R, KeyCode::TAB</autogen> -->
-      <autogen>--KeyToKey-- KeyCode::CONTROL_R, KeyCode::TAB</autogen>
+      <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::TAB</autogen>
       <autogen>--KeyToKey-- KeyCode::BACKQUOTE, VK_CONTROL, KeyCode::CAPSLOCK</autogen>
     </item>
   </list>
