@@ -186,13 +186,9 @@ File suffix is used to determine what program to run."
 
 (defun start-newline-prev ()
   (interactive)
-  (if (eq (line-beginning-position) (point-min))
-      (progn
-        (beginning-of-line)
-        (open-line 1))
-    (progn
-      (forward-line -1)
-      (start-newline-next))))
+  (beginning-of-line)
+  (open-line 1)
+  (indent-according-to-mode))
 
 (global-set-key (kbd "C-o") 'start-newline-prev)
 
